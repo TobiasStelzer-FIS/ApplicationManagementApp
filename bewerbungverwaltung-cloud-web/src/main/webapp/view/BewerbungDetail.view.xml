@@ -1,7 +1,7 @@
 <mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungDetail" displayBlock="true" height="100%"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns="sap.uxap" xmlns:layout="sap.ui.layout"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m">
-	<semantic:DetailPage title="BewerbungDetail">
+	<semantic:DetailPage title="BewerbungDetail" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed">
 		<semantic:pagingAction>
 			<m:PagingButton count="5" positionChange="onPositionChange"/>
 		</semantic:pagingAction>
@@ -33,12 +33,14 @@
 					<m:Table items="{path: 'testModel>BewerbungStelleDetails/results'}">
 						<m:ColumnListItem width="auto" type="Inactive">
 							<m:cells>
-								<m:Label text="{testModel>StelleDetails/Bezeichnung}" id="__text7"
+								<core:Icon src="sap-icon://overlay"/>
+								<m:Text text="{testModel>StelleDetails/Bezeichnung}" id="__text7"
 									width="auto" />
 							</m:cells>
 						</m:ColumnListItem>
 						<m:columns>
-							<m:Column id="__column0"></m:Column>
+							<m:Column width="auto"></m:Column>
+							<m:Column width="80%"></m:Column>
 						</m:columns>
 					</m:Table>
 				</layout:VerticalLayout>
