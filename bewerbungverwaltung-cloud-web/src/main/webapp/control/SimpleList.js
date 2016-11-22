@@ -14,10 +14,11 @@ sap.ui.define([
 				}
 			},
 			aggregations: {
-				_items: {
+				items: {
 					multiple: true,
 					visibility: "public",
-					singularName: "item"
+					singularName: "item",
+					bindable: "bindable"
 				}
 			},
 			events: {}
@@ -34,7 +35,7 @@ sap.ui.define([
 			oRm.writeClasses();
 			oRm.write(">");
 
-			if (oControl.getTitle != "") {
+			if (oControl.getTitle !== "") {
 				var oTitle = new Text();
 				oTitle.setText(oControl.getTitle());
 				oRm.renderControl(oTitle);
