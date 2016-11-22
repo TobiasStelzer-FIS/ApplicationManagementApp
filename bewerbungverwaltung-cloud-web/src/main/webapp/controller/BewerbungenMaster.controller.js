@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/UIComponent",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(Controller, formatter) {
+], function(Controller, UIComponent, formatter) {
 	"use strict";
 	
 	return Controller.extend("de.fis.bewerbungverwaltung.controller.BewerbungenMaster", {
@@ -25,7 +26,7 @@ sap.ui.define([
 			sap.m.MessageToast.show(bindingContext);
 
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.navTo("BewerbungDetail", {Bewerbung:bindingContext.substr(1)});
+			oRouter.navTo("BewerbungDetail", {Bewerbung:bindingContext.substr(12)});
 		},
 		onSemanticSelectChange: function() {
 			sap.m.MessageToast.show("onSemanticSelectChange");

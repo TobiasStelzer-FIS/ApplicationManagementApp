@@ -1,12 +1,22 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/UIComponent"
+], function(Controller, UIComponent) {
 	"use strict";
 	
 	return Controller.extend("de.fis.bewerbungverwaltung.controller.BewerbungDetail", {
 		
-		onInit: function() {
-			
+		onInit:function()
+		{
+			var oRouter = UIComponent.getRouterFor(this);
+
+			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
+		},
+		_handleRouteMatched: function (oEvent) {
+			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
+
+			this.getView().bindElement(sBindingEntity);
+//			this.getView().getModel("testModel").updateBindings(true);
 		},
 		onExit: function() {
 			

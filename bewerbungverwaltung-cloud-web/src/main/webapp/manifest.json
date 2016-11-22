@@ -77,7 +77,7 @@
 				"name": "BewerbungenMaster",
 				"target": "BewerbungenMaster",
 				"subroutes": [{
-					"pattern": "{Detail}",
+					"pattern": "Bewerbungs/{Bewerbung}",
 					"name": "BewerbungDetail",
 					"target": "BewerbungDetail"
 				}]
