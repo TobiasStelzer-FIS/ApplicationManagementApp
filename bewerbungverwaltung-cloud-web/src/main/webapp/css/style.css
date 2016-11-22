@@ -1,0 +1,45 @@
+.listBewerbungen
+.sapMListUl>li:hover {
+	background: #f0f0f0;
+}
+
+.listBewerbungen
+.sapMListUl>li .sapMLabel {
+	color: black;
+}
+
+.tableStellen
+.sapMListTbl {
+	width: 80%;
+}
+
+.tableStellen
+.sapMListTbl
+.sapMListTblRow {
+	background: inherit;	/* inherit the background so it changes together with the ListItem when it is highlighted (hover) */
+}
+
+.tableStellen
+.sapMListTbl
+.sapMListTblRow
+.sapMListTblCell {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.tableStellen
+.sapMListTbl
+.sapMListTblRow
+.sapMListTblCellNoData {
+	color: #808080;
+	font-size: 0.9em;
+}
+
+.tableStellen
+.sapMListTbl
+.sapMListTblRow
+.sapMListTblCell
+.sapMText {
+	color: #808080;
+	font-size: 0.9em;
+}

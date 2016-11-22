@@ -1,0 +1,39 @@
+<mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungenMaster"
+	displayBlock="true" height="100%" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns="sap.m">
+
+	<semantic:MasterPage title="BewerbungenMaster"
+		showSubHeader="true">
+		<semantic:subHeader>
+			<Toolbar>
+				<SearchField width="100%" placeholder="Search for name..." />
+			</Toolbar>
+		</semantic:subHeader>
+
+		<List class="listBewerbungen" items="{path: 'testModel>/Bewerbungs'}">
+			<core:Fragment
+				fragmentName="de.fis.bewerbungverwaltung.view.fragment.BewerbungListItem"
+				type="XML" />
+		</List>
+
+		<semantic:sort>
+			<semantic:SortSelect change="onSemanticSelectChange"
+				items="{
+							path: '/ProductCollectionStats/Filters',
+							sorter: { path: 'Name' }
+							}">
+				<core:Item key="{type}" text="{type}" />
+			</semantic:SortSelect>
+		</semantic:sort>
+		<semantic:filter>
+			<semantic:FilterAction press="onSemanticButtonPress" />
+		</semantic:filter>
+		<semantic:group>
+			<semantic:GroupAction press="onSemanticButtonPress" />
+		</semantic:group>
+		<semantic:addAction>
+			<semantic:AddAction press="onSemanticButtonPress" />
+		</semantic:addAction>
+	</semantic:MasterPage>
+
+</mvc:View>

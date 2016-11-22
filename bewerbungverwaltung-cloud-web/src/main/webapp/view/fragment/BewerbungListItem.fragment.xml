@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	<CustomListItem type="Active" press="onBewerbungPressed">
+
+		<VBox width="auto" class="sapUiTinyMarginTop sapUiSmallMarginBeginEnd"
+			direction="Column" id="__vbox0">
+
+			<HBox width="auto">
+				<Label
+					text="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}"
+					design="Bold" width="auto" id="__label1" />
+				<FlexBox width="100%" id="spaceBox0" />
+				<!-- <ObjectStatus text="{testModel>Bewerbung/Status/Bezeichnung}" state="{path: 
+					'testModel>Bewerbung/Status/Bezeichnung', formatter: '.formatter.formatStatus2'}" 
+					/> -->
+				<Label text="{testModel>StatusDetails/Bezeichnung}" class=""
+					width="auto" id="__label9" textAlign="End" />
+			</HBox>
+
+			<HBox>
+				<VBox>
+					<Label
+						text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"
+						width="100%" id="__label2" />
+					<Table noDataText="Keine Stellen" class="tableStellen sapUiTinyMarginBottom"
+						width="auto" id="__table0" showSeparators="Inner"
+						backgroundDesign="Transparent"
+						items="{path: 'testModel>BewerbungStelleDetails/results', templateShareable: false}">
+						<ColumnListItem width="auto" type="Inactive">
+							<cells>
+								<Text text="{testModel>StelleDetails/Bezeichnung}" id="__text7"
+									width="auto" />
+							</cells>
+						</ColumnListItem>
+						<columns>
+							<Column id="__column0"></Column>
+						</columns>
+					</Table>
+				</VBox>
+				<HBox width="100%" alignItems="Center">
+					<core:Icon src="sap-icon://navigation-right-arrow" color="black" />
+				</HBox>
+			</HBox>
+
+			<HBox width="auto" id="__hbox0">
+				<Label
+					text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"
+					width="auto" id="__label10" />
+				<FlexBox width="100%" id="spaceBox1" />
+				<Label
+					text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatTage'} {i18n>Tage}"
+					width="auto" id="__label11" textAlign="End" />
+			</HBox>
+
+		</VBox>
+
+	</CustomListItem>
+</core:FragmentDefinition>

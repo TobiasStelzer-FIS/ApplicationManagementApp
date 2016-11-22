@@ -1,0 +1,97 @@
+<mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungDetail"
+	displayBlock="true" height="100%" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m">
+
+	<semantic:DetailPage title="BewerbungDetail">
+
+		<semantic:pagingAction>
+			<m:PagingButton count="5" positionChange="onPositionChange" />
+		</semantic:pagingAction>
+
+		<ObjectPageLayout id="ObjectPageLayout"
+			enableLazyLoading="false" showTitleInHeaderContent="true"
+			showEditHeaderButton="true" editHeaderButtonPress="handleEditBtnPress">
+			<headerTitle>
+				<ObjectPageHeader
+					objectImageURI="./images/Pikachu.png"
+					objectTitle="Ali Ak" objectImageShape="Circle"
+					objectImageAlt="Ali Ak" objectSubtitle="97493 Bergrheinfeld"
+
+					isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+					isObjectSubtitleAlwaysVisible="false">
+				</ObjectPageHeader>
+			</headerTitle>
+
+			<headerContent>
+				<layout:VerticalLayout>
+					<m:HBox alignItems="Center">
+						<core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd" />
+						<m:Label text="09721 122345" />
+					</m:HBox>
+					<m:HBox alignItems="Center">
+						<core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd" />
+						<m:Label text="+33 6 4512 5158" />
+					</m:HBox>
+					<m:HBox alignItems="Center">
+						<core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd" />
+						<m:Label text="ali.ak@gmail.com" />
+					</m:HBox>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout>
+					<html:ul><html:li>Item 1</html:li><html:li>Item 2</html:li><html:li>Item 3</html:li></html:ul>
+				</layout:VerticalLayout>
+			</headerContent>
+			
+			
+			
+			<sections>
+			<ObjectPageSection title="Details">
+				<subSections>
+					<ObjectPageSubSection title=" ">
+						<m:Panel title="asdf">
+							<m:Label text="Some text"/>
+						</m:Panel>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+ 
+			<ObjectPageSection title="Kommentare">
+				<subSections>
+					<ObjectPageSubSection title="">
+						<m:Panel title="asdf">
+							<m:Label text="Some text"/>
+						</m:Panel>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+ 
+			<ObjectPageSection title="Unterlagen">
+				<subSections>
+					<ObjectPageSubSection title="">
+						<m:Panel title="asdf">
+							<m:Label text="Some text"/>
+						</m:Panel>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+			<ObjectPageSection title="Umlauf">
+				<subSections>
+ 
+					<ObjectPageSubSection title=" ">
+						<m:Panel title="asdf">
+							<m:Label text="Some text"/>
+						</m:Panel>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+		</sections>
+
+			
+		</ObjectPageLayout>
+		
+	</semantic:DetailPage>
+
+</mvc:View>

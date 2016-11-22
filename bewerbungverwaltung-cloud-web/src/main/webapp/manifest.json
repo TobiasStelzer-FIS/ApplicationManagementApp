@@ -1,0 +1,110 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "de.fis.bewerbungverwaltung",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"dataSources": {
+
+		},
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "de.fis.bewerbungverwaltung.view.SplitApp",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "de.fis.bewerbungverwaltung.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "de.fis.bewerbungverwaltung.view",
+				"controlId": "splitAppId",
+				"clearTarget": "false"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "BewerbungenMaster",
+				"target": "BewerbungenMaster",
+				"subroutes": [{
+					"pattern": "{Detail}",
+					"name": "BewerbungDetail",
+					"target": "BewerbungDetail"
+				}]
+			}, {
+				"pattern": "{all*}",
+				"name": "NotFound",
+				"target": "NotFound"
+			}],
+			"targets": {
+				"BewerbungenMaster": {
+					"viewName": "BewerbungenMaster",
+					"controlAggregation": "masterPages"
+				},
+				"BewerbungDetail": {
+					"viewName": "BewerbungDetail",
+					"controlAggregation": "detailPages"
+				},
+				"NotFound": {
+					"viewName": "NotFound",
+					"controlAggregation": "detailPages"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}
