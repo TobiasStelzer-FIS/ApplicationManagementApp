@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay480_Trial" maxContainerCols="3" editable="false" layout="ResponsiveGridLayout" title="Address"
+			labelSpanXL="4" labelSpanL="4" labelSpanM="4" emptySpanXL="0" emptySpanL="0" emptySpanM="0" columnsXL="3" columnsL="2" columnsM="2">
+			<f:content>
+				<core:Title text="Persönliche Daten"/>
+				<Label text="Nachname"/>
+				<Text text="{testModel>BewerberDetails/Nachname}"/>
+				<Label text="Vorname"/>
+				<Text text="{testModel>BewerberDetails/Vorname}"/>
+				<Label text="Strasse"/>
+				<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
+				<Label text="PLZ / Ort"/>
+				<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+				<core:Title text="Beworben als"/>
+				<Label text="Stelle"/>
+				<Text text="{StelleDetails/Bezeichnung}"/>
+				<Label text="Web"/>
+				<Text text="Test"/>
+				<Label text="Twitter"/>
+				<Text text="Test"/>
+				<core:Title text="Kontaktinformationen"/>
+				<Label text="Email"/>
+				<Text text="{testModel>BewerberDetails/Email}"/>
+				<Label text="Telefon"/>
+				<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
+				<Label text="Mobil"/>
+				<Text text="{testModel>BewerberDetails/Handynummer}"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

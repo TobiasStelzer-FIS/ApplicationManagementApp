@@ -15,9 +15,7 @@
 					objectSubtitle="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" isObjectIconAlwaysVisible="false"
 					isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
-			
 			<uxap:headerContent>
-				
 				<VBox width="200px">
 					<FlexBox width="100%" alignItems="Start">
 						<core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd">
@@ -44,7 +42,6 @@
 						<Label text="{testModel>BewerberDetails/Email}"/>
 					</FlexBox>
 				</VBox>
-				
 				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
 					<Label text="Stellen" design="Bold"/>
 					<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
@@ -53,7 +50,6 @@
 						</items>
 					</VBox>
 				</VBox>
-
 				<VBox width="auto">
 					<FlexBox width="auto">
 						<Label text="Eingetragen von: ">
@@ -72,43 +68,12 @@
 						<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
 					</FlexBox>
 				</VBox>
-				
 			</uxap:headerContent>
-			
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Details">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title=" ">
-							<VBox class="sapUiSmallMargin">
-								<f:SimpleForm id="SimpleFormDisplay480_Trial" maxContainerCols="3" editable="false" layout="ResponsiveGridLayout" title="Address"
-									labelSpanXL="4" labelSpanL="4" labelSpanM="4" emptySpanXL="0" emptySpanL="0" emptySpanM="0" columnsXL="3" columnsL="2" columnsM="2">
-									<f:content>
-										<core:Title text="Persönliche Daten"/>
-										<Label text="Nachname"/>
-										<Text text="{testModel>BewerberDetails/Nachname}"/>
-										<Label text="Vorname"/>
-										<Text text="{testModel>BewerberDetails/Vorname}"/>
-										<Label text="Strasse"/>
-										<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
-										<Label text="PLZ / Ort"/>
-										<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
-										<core:Title text="Beworben als"/>
-										<Label text="Stelle"/>
-										<Text text="{StelleDetails/Bezeichnung}"/>
-										<Label text="Web"/>
-										<Text text="Test"/>
-										<Label text="Twitter"/>
-										<Text text="Test"/>
-										<core:Title text="Kontaktinformationen"/>
-										<Label text="Email"/>
-										<Text text="{testModel>BewerberDetails/Email}"/>
-										<Label text="Telefon"/>
-										<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
-										<Label text="Mobil"/>
-										<Text text="{testModel>BewerberDetails/Handynummer}"/>
-									</f:content>
-								</f:SimpleForm>
-							</VBox>
+							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Details" type="XML"/>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
@@ -133,43 +98,7 @@
 				<uxap:ObjectPageSection title="Umlauf">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
-							<Panel>
-								<Table>
-									<headerToolbar>
-										<Toolbar>
-											<Title text="Abteilungen"/>
-										</Toolbar>
-									</headerToolbar>
-									<columns>
-										<Column>
-											<header>
-												<Label text="Abteilung"/>
-											</header>
-										</Column>
-										<Column>
-											<header>
-												<Label text="Gesendet"/>
-											</header>
-										</Column>
-										<Column>
-											<header>
-												<Label text="Gelesen"/>
-											</header>
-										</Column>
-										<Column>
-											<header>
-												<Label text="Status"/>
-											</header>
-										</Column>
-									</columns>
-									<ColumnListItem>
-										<ObjectIdentifier title="KEP4"/>
-										<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
-										<Label text="23.11.2016"/>
-										<Label text="Interessiert"/>
-									</ColumnListItem>
-								</Table>
-							</Panel>
+							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Umlauf" type="XML"/>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
