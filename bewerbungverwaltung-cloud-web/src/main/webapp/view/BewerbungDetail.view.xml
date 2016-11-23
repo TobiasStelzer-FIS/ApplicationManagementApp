@@ -1,7 +1,7 @@
 <mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungDetail" displayBlock="true" height="100%"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:custom="de.fis.bewerbungverwaltung.control"
 	xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m">
-	<semantic:DetailPage title="BewerbungDetail" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed">
+	<semantic:DetailPage title="Bewerbung" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed">
 		<semantic:pagingAction>
 			<m:PagingButton count="5" positionChange="onPositionChange"/>
 		</semantic:pagingAction>
@@ -14,38 +14,38 @@
 					isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></ObjectPageHeader>
 			</headerTitle>
 			<headerContent>
-					<html:table>
-						<html:tr>
-							<html:td><core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-							<html:td><m:Label text="{testModel>BewerberDetails/Telefonnummer}"/></html:td>
-						</html:tr>
-						<html:tr>
-							<html:td><core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-							<html:td><m:Label text="{testModel>BewerberDetails/Handynummer}"/></html:td>
-						</html:tr>
-						<html:tr>
-							<html:td><core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-							<html:td><m:Label text="{testModel>BewerberDetails/Email}"/></html:td>
-						</html:tr>
-					</html:table>
-					<m:VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
-						<m:Label text="Stellen" design="Bold"/>
-						<m:VBox items="{path: 'testModel>/Bewerbungs/0/BewerbungStelleDetails/results'}">
-							<m:items>
-								<m:Text text="• {testModel>StelleDetails/Bezeichnung}"/>
-							</m:items>
-						</m:VBox>
+				<html:table>
+					<html:tr>
+						<html:td><core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
+						<html:td><m:Label text="{testModel>BewerberDetails/Telefonnummer}"/></html:td>
+					</html:tr>
+					<html:tr>
+						<html:td><core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
+						<html:td><m:Label text="{testModel>BewerberDetails/Handynummer}"/></html:td>
+					</html:tr>
+					<html:tr>
+						<html:td><core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
+						<html:td><m:Label text="{testModel>BewerberDetails/Email}"/></html:td>
+					</html:tr>
+				</html:table>
+				<m:VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
+					<m:Label text="Stellen" design="Bold"/>
+					<m:VBox items="{path: 'testModel>/Bewerbungs/0/BewerbungStelleDetails/results'}">
+						<m:items>
+							<m:Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+						</m:items>
 					</m:VBox>
-					<html:table>
-						<html:tr>
-							<html:td><m:Label text="Eingetragen von: "/></html:td>
-							<html:td><m:Label text="{testModel>EingetragenVon}"/></html:td>
-						</html:tr>
-						<html:tr>
-							<html:td><m:Label text="Eingetragen am: "/></html:td>
-							<html:td><m:Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/></html:td>
-						</html:tr>
-					</html:table>
+				</m:VBox>
+				<html:table>
+					<html:tr>
+						<html:td><m:Label text="Eingetragen von: "/></html:td>
+						<html:td><m:Label text="{testModel>EingetragenVon}"/></html:td>
+					</html:tr>
+					<html:tr>
+						<html:td><m:Label text="Eingetragen am: "/></html:td>
+						<html:td><m:Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/></html:td>
+					</html:tr>
+				</html:table>
 			</headerContent>
 			<sections>
 				<ObjectPageSection title="Details">
@@ -77,9 +77,39 @@
 				</ObjectPageSection>
 				<ObjectPageSection title="Umlauf">
 					<subSections>
-						<ObjectPageSubSection title=" ">
-							<m:Panel title="asdf">
-								<m:Label text="Some text"/>
+						<ObjectPageSubSection title="">
+							<m:Panel>
+								<m:ObjectIdentifier title="Abteilungen" class="sapUiSmallMarginBottom"/>
+								<m:Table>
+									<m:columns>
+										<m:Column>
+											<m:header>
+												<m:Label text="Abteilung"/>
+											</m:header>
+										</m:Column>
+										<m:Column>
+											<m:header>
+												<m:Label text="Gesendet"/>
+											</m:header>
+										</m:Column>
+										<m:Column>
+											<m:header>
+												<m:Label text="Gelesen"/>
+											</m:header>
+										</m:Column>
+										<m:Column>
+											<m:header>
+												<m:Label text="Status"/>
+											</m:header>
+										</m:Column>
+									</m:columns>
+									<m:ColumnListItem>
+										<m:ObjectIdentifier title="KEP4"/>
+										<m:Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
+										<m:Label text="23.11.2016"/>
+										<m:Label text="Interessiert"/>
+									</m:ColumnListItem>
+								</m:Table>
 							</m:Panel>
 						</ObjectPageSubSection>
 					</subSections>

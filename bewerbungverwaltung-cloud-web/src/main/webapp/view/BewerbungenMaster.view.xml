@@ -2,7 +2,7 @@
 	displayBlock="true" height="100%" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns="sap.m">
 
-	<semantic:MasterPage title="BewerbungenMaster"
+	<semantic:MasterPage title="Bewerbungen"
 		showSubHeader="true">
 		<semantic:subHeader>
 			<Toolbar>
