@@ -1,120 +1,179 @@
 <mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungDetail" displayBlock="true" height="100%"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:custom="de.fis.bewerbungverwaltung.control"
-	xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m">
-	<semantic:DetailPage title="Bewerbung" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed">
+	xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m">
+	<semantic:DetailPage title="Bewerbung" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" height="100%"
+		enableScrolling="false">
 		<semantic:pagingAction>
-			<m:PagingButton count="5" positionChange="onPositionChange"/>
+			<PagingButton count="5" positionChange="onPositionChange"/>
 		</semantic:pagingAction>
-		<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" editHeaderButtonPress="handleEditBtnPress">
-			<headerTitle>
-				<ObjectPageHeader objectImageURI="./images/Pikachu.png"
+		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
+			editHeaderButtonPress="handleEditBtnPress">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="./images/Pikachu.png"
 					objectTitle="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}" objectImageShape="Circle"
 					objectImageAlt="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}"
 					objectSubtitle="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" isObjectIconAlwaysVisible="false"
-					isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></ObjectPageHeader>
-			</headerTitle>
-			<headerContent>
-				<html:table>
-					<html:tr>
-						<html:td><core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-						<html:td><m:Label text="{testModel>BewerberDetails/Telefonnummer}"/></html:td>
-					</html:tr>
-					<html:tr>
-						<html:td><core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-						<html:td><m:Label text="{testModel>BewerberDetails/Handynummer}"/></html:td>
-					</html:tr>
-					<html:tr>
-						<html:td><core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd"/></html:td>
-						<html:td><m:Label text="{testModel>BewerberDetails/Email}"/></html:td>
-					</html:tr>
-				</html:table>
-				<m:VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
-					<m:Label text="Stellen" design="Bold"/>
-					<m:VBox items="{path: 'testModel>/Bewerbungs/0/BewerbungStelleDetails/results'}">
-						<m:items>
-							<m:Text text="• {testModel>StelleDetails/Bezeichnung}"/>
-						</m:items>
-					</m:VBox>
-				</m:VBox>
-				<html:table>
-					<html:tr>
-						<html:td><m:Label text="Eingetragen von: "/></html:td>
-						<html:td><m:Label text="{testModel>EingetragenVon}"/></html:td>
-					</html:tr>
-					<html:tr>
-						<html:td><m:Label text="Eingetragen am: "/></html:td>
-						<html:td><m:Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/></html:td>
-					</html:tr>
-				</html:table>
-			</headerContent>
-			<sections>
-				<ObjectPageSection title="Details">
-					<subSections>
-						<ObjectPageSubSection title=" ">
-							<m:Panel title="asdf">
-								<m:Label text="Some text"/>
-							</m:Panel>
-						</ObjectPageSubSection>
-					</subSections>
-				</ObjectPageSection>
-				<ObjectPageSection title="Kommentare">
-					<subSections>
-						<ObjectPageSubSection title="">
-							<m:Panel title="asdf">
-								<m:Label text="Some text"/>
-							</m:Panel>
-						</ObjectPageSubSection>
-					</subSections>
-				</ObjectPageSection>
-				<ObjectPageSection title="Unterlagen">
-					<subSections>
-						<ObjectPageSubSection title="">
-							<m:Panel title="asdf">
-								<m:Label text="Some text"/>
-							</m:Panel>
-						</ObjectPageSubSection>
-					</subSections>
-				</ObjectPageSection>
-				<ObjectPageSection title="Umlauf">
-					<subSections>
-						<ObjectPageSubSection title="">
-							<m:Panel>
-								<m:ObjectIdentifier title="Abteilungen" class="sapUiSmallMarginBottom"/>
-								<m:Table>
-									<m:columns>
-										<m:Column>
-											<m:header>
-												<m:Label text="Abteilung"/>
-											</m:header>
-										</m:Column>
-										<m:Column>
-											<m:header>
-												<m:Label text="Gesendet"/>
-											</m:header>
-										</m:Column>
-										<m:Column>
-											<m:header>
-												<m:Label text="Gelesen"/>
-											</m:header>
-										</m:Column>
-										<m:Column>
-											<m:header>
-												<m:Label text="Status"/>
-											</m:header>
-										</m:Column>
-									</m:columns>
-									<m:ColumnListItem>
-										<m:ObjectIdentifier title="KEP4"/>
-										<m:Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
-										<m:Label text="23.11.2016"/>
-										<m:Label text="Interessiert"/>
-									</m:ColumnListItem>
-								</m:Table>
-							</m:Panel>
-						</ObjectPageSubSection>
-					</subSections>
-				</ObjectPageSection>
-			</sections>
-		</ObjectPageLayout>
+					isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			
+			<uxap:headerContent>
+				
+				<VBox width="200px">
+					<FlexBox width="100%" alignItems="Start">
+						<core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd">
+							<core:layoutData>
+								<FlexItemData minWidth="30px"/>
+							</core:layoutData>
+						</core:Icon>
+						<Label text="{testModel>BewerberDetails/Telefonnummer}"/>
+					</FlexBox>
+					<FlexBox width="auto" alignItems="Start">
+						<core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd">
+							<core:layoutData>
+								<FlexItemData minWidth="30px"/>
+							</core:layoutData>
+						</core:Icon>
+						<Label text="{testModel>BewerberDetails/Handynummer}"/>
+					</FlexBox>
+					<FlexBox width="auto" alignItems="Start">
+						<core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd">
+							<core:layoutData>
+								<FlexItemData minWidth="30px"/>
+							</core:layoutData>
+						</core:Icon>
+						<Label text="{testModel>BewerberDetails/Email}"/>
+					</FlexBox>
+				</VBox>
+				
+				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
+					<Label text="Stellen" design="Bold"/>
+					<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
+						<items>
+							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiTinyMarginBottom"/>
+						</items>
+					</VBox>
+				</VBox>
+
+				<VBox width="auto">
+					<FlexBox width="auto">
+						<Label text="Eingetragen von: ">
+							<layoutData>
+								<FlexItemData minWidth="115px"/>
+							</layoutData>
+						</Label>
+						<Label text="{testModel>EingetragenVon}"/>
+					</FlexBox>
+					<FlexBox width="auto" alignItems="End">
+						<Label text="Eingetragen am: ">
+							<layoutData>
+								<FlexItemData minWidth="115px"/>
+							</layoutData>
+						</Label>
+						<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
+					</FlexBox>
+				</VBox>
+				
+			</uxap:headerContent>
+			
+			<uxap:sections>
+				<uxap:ObjectPageSection title="Details">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title=" ">
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm id="SimpleFormDisplay480_Trial" maxContainerCols="3" editable="false" layout="ResponsiveGridLayout" title="Address"
+									labelSpanXL="4" labelSpanL="4" labelSpanM="4" emptySpanXL="0" emptySpanL="0" emptySpanM="0" columnsXL="3" columnsL="2" columnsM="2">
+									<f:content>
+										<core:Title text="Persönliche Daten"/>
+										<Label text="Nachname"/>
+										<Text text="{testModel>BewerberDetails/Nachname}"/>
+										<Label text="Vorname"/>
+										<Text text="{testModel>BewerberDetails/Vorname}"/>
+										<Label text="Strasse"/>
+										<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
+										<Label text="PLZ / Ort"/>
+										<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+										<core:Title text="Beworben als"/>
+										<Label text="Stelle"/>
+										<Text text="{StelleDetails/Bezeichnung}"/>
+										<Label text="Web"/>
+										<Text text="Test"/>
+										<Label text="Twitter"/>
+										<Text text="Test"/>
+										<core:Title text="Kontaktinformationen"/>
+										<Label text="Email"/>
+										<Text text="{testModel>BewerberDetails/Email}"/>
+										<Label text="Telefon"/>
+										<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
+										<Label text="Mobil"/>
+										<Text text="{testModel>BewerberDetails/Handynummer}"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Kommentare">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="">
+							<Panel title="asdf">
+								<Label text="Some text"/>
+							</Panel>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Unterlagen">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="">
+							<Panel title="asdf">
+								<Label text="Some text"/>
+							</Panel>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Umlauf">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="">
+							<Panel>
+								<Table>
+									<headerToolbar>
+										<Toolbar>
+											<Title text="Abteilungen"/>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column>
+											<header>
+												<Label text="Abteilung"/>
+											</header>
+										</Column>
+										<Column>
+											<header>
+												<Label text="Gesendet"/>
+											</header>
+										</Column>
+										<Column>
+											<header>
+												<Label text="Gelesen"/>
+											</header>
+										</Column>
+										<Column>
+											<header>
+												<Label text="Status"/>
+											</header>
+										</Column>
+									</columns>
+									<ColumnListItem>
+										<ObjectIdentifier title="KEP4"/>
+										<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
+										<Label text="23.11.2016"/>
+										<Label text="Interessiert"/>
+									</ColumnListItem>
+								</Table>
+							</Panel>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
 	</semantic:DetailPage>
 </mvc:View>
