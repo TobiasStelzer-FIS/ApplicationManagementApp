@@ -18,6 +18,9 @@ sap.ui.define(function() {
 		},
 		
 		formatDatum: function(date) {
+			if (date == null) {
+				return "";
+			}
 			var msPerDay = 1000 * 60 * 60 * 24;		// 1000 * 60 * 60 * 24 == MS_PER_DAY
 			var millis = date.substring(6, 19);
 			millis -= millis % msPerDay;
@@ -43,5 +46,5 @@ sap.ui.define(function() {
 			return Math.trunc((today - eingetragenAm) / msPerDay);	
 		}
 	
-	}
+	};
 });

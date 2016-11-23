@@ -13,6 +13,7 @@ sap.ui.define([
 					defaultValue: ""
 				}
 			},
+			defaultAggregation: "items",
 			aggregations: {
 				items: {
 					multiple: true,
@@ -34,23 +35,26 @@ sap.ui.define([
 			oRm.addClass("mySimpleList");
 			oRm.writeClasses();
 			oRm.write(">");
-
+			oRm.write("<ul>");
+			
 			if (oControl.getTitle !== "") {
 				var oTitle = new Text();
 				oTitle.setText(oControl.getTitle());
+				oRm.write("<b>");
 				oRm.renderControl(oTitle);
+				oRm.write("</b>");
 			}
-			
+
 			var aChildren = oControl.getItems();
-			oRm.write("<ul>");
-			for (var i = 0; i < aChildren.length; i++) { // loop over all child Controls, 
+
+			for (var i = 0; i < aChildren.length; i++) { // loop over all child Controls
 				oRm.write("<li>");
-//				oRm.writeStyles();
+				//				oRm.writeStyles();
 				oRm.renderControl(aChildren[i]);
 				oRm.write("</li>");
 			}
 			oRm.write("</ul>");
-			
+
 			oRm.write("</div>");
 		}
 	});

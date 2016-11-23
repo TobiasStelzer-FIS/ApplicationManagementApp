@@ -1,11 +1,14 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/UIComponent"
-], function(Controller, UIComponent, History) {
+	"sap/ui/core/UIComponent",
+	"de/fis/bewerbungverwaltung/model/formatter"
+], function(Controller, UIComponent, formatter) {
 	"use strict";
 
 	return Controller.extend("de.fis.bewerbungverwaltung.controller.BewerbungDetail", {
 
+		formatter: formatter,
+		
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
