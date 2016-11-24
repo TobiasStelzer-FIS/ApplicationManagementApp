@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
 	xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
-	<CustomListItem type="Active" press="onBewerbungPressed">
+	<CustomListItem type="Active" press="onListItemPressed">
 
 		<VBox width="auto" class="sapUiTinyMarginTop sapUiSmallMarginBeginEnd"
 			direction="Column" id="__vbox0">

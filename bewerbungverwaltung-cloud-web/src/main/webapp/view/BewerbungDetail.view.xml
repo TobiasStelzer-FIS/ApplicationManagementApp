@@ -81,7 +81,7 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
 							<Panel title="asdf">
-								<Label text="Some text"/>
+								<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
 							</Panel>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
@@ -90,7 +90,7 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
 							<Panel title="asdf">
-								<Label text="Some text"/>
+								<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
 							</Panel>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
