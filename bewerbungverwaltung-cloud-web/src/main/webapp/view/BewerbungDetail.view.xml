@@ -9,7 +9,7 @@
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectImageURI="./images/Pikachu.png"
+				<uxap:ObjectPageHeader objectImageURI="{testModel>BewerberDetails/Fotopfad}"
 					objectTitle="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}" objectImageShape="Circle"
 					objectImageAlt="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}"
 					objectSubtitle="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" isObjectIconAlwaysVisible="false"

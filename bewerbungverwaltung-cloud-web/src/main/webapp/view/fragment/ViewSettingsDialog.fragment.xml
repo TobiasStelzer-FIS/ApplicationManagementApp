@@ -2,16 +2,15 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<ViewSettingsDialog
-		confirm="handleConfirm">
+		confirm="onConfirmViewSettingsDialog">
 		<sortItems>
-			<ViewSettingsItem text="Datum" key="1" selected="true" />
-			<ViewSettingsItem text="Field 2" key="2" />
-			<ViewSettingsItem text="Field 3" key="3" />
+			<ViewSettingsItem text="Datum" key="EingetragenAm" selected="true" />
+			<ViewSettingsItem text="Vorname" key="BewerberDetails/Vorname" />
+			<ViewSettingsItem text="Nachname" key="BewerberDetails/Nachname" />
+			<ViewSettingsItem text="Status" key="StatusDetails/Bezeichnung" />
 		</sortItems>
 		<groupItems>
-			<ViewSettingsItem text="Field 1" key="1" selected="true" />
-			<ViewSettingsItem text="Field 2" key="2" />
-			<ViewSettingsItem text="Field 3" key="3" />
+			<ViewSettingsItem text="Status" key="StatusDetails/StatusId" />
 		</groupItems>
 		<filterItems>
 			<ViewSettingsFilterItem text="Status" key="Status" items="{path: 'testModel>/Statuss'}">
@@ -19,18 +18,9 @@
 					<ViewSettingsItem text="{testModel>Bezeichnung}" key="{testModel>StatusId}" />
 				</items>
 			</ViewSettingsFilterItem>
-			<ViewSettingsFilterItem text="Field2" key="2">
+			<ViewSettingsFilterItem text="Stelle" key="Stelle" items="{path: 'testModel>/Stelles'}">
 				<items>
-					<ViewSettingsItem text="Value A" key="2a" />
-					<ViewSettingsItem text="Value B" key="2b" />
-					<ViewSettingsItem text="Value C" key="2c" />
-				</items>
-			</ViewSettingsFilterItem>
-			<ViewSettingsFilterItem text="Field3" key="3">
-				<items>
-					<ViewSettingsItem text="Value A" key="3a" />
-					<ViewSettingsItem text="Value B" key="3b" />
-					<ViewSettingsItem text="Value C" key="3c" />
+					<ViewSettingsItem text="{testModel>Bezeichnung}" key="{testModel>StelleId}"/>
 				</items>
 			</ViewSettingsFilterItem>
 		</filterItems>

@@ -67,12 +67,8 @@ sap.ui.define([
 		},
 		onSearch: function(oEvent) {
 			var aFilter = [];
-			var searchFilter;
+			this._oListFilterState.aSearch = [];
 			var sQuery = oEvent.getParameter("query");
-			var oList = this.getView().byId("listBewerbungen");
-			jQuery.sap.log.error("list: " + oList);
-			var oBinding = oList.getBinding("items");
-			jQuery.sap.log.error("Test " + sQuery);
 
 			if (sQuery) {
 				aFilter.push(
@@ -80,10 +76,10 @@ sap.ui.define([
 					new Filter("BewerberDetails/Nachname", FilterOperator.Contains, sQuery)
 				);
 
-				searchFilter = new Filter(aFilter, false); // Filter by 'OR'
+				this._oListFilterState.aSearch.push(new Filter(aFilter, false)); // Filter by 'OR'
 			}
 
-			oBinding.filter(searchFilter);
+			this._applyFilterSearch();
 		},
 		onFilterPressed: function(oEvent) {
 			jQuery.sap.log.error("onFilterPressed");
@@ -94,27 +90,59 @@ sap.ui.define([
 		onConfirmViewSettingsDialog: function(oEvent) {
 			var aFilterItems = oEvent.getParameters().filterItems,
 				aFilters = [],
-				aCaptions = [];
+				aCaptions = [],
+				aFilterStellen = [];
 
 			// update filter state:
 			// combine the filter array and the filter string
 			aFilterItems.forEach(function(oItem) {
-				switch (oItem.getKey()) {
-					case "Filter1":
-						aFilters.push(new Filter("Price", FilterOperator.LE, 100));
+				switch (oItem.oParent.mProperties.key) { // Der key des ViewSettingsFilterItem
+					case "Status":
+						aFilters.push(new Filter("StatusDetails/StatusId", FilterOperator.EQ, oItem.getKey()));
 						break;
-					case "Filter2":
-						aFilters.push(new Filter("Price", FilterOperator.GT, 100));
-						break;
-					default:
+					case "Stelle":
+						aFilterStellen.push(oItem.getKey());
 						break;
 				}
 				aCaptions.push(oItem.getText());
 			});
 
+			if (aFilterStellen.length > 0) {
+				aFilters.push(new sap.ui.model.Filter({
+					path: "BewerbungStelleDetails/results",
+					test: this._fnFilterStellen.bind(this)
+				}));
+			}
+			
+			this.getModel("masterView").setProperty("/filterStellen", aFilterStellen);
 			this._oListFilterState.aFilter = aFilters;
 			this._updateFilterBar(aCaptions.join(", "));
 			this._applyFilterSearch();
+		},
+		_fnFilterStellen: function(oPath) {
+			jQuery.sap.log.error("---- _fnFilterStellen ----");
+			var aFilterStellen = this.getModel("masterView").getProperty("/filterStellen");
+			var i = 0;
+			/*
+			jQuery.sap.log.error(" Stellen:");
+			for(i = 0; i < oPath.length; i++) {
+				jQuery.sap.log.error("   " + oPath[i].Stelle);
+			}
+			jQuery.sap.log.error(" filterStellen:");
+			for(i = 0; i < aFilterStellen.length; i++) {
+				jQuery.sap.log.error("   " + aFilterStellen[i]);
+			}
+			*/
+			for (i = 0; i < oPath.length; i++) { // Enthält aFilterStellen eine der Stellen des Items ?
+				var j = 0;
+				for (j = 0; j < aFilterStellen.length; j++) {
+					jQuery.sap.log.error("  " + aFilterStellen[j] + " == " + oPath[i].Stelle);
+					if (aFilterStellen[j] == oPath[i].Stelle) {
+						return true;
+					}
+				}
+			}
+			return false;
 		},
 		_updateListItemCount: function(iTotalItems) {
 			var sTitle;
@@ -131,6 +159,7 @@ sap.ui.define([
 				delay: 0,
 				title: this.getResourceBundle().getText("masterTitleCount", [0]),
 				noDataText: this.getResourceBundle().getText("masterListNoDataText"),
+				filterStellen: [],
 				sortBy: "EingetragenAm",
 				groupBy: "None"
 			});
@@ -144,6 +173,31 @@ sap.ui.define([
 			var oViewModel = this.getModel("masterView");
 			oViewModel.setProperty("/isFilterBarVisible", (this._oListFilterState.aFilter.length > 0));
 			oViewModel.setProperty("/filterBarLabel", this.getResourceBundle().getText("masterFilterBarText", [sFilterBarText]));
+		},
+		/**
+		 * Internal helper method to apply both filter and search state together on the list binding
+		 * @private
+		 */
+		_applyFilterSearch: function() {
+			var aFilters = this._oListFilterState.aSearch.concat(this._oListFilterState.aFilter),
+				oViewModel = this.getModel("masterView");
+			jQuery.sap.log.error("Filters: " + JSON.stringify(aFilters));
+			this._oList.getBinding("items").filter(aFilters, "Application");
+			// changes the noDataText of the list in case there are no filter results
+			if (aFilters.length !== 0) {
+				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("masterListNoDataWithFilterOrSearchText"));
+			} else if (this._oListFilterState.aSearch.length > 0) {
+				// only reset the no data text to default when no new search was triggered
+				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("masterListNoDataText"));
+			}
+		},
+		/**
+		 * Internal helper method to apply both group and sort state together on the list binding
+		 * @param {sap.ui.model.Sorter[]} aSorters an array of sorters
+		 * @private
+		 */
+		_applyGroupSort: function(aSorters) {
+			this._oList.getBinding("items").sort(aSorters);
 		}
 
 	});
