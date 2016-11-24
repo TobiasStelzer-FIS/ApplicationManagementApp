@@ -8,21 +8,27 @@
 		</semantic:subHeader>
 		<semantic:content>
 			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
-			<List id="listBewerbungen" class="listBewerbungen" items="{path: 'testModel>/Bewerbungs', sorter: {path: '{masterView>/sortBy}'} }"
+			<List id="listBewerbungen" class="listBewerbungen"
+				items="{path: 'testModel>/Bewerbungs', sorter: {path: 'testModel>EingetragenAm'}, groupHeaderFactory: '.createGroupHeader'}"
 				busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}" updateFinished="onUpdateFinished">
 				<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.BewerbungListItem" type="XML"/>
 			</List>
 		</semantic:content>
 		<semantic:sort>
-			<semantic:SortSelect change="onSemanticSelectChange" items="{ path: '/ProductCollectionStats/Filters', sorter: { path: 'Name' } }">
-				<core:Item key="{type}" text="{type}"/>
+			<semantic:SortSelect id="sort" selectedKey="{masterView>/sortBy}" change="onSort">
+				<core:Item id="masterSort1" key="BewerberDetails/Vorname" text="{i18n>masterSort1}"/>
+				<core:Item id="masterSort2" key="BewerberDetails/Nachname" text="{i18n>masterSort2}"/>
+				<core:Item id="masterSort3" key="EingetragenAm" text="{i18n>masterSort3}"/>
 			</semantic:SortSelect>
 		</semantic:sort>
 		<semantic:filter>
 			<semantic:FilterAction press="onFilterPressed"/>
 		</semantic:filter>
 		<semantic:group>
-			<semantic:GroupAction press="onSemanticButtonPress"/>
+			<semantic:GroupSelect id="group" selectedKey="{masterView>/groupBy}" change="onGroup">
+				<core:Item id="masterGroupNone" key="None" text="{i18n>masterGroupNone}"/>
+				<core:Item id="masterGroup1" key="StatusDetails/Bezeichnung" text="{i18n>masterGroup1}"/>
+			</semantic:GroupSelect>
 		</semantic:group>
 	</semantic:MasterPage>
 </mvc:View>

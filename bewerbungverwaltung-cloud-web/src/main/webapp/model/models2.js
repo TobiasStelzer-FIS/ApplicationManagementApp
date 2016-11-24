@@ -985,7 +985,7 @@ sap.ui.define([
 					},
 					"Bewerber": 5,
 					"BewerbungId": 5,
-					"EingetragenAm": "/Date(1480460400000)/",
+					"EingetragenAm": "/Date(1423436400000)/",
 					"EingetragenVon": "Katrin Mustermann",
 					"Status": 2,
 					"BewerberDetails": {

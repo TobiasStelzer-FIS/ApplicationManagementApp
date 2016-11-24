@@ -4,8 +4,12 @@ sap.ui.define([
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	"sap/ui/model/json/JSONModel",
+	"sap/m/GroupHeaderListItem",
+	"de/fis/bewerbungverwaltung/model/GroupSortState",
+	"de/fis/bewerbungverwaltung/model/grouper",
+	"de/fis/bewerbungverwaltung/model/filter",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(BaseController, UIComponent, Filter, FilterOperator, JSONModel, formatter) {
+], function(BaseController, UIComponent, Filter, FilterOperator, JSONModel, GroupHeaderListItem, GroupSortState, grouper, filter, formatter) {
 	"use strict";
 
 	return BaseController.extend("de.fis.bewerbungverwaltung.controller.BewerbungenMaster", {
@@ -13,15 +17,17 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function() {
+			var oViewModel = this._createViewModel();
+			this.getView().setModel(oViewModel, "masterView");
+
+			this._oGroupSortState = new GroupSortState(oViewModel, grouper.groupStatus);
+
 			this._oList = this.getView().byId("listBewerbungen");
 			// keeps the filter and search state
 			this._oListFilterState = {
 				aFilter: [],
 				aSearch: []
 			};
-
-			var oViewModel = this._createViewModel();
-			this.getView().setModel(oViewModel, "masterView");
 		},
 		onExit: function() {
 
@@ -59,11 +65,27 @@ sap.ui.define([
 				Bewerbung: bindingContext.substr(12)
 			});
 		},
-		onSemanticSelectChange: function() {
-			sap.m.MessageToast.show("onSemanticSelectChange");
+		/**
+		 * Event handler for the sorter selection.
+		 * @param {sap.ui.base.Event} oEvent the select event
+		 * @public
+		 */
+		onSort: function(oEvent) {
+			var sKey = oEvent.getSource().getSelectedItem().getKey(),
+				aSorters = this._oGroupSortState.sort(sKey);
+
+			this._applyGroupSort(aSorters);
 		},
-		onSemanticButtonPress: function() {
-			sap.m.MessageToast.show("onSemanticButtonPress");
+		/**
+		 * Event handler for the grouper selection.
+		 * @param {sap.ui.base.Event} oEvent the search field event
+		 * @public
+		 */
+		onGroup: function(oEvent) {
+			var sKey = oEvent.getSource().getSelectedItem().getKey(),
+				aSorters = this._oGroupSortState.group(sKey);
+
+			this._applyGroupSort(aSorters);
 		},
 		onSearch: function(oEvent) {
 			var aFilter = [];
@@ -110,39 +132,29 @@ sap.ui.define([
 			if (aFilterStellen.length > 0) {
 				aFilters.push(new sap.ui.model.Filter({
 					path: "BewerbungStelleDetails/results",
-					test: this._fnFilterStellen.bind(this)
+					test: filter.fnFilterStellen.bind(this)
 				}));
 			}
-			
+
 			this.getModel("masterView").setProperty("/filterStellen", aFilterStellen);
 			this._oListFilterState.aFilter = aFilters;
 			this._updateFilterBar(aCaptions.join(", "));
 			this._applyFilterSearch();
 		},
-		_fnFilterStellen: function(oPath) {
-			jQuery.sap.log.error("---- _fnFilterStellen ----");
-			var aFilterStellen = this.getModel("masterView").getProperty("/filterStellen");
-			var i = 0;
-			/*
-			jQuery.sap.log.error(" Stellen:");
-			for(i = 0; i < oPath.length; i++) {
-				jQuery.sap.log.error("   " + oPath[i].Stelle);
-			}
-			jQuery.sap.log.error(" filterStellen:");
-			for(i = 0; i < aFilterStellen.length; i++) {
-				jQuery.sap.log.error("   " + aFilterStellen[i]);
-			}
-			*/
-			for (i = 0; i < oPath.length; i++) { // Enthält aFilterStellen eine der Stellen des Items ?
-				var j = 0;
-				for (j = 0; j < aFilterStellen.length; j++) {
-					jQuery.sap.log.error("  " + aFilterStellen[j] + " == " + oPath[i].Stelle);
-					if (aFilterStellen[j] == oPath[i].Stelle) {
-						return true;
-					}
-				}
-			}
-			return false;
+		/**
+		 * Used to create GroupHeaders with non-capitalized caption.
+		 * These headers are inserted into the master list to
+		 * group the master list's items.
+		 * @param {Object} oGroup group whose text is to be displayed
+		 * @public
+		 * @returns {sap.m.GroupHeaderListItem} group header with non-capitalized caption.
+		 */
+		createGroupHeader: function(oGroup) {
+			jQuery.sap.log.error("CreateGroupHeader");
+			return new GroupHeaderListItem({
+				title: oGroup.text,
+				upperCase: false
+			});
 		},
 		_updateListItemCount: function(iTotalItems) {
 			var sTitle;
@@ -197,6 +209,7 @@ sap.ui.define([
 		 * @private
 		 */
 		_applyGroupSort: function(aSorters) {
+			jQuery.sap.log.error("Sorter: " + JSON.stringify(aSorters));
 			this._oList.getBinding("items").sort(aSorters);
 		}
 

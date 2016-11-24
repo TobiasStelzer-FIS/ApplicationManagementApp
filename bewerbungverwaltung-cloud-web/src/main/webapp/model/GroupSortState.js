@@ -1,7 +1,7 @@
 sap.ui.define([
-		"sap/ui/base/Object",
-		"sap/ui/model/Sorter"
-	], function (BaseObject, Sorter) {
+	"sap/ui/base/Object",
+	"sap/ui/model/Sorter"
+], function(BaseObject, Sorter) {
 	"use strict";
 
 	return BaseObject.extend("de.fis.bewerbungverwaltung.model.GroupSortState", {
@@ -17,7 +17,7 @@ sap.ui.define([
 		 * @param {function} fnGroupFunction the grouping function to be applied
 		 * @alias com.sap.espm.model.GroupSortState
 		 */
-		constructor: function (oViewModel, fnGroupFunction) {
+		constructor: function(oViewModel, fnGroupFunction) {
 			this._oViewModel = oViewModel;
 			this._fnGroupFunction = fnGroupFunction;
 		},
@@ -28,7 +28,7 @@ sap.ui.define([
 		 * @param {string} sKey - the key of the field used for grouping
 		 * @returns {sap.ui.model.Sorter[]} an array of sorters
 		 */
-		sort: function (sKey) {
+		sort: function(sKey) {
 			var sGroupedBy = this._oViewModel.getProperty("/groupBy");
 
 			if (sGroupedBy !== "None") {
@@ -41,26 +41,27 @@ sap.ui.define([
 		},
 
 		/**
-		 * Groups by Price, or resets the grouping for the key "None"
+		 * Groups by Status, or resets the grouping for the key "None"
 		 *
 		 * @param {string} sKey - the key of the field used for grouping
 		 * @returns {sap.ui.model.Sorter[]} an array of sorters
 		 */
-		group: function (sKey) {
+		group: function(sKey) {
 			var aSorters = [];
 
-			if (sKey === "Price") {
-				// Grouping means sorting so we set the select to the same Entity used for grouping
-				this._oViewModel.setProperty("/sortBy", "Price");
-
-				aSorters.push(
-					new Sorter("Price", false,
-						this._fnGroupFunction.bind(this))
-				);
-			} else if (sKey === "None") {
+			if (sKey === "None") {
 				// select the default sorting again
-				this._oViewModel.setProperty("/sortBy", "Name");
+				this._oViewModel.setProperty("/sortBy", "EingetragenAm");
+				return [new Sorter("EingetragenAm", false)];
 			}
+
+			// Grouping means sorting so we set the select to the same Entity used for grouping
+			this._oViewModel.setProperty("/sortBy", sKey);
+
+			aSorters.push(
+				new Sorter(sKey, false,
+					this._fnGroupFunction.bind(this))
+			);
 
 			return aSorters;
 		}
