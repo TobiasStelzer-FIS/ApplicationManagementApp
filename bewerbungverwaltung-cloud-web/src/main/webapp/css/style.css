@@ -14,6 +14,8 @@
 .listKommentare
 .sapMListUl>li {
 	background: inherit;
+	border-bottom: 0px;
+	height: auto;
 }
 
 .listBewerbungen
