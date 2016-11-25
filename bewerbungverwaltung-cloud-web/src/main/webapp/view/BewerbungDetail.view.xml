@@ -3,9 +3,11 @@
 	xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m">
 	<semantic:DetailPage title="{i18n>detailTitle}" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" height="100%"
 		enableScrolling="false">
+<!--
 		<semantic:pagingAction>
 			<PagingButton count="10" positionChange="onPositionChange"/>
 		</semantic:pagingAction>
+-->
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
 			<uxap:headerTitle>
@@ -80,18 +82,14 @@
 				<uxap:ObjectPageSection title="Kommentare">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
-							<Panel title="asdf">
-								<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
-							</Panel>
+							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Unterlagen">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
-							<Panel title="asdf">
-								<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
-							</Panel>
+							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>

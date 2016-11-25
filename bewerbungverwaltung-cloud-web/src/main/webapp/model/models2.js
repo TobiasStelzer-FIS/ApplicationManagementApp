@@ -321,49 +321,668 @@ sap.ui.define([
 
 				Bewerbungs: [{
 					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
 						"type": "de.fis.bewerbungtest.model.Bewerbung"
 					},
-					"Bewerber": 6,
-					"BewerbungId": 6,
-					"EingetragenAm": "/Date(1477605600000)/",
-					"EingetragenVon": "Emma Schneider",
-					"Status": 1,
+					"Bewerber": 5,
+					"BewerbungId": 5,
+					"EingetragenAm": "/Date(1474322400000)/",
+					"EingetragenVon": "Elisabeth König",
+					"Status": 2,
 					"BewerberDetails": {
 						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
 							"type": "de.fis.bewerbungtest.model.Bewerber"
 						},
-						"Anrede": "Frau",
-						"BewerberId": 6,
-						"Email": "Katrin.Koch@hotmail.de",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(400629600000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+39 164 709072164",
-						"Nachname": "Koch",
-						"Ort": "Roth a. d. Saale",
-						"Postleitzahl": "95315",
-						"StrasseHnr": "Fontanestraße 17",
-						"Telefonnummer": "0920 963832",
-						"Vorname": "Katrin",
+						"Anrede": "Herr",
+						"BewerberId": 5,
+						"Email": "Julian.Schneider@gmail.net",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(-127702800000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+40 123 458804336",
+						"Nachname": "Schneider",
+						"Ort": "Grafenrheinfeld",
+						"Postleitzahl": "95149",
+						"StrasseHnr": "Birkenweg 113",
+						"Telefonnummer": "0943 5774575",
+						"Vorname": "Julian",
 						"BewerbungDetails": {
 							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)/BewerbungDetails"
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)/BewerbungDetails"
 							}
 						}
 					},
 					"DokumentDetails": {
 						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/DokumentDetails"
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/DokumentDetails"
 						}
 					},
 					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/KommentarDetails"
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 5,
+							"KommentarId": 12,
+							"Name": "Lia Werner",
+							"Text": "Julian.Schneider@gmail.net --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1470292657000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 5,
+							"KommentarId": 14,
+							"Name": "Finn Zimmermann",
+							"Text": "Julian.Schneider@gmail.net --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1473049416000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 5,
+							"KommentarId": 13,
+							"Name": "Luisa Zimmermann",
+							"Text": "Julian.Schneider@gmail.net --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1469107206000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingeladen",
+						"StatusId": 2,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
+							}
 						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 5,
+							"BewerbungStelleId": 8,
+							"Stelle": 19,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Presales Consultant für SAP-Lösungserweiterungen (m/w)",
+								"StelleId": 19,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 5,
+							"BewerbungStelleId": 6,
+							"Stelle": 16,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Web-Entwickler (m/w)",
+								"StelleId": 16,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 5,
+							"BewerbungStelleId": 7,
+							"Stelle": 17,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "SAP-Software-Entwickler/ABAP (m/w)",
+								"StelleId": 17,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 12,
+					"BewerbungId": 12,
+					"EingetragenAm": "/Date(1451689200000)/",
+					"EingetragenVon": "Luca Jung",
+					"Status": 4,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 12,
+						"Email": "Mila.Walter@web.net",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(679528800000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+49 153 282274857",
+						"Nachname": "Walter",
+						"Ort": "Stuttgart",
+						"Postleitzahl": "91721",
+						"StrasseHnr": "Eglofstraße 119",
+						"Telefonnummer": "0884 2665368",
+						"Vorname": "Mila",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": []
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Abgelehnt",
+						"StatusId": 4,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 12,
+							"BewerbungStelleId": 17,
+							"Stelle": 7,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
+								"StelleId": 7,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 12,
+							"BewerbungStelleId": 18,
+							"Stelle": 14,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant oder Senior Consultant SAP LES/WM (m/w)",
+								"StelleId": 14,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 14,
+					"BewerbungId": 14,
+					"EingetragenAm": "/Date(1473458400000)/",
+					"EingetragenVon": "Noah Schneider",
+					"Status": 3,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 14,
+						"Email": "Sophia.Zimmermann@gmail.net",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(1000677600000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+48 191 541641590",
+						"Nachname": "Zimmermann",
+						"Ort": "Hergolshausen",
+						"Postleitzahl": "84361",
+						"StrasseHnr": "Eglofstraße 96",
+						"Telefonnummer": "0798 8911670",
+						"Vorname": "Sophia",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": []
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingestellt",
+						"StatusId": 3,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 14,
+							"BewerbungStelleId": 19,
+							"Stelle": 5,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Inhouse Consultant SAP MM, SD oder PP (m/w)",
+								"StelleId": 5,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 14,
+							"BewerbungStelleId": 21,
+							"Stelle": 10,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
+								"StelleId": 10,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 14,
+							"BewerbungStelleId": 20,
+							"Stelle": 8,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant für Windows-basierende Anwendungssysteme (m/w)",
+								"StelleId": 8,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 1,
+					"BewerbungId": 1,
+					"EingetragenAm": "/Date(1453417200000)/",
+					"EingetragenVon": "Noah Mustermann",
+					"Status": 3,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Herr",
+						"BewerberId": 1,
+						"Email": "Anton.Zimmermann@gmx.de",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(502671600000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+49 188 667277902",
+						"Nachname": "Zimmermann",
+						"Ort": "Garstadt",
+						"Postleitzahl": "91249",
+						"StrasseHnr": "Goldnesselweg 40",
+						"Telefonnummer": "0809 4851255",
+						"Vorname": "Anton",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 1,
+							"KommentarId": 3,
+							"Name": "Moritz Lehrmann",
+							"Text": "Anton.Zimmermann@gmx.de --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1466856434000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 1,
+							"KommentarId": 2,
+							"Name": "Elisabeth Lange",
+							"Text": "Anton.Zimmermann@gmx.de --- Klingt ganz gut",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1467901750000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 1,
+							"KommentarId": 1,
+							"Name": "Amelie Schneider",
+							"Text": "Anton.Zimmermann@gmx.de --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1462199977000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingestellt",
+						"StatusId": 3,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": []
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 8,
+					"BewerbungId": 8,
+					"EingetragenAm": "/Date(1453330800000)/",
+					"EingetragenVon": "Amelie Koch",
+					"Status": 1,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 8,
+						"Email": "Emily.Schmidt@gmail.net",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(730335600000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+43 181 15728644",
+						"Nachname": "Schmidt",
+						"Ort": "Schnackenwerth",
+						"Postleitzahl": "97634",
+						"StrasseHnr": "Darmstädter Straße 83",
+						"Telefonnummer": "0907 1619789",
+						"Vorname": "Emily",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 8,
+							"KommentarId": 21,
+							"Name": "Mila Jung",
+							"Text": "Emily.Schmidt@gmail.net --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1464074901000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(23)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(23)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 8,
+							"KommentarId": 23,
+							"Name": "Lara Hermann",
+							"Text": "Emily.Schmidt@gmail.net --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1457767959000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(23)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(22)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(22)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 8,
+							"KommentarId": 22,
+							"Name": "Emilia Zimmermann",
+							"Text": "Emily.Schmidt@gmail.net --- Klingt ganz gut",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1463113838000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(22)/BewerbungDetails"
+								}
+							}
+						}]
 					},
 					"StatusDetails": {
 						"__metadata": {
@@ -386,9 +1005,9 @@ sap.ui.define([
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
-							"Bewerbung": 6,
+							"Bewerbung": 8,
 							"BewerbungStelleId": 12,
-							"Stelle": 11,
+							"Stelle": 10,
 							"BewerbungDetails": {
 								"__deferred": {
 									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)/BewerbungDetails"
@@ -396,15 +1015,43 @@ sap.ui.define([
 							},
 							"StelleDetails": {
 								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Consultant SAP MM, SD oder PP für Grafenrheinfeld oder Leonberg (m/w)",
-								"StelleId": 11,
+								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
+								"StelleId": 10,
 								"BewerbungStelleDetails": {
 									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)/BewerbungStelleDetails"
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 8,
+							"BewerbungStelleId": 14,
+							"Stelle": 15,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant für SAP HCM (m/w)",
+								"StelleId": 15,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)/BewerbungStelleDetails"
 									}
 								}
 							}
@@ -414,7 +1061,7 @@ sap.ui.define([
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(13)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
-							"Bewerbung": 6,
+							"Bewerbung": 8,
 							"BewerbungStelleId": 13,
 							"Stelle": 13,
 							"BewerbungDetails": {
@@ -436,13 +1083,718 @@ sap.ui.define([
 									}
 								}
 							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 3,
+					"BewerbungId": 3,
+					"EingetragenAm": "/Date(1468447200000)/",
+					"EingetragenVon": "Stefanie Schröder",
+					"Status": 2,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Herr",
+						"BewerberId": 3,
+						"Email": "Maximilian.Schneider@aol.com",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(529369200000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+40 135 693634814",
+						"Nachname": "Schneider",
+						"Ort": "Roth a. d. Saale",
+						"Postleitzahl": "86885",
+						"StrasseHnr": "Feigstraße 44",
+						"Telefonnummer": "0734 9489825",
+						"Vorname": "Maximilian",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 3,
+							"KommentarId": 7,
+							"Name": "Finn Lehrmann",
+							"Text": "Maximilian.Schneider@aol.com --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1452781864000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 3,
+							"KommentarId": 8,
+							"Name": "Noah Koch",
+							"Text": "Maximilian.Schneider@aol.com --- Toller Bewerber",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1469085687000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingeladen",
+						"StatusId": 2,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 3,
+							"BewerbungStelleId": 3,
+							"Stelle": 13,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Junior Consultant SAP FI (m/w)",
+								"StelleId": 13,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 3,
+							"BewerbungStelleId": 2,
+							"Stelle": 2,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "SAP Vertriebsbeauftragter Lager-Logistik (m/w)",
+								"StelleId": 2,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 3,
+							"BewerbungStelleId": 4,
+							"Stelle": 18,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Solution Architect/Presales Consultant für Grafenrheinfeld oder Leonberg (m/w)",
+								"StelleId": 18,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 11,
+					"BewerbungId": 11,
+					"EingetragenAm": "/Date(1473890400000)/",
+					"EingetragenVon": "Lena König",
+					"Status": 2,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 11,
+						"Email": "Emma.Lange@aol.com",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(951087600000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+49 190 569531042",
+						"Nachname": "Lange",
+						"Ort": "Stuttgart",
+						"Postleitzahl": "95926",
+						"StrasseHnr": "Bayerstraße 50",
+						"Telefonnummer": "0739 2515629",
+						"Vorname": "Emma",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(28)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(28)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 11,
+							"KommentarId": 28,
+							"Name": "Lena Fischer",
+							"Text": "Emma.Lange@aol.com --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1473955621000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(28)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingeladen",
+						"StatusId": 2,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 11,
+							"BewerbungStelleId": 16,
+							"Stelle": 8,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant für Windows-basierende Anwendungssysteme (m/w)",
+								"StelleId": 8,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 6,
+					"BewerbungId": 6,
+					"EingetragenAm": "/Date(1477954800000)/",
+					"EingetragenVon": "Tom König",
+					"Status": 4,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 6,
+						"Email": "Julia.König@aol.de",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(680824800000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+43 137 99263623",
+						"Nachname": "König",
+						"Ort": "Hamburg",
+						"Postleitzahl": "89189",
+						"StrasseHnr": "Aachener Straße 115",
+						"Telefonnummer": "0758 5756440",
+						"Vorname": "Julia",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 6,
+							"KommentarId": 16,
+							"Name": "Julian Schröder",
+							"Text": "Julia.König@aol.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1468949927000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 6,
+							"KommentarId": 15,
+							"Name": "Hannah Mustermann",
+							"Text": "Julia.König@aol.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1456216043000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 6,
+							"KommentarId": 17,
+							"Name": "Noah Lange",
+							"Text": "Julia.König@aol.de --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1468238665000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Abgelehnt",
+						"StatusId": 4,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 6,
+							"BewerbungStelleId": 9,
+							"Stelle": 14,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Consultant oder Senior Consultant SAP LES/WM (m/w)",
+								"StelleId": 14,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 2,
+					"BewerbungId": 2,
+					"EingetragenAm": "/Date(1476136800000)/",
+					"EingetragenVon": "Luca Zimmermann",
+					"Status": 3,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Herr",
+						"BewerberId": 2,
+						"Email": "Moritz.Mueller@web.de",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(447807600000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+31 123 691873254",
+						"Nachname": "Mueller",
+						"Ort": "Köln",
+						"Postleitzahl": "86390",
+						"StrasseHnr": "Adenauerring 10",
+						"Telefonnummer": "0735 959257",
+						"Vorname": "Moritz",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 2,
+							"KommentarId": 4,
+							"Name": "Finn Schmidt",
+							"Text": "Moritz.Mueller@web.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1460544329000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 2,
+							"KommentarId": 5,
+							"Name": "Sophie Schneider",
+							"Text": "Moritz.Mueller@web.de --- Toller Bewerber",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1468050507000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 2,
+							"KommentarId": 6,
+							"Name": "Theo Lange",
+							"Text": "Moritz.Mueller@web.de --- Toller Bewerber",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1476785873000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingestellt",
+						"StatusId": 3,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 2,
+							"BewerbungStelleId": 1,
+							"Stelle": 19,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Presales Consultant für SAP-Lösungserweiterungen (m/w)",
+								"StelleId": 19,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)/BewerbungStelleDetails"
+									}
+								}
+							}
+						}]
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 7,
+					"BewerbungId": 7,
+					"EingetragenAm": "/Date(1472940000000)/",
+					"EingetragenVon": "Elisabeth Schneider",
+					"Status": 2,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Herr",
+						"BewerberId": 7,
+						"Email": "Finn.Lange@gmail.net",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(244076400000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+43 155 776293017",
+						"Nachname": "Lange",
+						"Ort": "München",
+						"Postleitzahl": "82606",
+						"StrasseHnr": "Am Olympiapark 68",
+						"Telefonnummer": "0810 8972652",
+						"Vorname": "Finn",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 7,
+							"KommentarId": 20,
+							"Name": "Luisa Lehrmann",
+							"Text": "Finn.Lange@gmail.net --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1476605078000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 7,
+							"KommentarId": 18,
+							"Name": "Moritz Lange",
+							"Text": "Finn.Lange@gmail.net --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1470296210000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 7,
+							"KommentarId": 19,
+							"Name": "Julian Zimmermann",
+							"Text": "Finn.Lange@gmail.net --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1466061443000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingeladen",
+						"StatusId": 2,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
+							}
+						}
+					},
+					"BewerbungStelleDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
+								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+							},
+							"Bewerbung": 7,
+							"BewerbungStelleId": 10,
+							"Stelle": 1,
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)/BewerbungDetails"
+								}
+							},
+							"StelleDetails": {
+								"__metadata": {
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
+									"type": "de.fis.bewerbungtest.model.Stelle"
+								},
+								"Bezeichnung": "Senior Account Manager Neukundenvertrieb DACH (m/w)",
+								"StelleId": 1,
+								"BewerbungStelleDetails": {
+									"__deferred": {
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)/BewerbungStelleDetails"
+									}
+								}
+							}
 						}, {
 							"__metadata": {
 								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)",
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
-							"Bewerbung": 6,
+							"Bewerbung": 7,
 							"BewerbungStelleId": 11,
 							"Stelle": 6,
 							"BewerbungDetails": {
@@ -474,28 +1826,28 @@ sap.ui.define([
 					},
 					"Bewerber": 13,
 					"BewerbungId": 13,
-					"EingetragenAm": "/Date(1474754400000)/",
-					"EingetragenVon": "David Mueller",
-					"Status": 4,
+					"EingetragenAm": "/Date(1465423200000)/",
+					"EingetragenVon": "Emma Schmidt",
+					"Status": 3,
 					"BewerberDetails": {
 						"__metadata": {
 							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)",
 							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)",
 							"type": "de.fis.bewerbungtest.model.Bewerber"
 						},
-						"Anrede": "Frau",
+						"Anrede": "Herr",
 						"BewerberId": 13,
-						"Email": "Sophia.König@gmail.com",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(413593200000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+351 164 712326940",
-						"Nachname": "König",
-						"Ort": "Grafenrheinfeld",
-						"Postleitzahl": "82988",
-						"StrasseHnr": "Bayerstraße 47",
-						"Telefonnummer": "0849 6443670",
-						"Vorname": "Sophia",
+						"Email": "Paul.Schneider@web.de",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(-312080400000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+43 133 490181675",
+						"Nachname": "Schneider",
+						"Ort": "Heidelberg",
+						"Postleitzahl": "82654",
+						"StrasseHnr": "Eglofstraße 111",
+						"Telefonnummer": "0721 7370993",
+						"Vorname": "Paul",
 						"BewerbungDetails": {
 							"__deferred": {
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)/BewerbungDetails"
@@ -508,9 +1860,153 @@ sap.ui.define([
 						}
 					},
 					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/KommentarDetails"
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(31)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(31)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 13,
+							"KommentarId": 31,
+							"Name": "Emilia Hermann",
+							"Text": "Paul.Schneider@web.de --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1463241780000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(31)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(29)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(29)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 13,
+							"KommentarId": 29,
+							"Name": "David Schröder",
+							"Text": "Paul.Schneider@web.de --- Klingt ganz gut",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1465193509000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(29)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(30)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(30)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 13,
+							"KommentarId": 30,
+							"Name": "Mila Schmidt",
+							"Text": "Paul.Schneider@web.de --- Toller Bewerber",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1452013420000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(30)/BewerbungDetails"
+								}
+							}
+						}]
+					},
+					"StatusDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"type": "de.fis.bewerbungtest.model.Status"
+						},
+						"Bezeichnung": "Eingestellt",
+						"StatusId": 3,
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+							}
 						}
+					},
+					"BewerbungStelleDetails": {
+						"results": []
+					}
+				}, {
+					"__metadata": {
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
+						"type": "de.fis.bewerbungtest.model.Bewerbung"
+					},
+					"Bewerber": 9,
+					"BewerbungId": 9,
+					"EingetragenAm": "/Date(1457218800000)/",
+					"EingetragenVon": "Anna Werner",
+					"Status": 4,
+					"BewerberDetails": {
+						"__metadata": {
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
+							"type": "de.fis.bewerbungtest.model.Bewerber"
+						},
+						"Anrede": "Frau",
+						"BewerberId": 9,
+						"Email": "Elisabeth.Werner@aol.com",
+						"Fotopfad": "./images/Musterfrau.png",
+						"Geburtsdatum": "/Date(22633200000)/",
+						"Geschlecht": "w",
+						"Handynummer": "+47 192 33422272",
+						"Nachname": "Werner",
+						"Ort": "Würzburg",
+						"Postleitzahl": "81471",
+						"StrasseHnr": "Bayerstraße 150",
+						"Telefonnummer": "0965 4950082",
+						"Vorname": "Elisabeth",
+						"BewerbungDetails": {
+							"__deferred": {
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)/BewerbungDetails"
+							}
+						}
+					},
+					"DokumentDetails": {
+						"__deferred": {
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/DokumentDetails"
+						}
+					},
+					"KommentarDetails": {
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(24)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(24)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 9,
+							"KommentarId": 24,
+							"Name": "Luisa Koch",
+							"Text": "Elisabeth.Werner@aol.com --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1453659312000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(24)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(25)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(25)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 9,
+							"KommentarId": 25,
+							"Name": "Carolin Schröder",
+							"Text": "Elisabeth.Werner@aol.com --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1462978897000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(25)/BewerbungDetails"
+								}
+							}
+						}]
 					},
 					"StatusDetails": {
 						"__metadata": {
@@ -531,146 +2027,139 @@ sap.ui.define([
 					}
 				}, {
 					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
+						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
+						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
 						"type": "de.fis.bewerbungtest.model.Bewerbung"
 					},
-					"Bewerber": 2,
-					"BewerbungId": 2,
-					"EingetragenAm": "/Date(1429912800000)/",
-					"EingetragenVon": "Katrin König",
-					"Status": 3,
+					"Bewerber": 4,
+					"BewerbungId": 4,
+					"EingetragenAm": "/Date(1467842400000)/",
+					"EingetragenVon": "Lia König",
+					"Status": 4,
 					"BewerberDetails": {
 						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
 							"type": "de.fis.bewerbungtest.model.Bewerber"
 						},
 						"Anrede": "Herr",
-						"BewerberId": 2,
-						"Email": "Maximilian.Koch@aol.com",
+						"BewerberId": 4,
+						"Email": "Maximilian.Lange@gmx.de",
 						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(520380000000)/",
+						"Geburtsdatum": "/Date(737330400000)/",
 						"Geschlecht": "m",
-						"Handynummer": "+49 196 469643906",
-						"Nachname": "Koch",
-						"Ort": "Hamburg",
-						"Postleitzahl": "98674",
-						"StrasseHnr": "Canalettostraße 103",
-						"Telefonnummer": "0737 252211",
+						"Handynummer": "+47 194 498534659",
+						"Nachname": "Lange",
+						"Ort": "München",
+						"Postleitzahl": "90498",
+						"StrasseHnr": "Ellingerweg 115",
+						"Telefonnummer": "0960 2263419",
 						"Vorname": "Maximilian",
 						"BewerbungDetails": {
 							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)/BewerbungDetails"
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)/BewerbungDetails"
 							}
 						}
 					},
 					"DokumentDetails": {
 						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/DokumentDetails"
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/DokumentDetails"
 						}
 					},
 					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/KommentarDetails"
-						}
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 4,
+							"KommentarId": 10,
+							"Name": "Finn Schröder",
+							"Text": "Maximilian.Lange@gmx.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1479227327000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 4,
+							"KommentarId": 11,
+							"Name": "Emily Zimmermann",
+							"Text": "Maximilian.Lange@gmx.de --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+							"Thema": "Thema 3",
+							"Zeitstempel": "/Date(1452066766000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 4,
+							"KommentarId": 9,
+							"Name": "Moritz Meyer",
+							"Text": "Maximilian.Lange@gmx.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1477227489000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)/BewerbungDetails"
+								}
+							}
+						}]
 					},
 					"StatusDetails": {
 						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
 							"type": "de.fis.bewerbungtest.model.Status"
 						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
+						"Bezeichnung": "Abgelehnt",
+						"StatusId": 4,
 						"BewerbungDetails": {
 							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)/BewerbungDetails"
 							}
 						}
 					},
 					"BewerbungStelleDetails": {
 						"results": [{
 							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
-							"Bewerbung": 2,
-							"BewerbungStelleId": 1,
-							"Stelle": 1,
+							"Bewerbung": 4,
+							"BewerbungStelleId": 5,
+							"Stelle": 13,
 							"BewerbungDetails": {
 								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)/BewerbungDetails"
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)/BewerbungDetails"
 								}
 							},
 							"StelleDetails": {
 								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Senior Account Manager Neukundenvertrieb DACH (m/w)",
-								"StelleId": 1,
+								"Bezeichnung": "Junior Consultant SAP FI (m/w)",
+								"StelleId": 13,
 								"BewerbungStelleDetails": {
 									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 2,
-							"BewerbungStelleId": 3,
-							"Stelle": 17,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "SAP-Software-Entwickler/ABAP (m/w)",
-								"StelleId": 17,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 2,
-							"BewerbungStelleId": 2,
-							"Stelle": 3,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Senior Consultant für SAP MM oder FI mit Projektmanagementerfahrung (m/w)",
-								"StelleId": 3,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)/BewerbungStelleDetails"
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)/BewerbungStelleDetails"
 									}
 								}
 							}
@@ -684,28 +2173,28 @@ sap.ui.define([
 					},
 					"Bewerber": 15,
 					"BewerbungId": 15,
-					"EingetragenAm": "/Date(1459807200000)/",
-					"EingetragenVon": "Lea Hermann",
-					"Status": 3,
+					"EingetragenAm": "/Date(1452034800000)/",
+					"EingetragenVon": "Luisa Schneider",
+					"Status": 4,
 					"BewerberDetails": {
 						"__metadata": {
 							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)",
 							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)",
 							"type": "de.fis.bewerbungtest.model.Bewerber"
 						},
-						"Anrede": "Frau",
+						"Anrede": "Herr",
 						"BewerberId": 15,
-						"Email": "Leonie.Lehrmann@aol.com",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(-220928400000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+351 130 535747097",
-						"Nachname": "Lehrmann",
-						"Ort": "München",
-						"Postleitzahl": "85317",
-						"StrasseHnr": "Canalettostraße 118",
-						"Telefonnummer": "0910 9222600",
-						"Vorname": "Leonie",
+						"Email": "Theo.Hofmann@gmail.net",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(-239677200000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+39 184 29591103",
+						"Nachname": "Hofmann",
+						"Ort": "Nürnberg",
+						"Postleitzahl": "87210",
+						"StrasseHnr": "Havelstraße 10",
+						"Telefonnummer": "0878 4861834",
+						"Vorname": "Theo",
 						"BewerbungDetails": {
 							"__deferred": {
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)/BewerbungDetails"
@@ -718,1037 +2207,82 @@ sap.ui.define([
 						}
 					},
 					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/KommentarDetails"
-						}
+						"results": [{
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(32)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(32)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 15,
+							"KommentarId": 32,
+							"Name": "Sophie Hofmann",
+							"Text": "Theo.Hofmann@gmail.net --- Toller Bewerber",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1478668662000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(32)/BewerbungDetails"
+								}
+							}
+						}, {
+							"__metadata": {
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(33)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(33)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
+							},
+							"Bewerbung": 15,
+							"KommentarId": 33,
+							"Name": "Stefanie Meyer",
+							"Text": "Theo.Hofmann@gmail.net --- Klingt ganz gut",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1464001104000)/",
+							"BewerbungDetails": {
+								"__deferred": {
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(33)/BewerbungDetails"
+								}
+							}
+						}]
 					},
 					"StatusDetails": {
 						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
 							"type": "de.fis.bewerbungtest.model.Status"
 						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
+						"Bezeichnung": "Abgelehnt",
+						"StatusId": 4,
 						"BewerbungDetails": {
 							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)/BewerbungDetails"
 							}
 						}
 					},
 					"BewerbungStelleDetails": {
 						"results": [{
 							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(25)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(25)",
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
 							"Bewerbung": 15,
-							"BewerbungStelleId": 25,
-							"Stelle": 14,
+							"BewerbungStelleId": 22,
+							"Stelle": 9,
 							"BewerbungDetails": {
 								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(25)/BewerbungDetails"
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)/BewerbungDetails"
 								}
 							},
 							"StelleDetails": {
 								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Consultant oder Senior Consultant SAP LES/WM (m/w)",
-								"StelleId": 14,
+								"Bezeichnung": "Consultant für Integrationsprozesse in der IT (m/w)",
+								"StelleId": 9,
 								"BewerbungStelleDetails": {
 									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(26)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(26)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 15,
-							"BewerbungStelleId": 26,
-							"Stelle": 15,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(26)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Consultant für SAP HCM (m/w)",
-								"StelleId": 15,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(24)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(24)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 15,
-							"BewerbungStelleId": 24,
-							"Stelle": 5,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(24)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Inhouse Consultant SAP MM, SD oder PP (m/w)",
-								"StelleId": 5,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 12,
-					"BewerbungId": 12,
-					"EingetragenAm": "/Date(1433714400000)/",
-					"EingetragenVon": "Sophia Werner",
-					"Status": 1,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 12,
-						"Email": "Finn.Werner@gmail.com",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(189039600000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+49 177 662818933",
-						"Nachname": "Werner",
-						"Ort": "Nürnberg",
-						"Postleitzahl": "85897",
-						"StrasseHnr": "Dehmelstraße 66",
-						"Telefonnummer": "0939 2300711",
-						"Vorname": "Finn",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Offen",
-						"StatusId": 1,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": []
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 14,
-					"BewerbungId": 14,
-					"EingetragenAm": "/Date(1442095200000)/",
-					"EingetragenVon": "Elias Zimmermann",
-					"Status": 2,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Frau",
-						"BewerberId": 14,
-						"Email": "Leonie.Koch@aol.com",
-						"Fotopfad": "./images/Pikachu.png",
-						"Geburtsdatum": "/Date(228351600000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+40 171 219834275",
-						"Nachname": "Koch",
-						"Ort": "Heidelberg",
-						"Postleitzahl": "87791",
-						"StrasseHnr": "Adenauerring 24",
-						"Telefonnummer": "0712 1113111",
-						"Vorname": "Leonie",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingeladen",
-						"StatusId": 2,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(23)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(23)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 14,
-							"BewerbungStelleId": 23,
-							"Stelle": 13,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(23)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Junior Consultant SAP FI (m/w)",
-								"StelleId": 13,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 5,
-					"BewerbungId": 5,
-					"EingetragenAm": "/Date(1423436400000)/",
-					"EingetragenVon": "Katrin Mustermann",
-					"Status": 2,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 5,
-						"Email": "Ben.Zimmermann@web.com",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(-16765200000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+41 157 338655957",
-						"Nachname": "Zimmermann",
-						"Ort": "Roth a. d. Saale",
-						"Postleitzahl": "88223",
-						"StrasseHnr": "Birkenweg 119",
-						"Telefonnummer": "0831 1125437",
-						"Vorname": "Ben",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingeladen",
-						"StatusId": 2,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 5,
-							"BewerbungStelleId": 9,
-							"Stelle": 5,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Inhouse Consultant SAP MM, SD oder PP (m/w)",
-								"StelleId": 5,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 5,
-							"BewerbungStelleId": 10,
-							"Stelle": 13,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Junior Consultant SAP FI (m/w)",
-								"StelleId": 13,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 9,
-					"BewerbungId": 9,
-					"EingetragenAm": "/Date(1423436400000)/",
-					"EingetragenVon": "Finn König",
-					"Status": 1,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 9,
-						"Email": "Julian.Schröder@hotmail.de",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(-22899600000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+41 172 272807659",
-						"Nachname": "Schröder",
-						"Ort": "Heidelberg",
-						"Postleitzahl": "92007",
-						"StrasseHnr": "Akademiestraße 87",
-						"Telefonnummer": "0942 8403813",
-						"Vorname": "Julian",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Offen",
-						"StatusId": 1,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 9,
-							"BewerbungStelleId": 20,
-							"Stelle": 12,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(20)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Consultant SAP FI für Grafenrheinfeld, Leonberg oder Offenbach (m/w)",
-								"StelleId": 12,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 9,
-							"BewerbungStelleId": 19,
-							"Stelle": 10,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(19)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
-								"StelleId": 10,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 1,
-					"BewerbungId": 1,
-					"EingetragenAm": "/Date(1479423600000)/",
-					"EingetragenVon": "Lia Schneider",
-					"Status": 3,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 1,
-						"Email": "Jonas.Koch@web.de",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(193532400000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+40 182 444849435",
-						"Nachname": "Koch",
-						"Ort": "Hamburg",
-						"Postleitzahl": "83468",
-						"StrasseHnr": "Gabelsbergerstraße 126",
-						"Telefonnummer": "0859 3789338",
-						"Vorname": "Jonas",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": []
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 8,
-					"BewerbungId": 8,
-					"EingetragenAm": "/Date(1449010800000)/",
-					"EingetragenVon": "Katrin Walter",
-					"Status": 3,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Frau",
-						"BewerberId": 8,
-						"Email": "Amelie.Hartmann@hotmail.de",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(233362800000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+49 141 306356504",
-						"Nachname": "Hartmann",
-						"Ort": "Hergolshausen",
-						"Postleitzahl": "94649",
-						"StrasseHnr": "Akademiestraße 89",
-						"Telefonnummer": "0761 4155703",
-						"Vorname": "Amelie",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 8,
-							"BewerbungStelleId": 17,
-							"Stelle": 3,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(17)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Senior Consultant für SAP MM oder FI mit Projektmanagementerfahrung (m/w)",
-								"StelleId": 3,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 8,
-							"BewerbungStelleId": 18,
-							"Stelle": 6,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(18)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Inhouse Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
-								"StelleId": 6,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 8,
-							"BewerbungStelleId": 16,
-							"Stelle": 2,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "SAP Vertriebsbeauftragter Lager-Logistik (m/w)",
-								"StelleId": 2,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 3,
-					"BewerbungId": 3,
-					"EingetragenAm": "/Date(1483052400000)/",
-					"EingetragenVon": "Lukas Lange",
-					"Status": 1,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 3,
-						"Email": "Emil.Meyer@gmail.com",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(212022000000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+48 177 206513063",
-						"Nachname": "Meyer",
-						"Ort": "München",
-						"Postleitzahl": "97537",
-						"StrasseHnr": "Aachener Straße 112",
-						"Telefonnummer": "0745 3760082",
-						"Vorname": "Emil",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Offen",
-						"StatusId": 1,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 3,
-							"BewerbungStelleId": 4,
-							"Stelle": 2,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "SAP Vertriebsbeauftragter Lager-Logistik (m/w)",
-								"StelleId": 2,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 3,
-							"BewerbungStelleId": 5,
-							"Stelle": 10,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
-								"StelleId": 10,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 3,
-							"BewerbungStelleId": 6,
-							"Stelle": 15,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Consultant für SAP HCM (m/w)",
-								"StelleId": 15,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 11,
-					"BewerbungId": 11,
-					"EingetragenAm": "/Date(1430431200000)/",
-					"EingetragenVon": "Sophie Schneider",
-					"Status": 3,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Herr",
-						"BewerberId": 11,
-						"Email": "Noah.Schmidt@aol.net",
-						"Fotopfad": "./images/Mustermann.png",
-						"Geburtsdatum": "/Date(114217200000)/",
-						"Geschlecht": "m",
-						"Handynummer": "+39 164 38031191",
-						"Nachname": "Schmidt",
-						"Ort": "Berlin",
-						"Postleitzahl": "94771",
-						"StrasseHnr": "Feigstraße 4",
-						"Telefonnummer": "0851 5752074",
-						"Vorname": "Noah",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": []
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 4,
-					"BewerbungId": 4,
-					"EingetragenAm": "/Date(1459461600000)/",
-					"EingetragenVon": "Lara Schneider",
-					"Status": 1,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Frau",
-						"BewerberId": 4,
-						"Email": "Lara.König@gmx.com",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(144975600000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+31 188 113004101",
-						"Nachname": "König",
-						"Ort": "Schweinfurt",
-						"Postleitzahl": "83732",
-						"StrasseHnr": "Ackermannstraße 43",
-						"Telefonnummer": "0919 2749829",
-						"Vorname": "Lara",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Offen",
-						"StatusId": 1,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
-						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 4,
-							"BewerbungStelleId": 7,
-							"Stelle": 10,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
-								"StelleId": 10,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 4,
-							"BewerbungStelleId": 8,
-							"Stelle": 17,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "SAP-Software-Entwickler/ABAP (m/w)",
-								"StelleId": 17,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)/BewerbungStelleDetails"
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)/BewerbungStelleDetails"
 									}
 								}
 							}
@@ -1762,28 +2296,28 @@ sap.ui.define([
 					},
 					"Bewerber": 10,
 					"BewerbungId": 10,
-					"EingetragenAm": "/Date(1440108000000)/",
-					"EingetragenVon": "Emil Lehrmann",
-					"Status": 3,
+					"EingetragenAm": "/Date(1462572000000)/",
+					"EingetragenVon": "Finn Schneider",
+					"Status": 2,
 					"BewerberDetails": {
 						"__metadata": {
 							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)",
 							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)",
 							"type": "de.fis.bewerbungtest.model.Bewerber"
 						},
-						"Anrede": "Frau",
+						"Anrede": "Herr",
 						"BewerberId": 10,
-						"Email": "Anna.Mustermann@hotmail.de",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(124844400000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+41 162 836188730",
-						"Nachname": "Mustermann",
+						"Email": "Tom.Koch@gmail.de",
+						"Fotopfad": "./images/Mustermann.png",
+						"Geburtsdatum": "/Date(-202352400000)/",
+						"Geschlecht": "m",
+						"Handynummer": "+41 195 932196786",
+						"Nachname": "Koch",
 						"Ort": "Grafenrheinfeld",
-						"Postleitzahl": "93581",
-						"StrasseHnr": "Gabelsbergerstraße 118",
-						"Telefonnummer": "0917 5482681",
-						"Vorname": "Anna",
+						"Postleitzahl": "93550",
+						"StrasseHnr": "Adenauerring 91",
+						"Telefonnummer": "0905 9703633",
+						"Vorname": "Tom",
 						"BewerbungDetails": {
 							"__deferred": {
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)/BewerbungDetails"
@@ -1796,181 +2330,66 @@ sap.ui.define([
 						}
 					},
 					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/KommentarDetails"
-						}
-					},
-					"StatusDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"type": "de.fis.bewerbungtest.model.Status"
-						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
-							}
-						}
-					},
-					"BewerbungStelleDetails": {
 						"results": [{
 							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(27)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(27)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
 							},
 							"Bewerbung": 10,
-							"BewerbungStelleId": 22,
-							"Stelle": 19,
+							"KommentarId": 27,
+							"Name": "Lena Fischer",
+							"Text": "Tom.Koch@gmail.de --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation.\nAußerdem passt er perfekt ins Profil.\nEmpfehlung: Einladen",
+							"Thema": "Thema 2",
+							"Zeitstempel": "/Date(1471238692000)/",
 							"BewerbungDetails": {
 								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(22)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Presales Consultant für SAP-Lösungserweiterungen (m/w)",
-								"StelleId": 19,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)/BewerbungStelleDetails"
-									}
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(27)/BewerbungDetails"
 								}
 							}
 						}, {
 							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(26)",
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(26)",
+								"type": "de.fis.bewerbungtest.model.Kommentar"
 							},
 							"Bewerbung": 10,
-							"BewerbungStelleId": 21,
-							"Stelle": 11,
+							"KommentarId": 26,
+							"Name": "Linus König",
+							"Text": "Tom.Koch@gmail.de --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+							"Thema": "Thema 1",
+							"Zeitstempel": "/Date(1479107580000)/",
 							"BewerbungDetails": {
 								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(21)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "Consultant SAP MM, SD oder PP für Grafenrheinfeld oder Leonberg (m/w)",
-								"StelleId": 11,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)/BewerbungStelleDetails"
-									}
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(26)/BewerbungDetails"
 								}
 							}
 						}]
-					}
-				}, {
-					"__metadata": {
-						"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
-						"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
-						"type": "de.fis.bewerbungtest.model.Bewerbung"
-					},
-					"Bewerber": 7,
-					"BewerbungId": 7,
-					"EingetragenAm": "/Date(1444082400000)/",
-					"EingetragenVon": "Lia Hartmann",
-					"Status": 3,
-					"BewerberDetails": {
-						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
-							"type": "de.fis.bewerbungtest.model.Bewerber"
-						},
-						"Anrede": "Frau",
-						"BewerberId": 7,
-						"Email": "Leonie.Werner@gmx.de",
-						"Fotopfad": "./images/Musterfrau.png",
-						"Geburtsdatum": "/Date(1011135600000)/",
-						"Geschlecht": "w",
-						"Handynummer": "+48 152 440362111",
-						"Nachname": "Werner",
-						"Ort": "Bergrheinfeld",
-						"Postleitzahl": "94863",
-						"StrasseHnr": "Am Langen Graben 43",
-						"Telefonnummer": "0897 7821447",
-						"Vorname": "Leonie",
-						"BewerbungDetails": {
-							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)/BewerbungDetails"
-							}
-						}
-					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/DokumentDetails"
-						}
-					},
-					"KommentarDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/KommentarDetails"
-						}
 					},
 					"StatusDetails": {
 						"__metadata": {
-							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+							"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
 							"type": "de.fis.bewerbungtest.model.Status"
 						},
-						"Bezeichnung": "Eingestellt",
-						"StatusId": 3,
+						"Bezeichnung": "Eingeladen",
+						"StatusId": 2,
 						"BewerbungDetails": {
 							"__deferred": {
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
 							}
 						}
 					},
 					"BewerbungStelleDetails": {
 						"results": [{
-							"__metadata": {
-								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
-								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
-								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
-							},
-							"Bewerbung": 7,
-							"BewerbungStelleId": 14,
-							"Stelle": 10,
-							"BewerbungDetails": {
-								"__deferred": {
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)/BewerbungDetails"
-								}
-							},
-							"StelleDetails": {
-								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
-									"type": "de.fis.bewerbungtest.model.Stelle"
-								},
-								"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
-								"StelleId": 10,
-								"BewerbungStelleDetails": {
-									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
-									}
-								}
-							}
-						}, {
 							"__metadata": {
 								"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)",
 								"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)",
 								"type": "de.fis.bewerbungtest.model.BewerbungStelle"
 							},
-							"Bewerbung": 7,
+							"Bewerbung": 10,
 							"BewerbungStelleId": 15,
-							"Stelle": 15,
+							"Stelle": 7,
 							"BewerbungDetails": {
 								"__deferred": {
 									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)/BewerbungDetails"
@@ -1978,15 +2397,15 @@ sap.ui.define([
 							},
 							"StelleDetails": {
 								"__metadata": {
-									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
-									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
+									"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
+									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Consultant für SAP HCM (m/w)",
-								"StelleId": 15,
+								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
+								"StelleId": 7,
 								"BewerbungStelleDetails": {
 									"__deferred": {
-										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)/BewerbungStelleDetails"
+										"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)/BewerbungStelleDetails"
 									}
 								}
 							}

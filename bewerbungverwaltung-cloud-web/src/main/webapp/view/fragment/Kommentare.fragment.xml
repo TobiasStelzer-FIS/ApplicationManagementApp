@@ -1,5 +1,29 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
-	<Panel>
-
-	</Panel>
+	<VBox>
+		<List items="{path: 'testModel>KommentarDetails/results'}" class="listKommentare">
+			<CustomListItem class="sapUiSmallMarginBottom">
+				<HBox class="themaKommentar">
+					<Title width="auto" text="{testModel>Thema}" />
+				</HBox>
+				<FlexBox width="100%" alignItems="Start">
+					<Label text="Name" class="sapUiTinyMarginEnd">
+						<layoutData>
+							<FlexItemData minWidth="60px"/>
+						</layoutData>
+					</Label>
+					<Text text="{testModel>Name}"/>
+				</FlexBox>
+				<FlexBox width="100%" alignItems="Start">
+					<Label text="Datum" class="sapUiTinyMarginEnd">
+						<layoutData>
+							<FlexItemData minWidth="60px"/>
+						</layoutData>
+					</Label>
+					<Text text="{path: 'testModel>Zeitstempel', formatter: '.formatter.formatZeitstempel'}"/>
+				</FlexBox>
+				<TextArea growing="true" editable="false" value="{testModel>Text}" width="100%"/>
+			</CustomListItem>
+		</List>
+		<Button text="Bearbeiten"/>
+	</VBox>
 </core:FragmentDefinition>
