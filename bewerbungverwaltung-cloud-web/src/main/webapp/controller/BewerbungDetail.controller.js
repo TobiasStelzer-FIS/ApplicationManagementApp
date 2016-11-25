@@ -1,14 +1,14 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
+	"de/fis/bewerbungverwaltung/controller/BaseController",
 	"sap/ui/core/UIComponent",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(Controller, UIComponent, formatter) {
+], function(BaseController, UIComponent, formatter) {
 	"use strict";
 
-	return Controller.extend("de.fis.bewerbungverwaltung.controller.BewerbungDetail", {
+	return BaseController.extend("de.fis.bewerbungverwaltung.controller.BewerbungDetail", {
 
 		formatter: formatter,
-		
+
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
@@ -17,8 +17,32 @@ sap.ui.define([
 		_handleRouteMatched: function(oEvent) {
 			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
 
-			this.getView().bindElement(sBindingEntity);
-			//			this.getView().getModel("testModel").updateBindings(true);
+			this._bindView(sBindingEntity);
+		},
+		/**
+		 * Binds the view to the object path. Makes sure that detail view displays
+		 * a busy indicator while data for the corresponding element binding is loaded.
+		 * @function
+		 * @param {string} sObjectPath path to the object to be bound to the view.
+		 * @private
+		 */
+		_bindView: function(sObjectPath) {
+			this.getView().bindElement({
+				path: sObjectPath,
+				events: {
+					change: this._onBindingChange.bind(this),
+					dataRequested: function() {},
+					dataReceived: function() {}
+				}
+			});
+		},
+		_onBindingChange: function() {
+			var oElementBinding = this.getView().getElementBinding();
+			// No data for the binding
+			if (!oElementBinding) {
+			//	this.getRouter().getTargets().display("detailObjectNotFound");
+				return;
+			}
 		},
 		onNavButtonPressed: function(oEvent) {
 			UIComponent.getRouterFor(this).navTo("BewerbungenMaster");
@@ -39,7 +63,22 @@ sap.ui.define([
 			sap.m.MessageToast.show("onMessagesButtonPress");
 		},
 		onPositionChange: function(oEvent) {
-			sap.m.MessageToast.show("Positioned changed to " + oEvent.getParameter("newPosition"));
+			var newPosition = oEvent.getParameter("newPosition");
+			sap.m.MessageToast.show("Positioned changed to " + newPosition);
+
+			this.getModel("testModeL").read("/Bewerbungs/$count", {
+				async: true,
+				success: function(oData, response) {
+					console.log(response.body); //Its a string
+					if (newPosition > parseInt(response.body)) {
+						newPosition = 0;
+					}
+
+					this.getRouter().navTo("BewerbungDetail", {
+						Bewerbung: bindingContext.substr(12)
+					});
+				}
+			});
 		},
 		onPress: function(oEvent) {
 			sap.m.MessageToast.show("onPress");

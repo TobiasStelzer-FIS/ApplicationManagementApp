@@ -9,7 +9,8 @@ sap.ui.define([
 	"de/fis/bewerbungverwaltung/model/grouper",
 	"de/fis/bewerbungverwaltung/model/filter",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(BaseController, UIComponent, Filter, FilterOperator, JSONModel, GroupHeaderListItem, GroupSortState, grouper, filter, formatter) {
+], function(BaseController, UIComponent, Filter, FilterOperator, JSONModel, GroupHeaderListItem, GroupSortState, grouper, filter,
+	formatter) {
 	"use strict";
 
 	return BaseController.extend("de.fis.bewerbungverwaltung.controller.BewerbungenMaster", {
@@ -20,7 +21,7 @@ sap.ui.define([
 			var oViewModel = this._createViewModel();
 			this.getView().setModel(oViewModel, "masterView");
 
-			this._oGroupSortState = new GroupSortState(oViewModel, grouper.groupStatus);
+			this._oGroupSortState = new GroupSortState(oViewModel);
 
 			this._oList = this.getView().byId("listBewerbungen");
 			// keeps the filter and search state
@@ -89,8 +90,11 @@ sap.ui.define([
 		},
 		onSearch: function(oEvent) {
 			var aFilter = [];
-			this._oListFilterState.aSearch = [];
-			var sQuery = oEvent.getParameter("query");
+			var sQuery = oEvent.getParameter("newValue");
+			if (sQuery === null) {
+				sQuery = oEvent.getParameter("query");
+			}
+			this._search(sQuery);
 
 			if (sQuery) {
 				aFilter.push(
@@ -173,7 +177,8 @@ sap.ui.define([
 				noDataText: this.getResourceBundle().getText("masterListNoDataText"),
 				filterStellen: [],
 				sortBy: "EingetragenAm",
-				groupBy: "None"
+				groupBy: "None",
+				descending: false
 			});
 		},
 		/**

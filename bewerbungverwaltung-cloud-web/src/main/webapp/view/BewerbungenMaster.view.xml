@@ -3,7 +3,7 @@
 	<semantic:MasterPage title="Bewerbungen" showSubHeader="true">
 		<semantic:subHeader>
 			<Toolbar>
-				<SearchField width="100%" placeholder="Suchen" search="onSearch"/>
+				<SearchField width="100%" placeholder="Suchen" search="onSearch" liveChange="onSearch"/>
 			</Toolbar>
 		</semantic:subHeader>
 		<semantic:content>

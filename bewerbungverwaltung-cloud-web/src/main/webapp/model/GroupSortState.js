@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/base/Object",
-	"sap/ui/model/Sorter"
-], function(BaseObject, Sorter) {
+	"sap/ui/model/Sorter",
+	"de/fis/bewerbungverwaltung/model/grouper"
+], function(BaseObject, Sorter, grouper) {
 	"use strict";
 
 	return BaseObject.extend("de.fis.bewerbungverwaltung.model.GroupSortState", {
@@ -48,19 +49,33 @@ sap.ui.define([
 		 */
 		group: function(sKey) {
 			var aSorters = [];
+			var groupBy = this._oViewModel.getProperty("/groupBy");
+			var descending = this._oViewModel.getProperty("/descending");
 
-			if (sKey === "None") {
-				// select the default sorting again
-				this._oViewModel.setProperty("/sortBy", "EingetragenAm");
-				return [new Sorter("EingetragenAm", false)];
+			jQuery.sap.log.error("sKey: " + sKey);
+			jQuery.sap.log.error("descending: " + descending);
+			if (sKey === groupBy) { // Wenn wieder aufs gleiche geklickt wurde, dann drehe die Sortierungsrichtung um
+				descending = !descending;
+				this._oViewModel.setProperty("/descending", descending);
+			}
+
+			var fnGroupFunction;
+			switch (sKey) {
+				case "StatusDetails/Bezeichnung":
+					fnGroupFunction = grouper.groupStatus;
+					break;
+				case "None":
+					// select the default sorting again
+					this._oViewModel.setProperty("/sortBy", "EingetragenAm");
+					return [new Sorter("EingetragenAm", descending)];
 			}
 
 			// Grouping means sorting so we set the select to the same Entity used for grouping
 			this._oViewModel.setProperty("/sortBy", sKey);
 
 			aSorters.push(
-				new Sorter(sKey, false,
-					this._fnGroupFunction.bind(this))
+				new Sorter(sKey, descending,
+					fnGroupFunction.bind(this))
 			);
 
 			return aSorters;

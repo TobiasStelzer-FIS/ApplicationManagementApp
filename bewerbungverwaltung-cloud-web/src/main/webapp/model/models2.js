@@ -906,7 +906,7 @@ sap.ui.define([
 						"Anrede": "Frau",
 						"BewerberId": 14,
 						"Email": "Leonie.Koch@aol.com",
-						"Fotopfad": "./images/Musterfrau.png",
+						"Fotopfad": "./images/Pikachu.png",
 						"Geburtsdatum": "/Date(228351600000)/",
 						"Geschlecht": "w",
 						"Handynummer": "+40 171 219834275",

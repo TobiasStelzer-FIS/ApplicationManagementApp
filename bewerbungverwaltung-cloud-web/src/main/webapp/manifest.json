@@ -70,7 +70,14 @@
 				"viewType": "XML",
 				"viewPath": "de.fis.bewerbungverwaltung.view",
 				"controlId": "splitAppId",
-				"clearTarget": "false"
+				"clearTarget": "false",
+				"bypassed": {
+					"target": [
+						"BewerbungenMaster",
+						"notFound"
+					]
+				},
+				"async": true
 			},
 			"routes": [{
 				"pattern": "",
@@ -95,9 +102,19 @@
 					"viewName": "BewerbungDetail",
 					"controlAggregation": "detailPages"
 				},
-				"NotFound": {
-					"viewName": "NotFound",
+				"detailObjectNotFound": {
+					"viewName": "DetailObjectNotFound",
+					"viewId": "detailObjectNotFound",
 					"controlAggregation": "detailPages"
+				},
+				"detailNoObjectsAvailable": {
+					"viewName": "DetailNoObjectsAvailable",
+					"viewId": "detailNoObjectsAvailable",
+					"controlAggregation": "detailPages"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
 				}
 			}
 		},
