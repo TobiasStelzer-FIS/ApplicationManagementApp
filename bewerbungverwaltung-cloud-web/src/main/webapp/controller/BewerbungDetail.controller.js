@@ -37,12 +37,12 @@ sap.ui.define([
 			});
 		},
 		_onBindingChange: function() {
-			var oElementBinding = this.getView().getElementBinding();
+			var oElementBinding = this.getView().getElementBinding("testModel");
 			this.getView().getModel("testModel").updateBindings();
+			jQuery.sap.log.error("oElementBinding: " + oElementBinding);
 			// No data for the binding
 			if (!oElementBinding) {
-			//	this.getRouter().getTargets().display("detailObjectNotFound");
-				return;
+				this.getRouter().getTargets().display("detailObjectNotFound");
 			}
 		},
 		onNavButtonPressed: function(oEvent) {
@@ -63,11 +63,12 @@ sap.ui.define([
 		onMessagesButtonPress: function(oEvent) {
 			sap.m.MessageToast.show("onMessagesButtonPress");
 		},
+/*
 		onPositionChange: function(oEvent) {
 			var newPosition = oEvent.getParameter("newPosition");
 			sap.m.MessageToast.show("Positioned changed to " + newPosition);
 
-			this.getModel("testModeL").read("/Bewerbungs/$count", {
+			this.getModel("testModel").read("/Bewerbungs/$count", {
 				async: true,
 				success: function(oData, response) {
 					console.log(response.body); //Its a string
@@ -81,8 +82,22 @@ sap.ui.define([
 				}
 			});
 		},
+*/
 		onPress: function(oEvent) {
 			sap.m.MessageToast.show("onPress");
+		},
+		onKommentareBearbeiten: function(oEvent) {
+			var oElementBinding = this.getView().getElementBinding("testModel");
+			this.getView().getModel("testModel").updateBindings();
+			jQuery.sap.log.error("oElementBinding: " + oElementBinding);
+			// No data for the binding
+			if (oElementBinding) {
+			//	this.getRouter().getTargets().display("detailObjectNotFound");
+				jQuery.sap.log.error("Yes");
+			}
+			else {
+				jQuery.sap.log.error("No");
+			}
 		}
 
 	});

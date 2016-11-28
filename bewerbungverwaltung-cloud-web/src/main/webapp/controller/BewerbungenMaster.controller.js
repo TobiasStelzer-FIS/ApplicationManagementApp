@@ -91,18 +91,20 @@ sap.ui.define([
 		onSearch: function(oEvent) {
 			var aFilter = [];
 			var sQuery = oEvent.getParameter("newValue");
-			if (sQuery === null) {
+			if (sQuery == null) {
 				sQuery = oEvent.getParameter("query");
 			}
-			this._search(sQuery);
-
-			if (sQuery) {
+			
+			if (sQuery !== "") {
 				aFilter.push(
 					new Filter("BewerberDetails/Vorname", FilterOperator.Contains, sQuery),
 					new Filter("BewerberDetails/Nachname", FilterOperator.Contains, sQuery)
 				);
 
-				this._oListFilterState.aSearch.push(new Filter(aFilter, false)); // Filter by 'OR'
+				this._oListFilterState.aSearch = [ new Filter(aFilter, false) ]; // Filter by 'OR'
+			}
+			else {
+				this._oListFilterState.aSearch = [];
 			}
 
 			this._applyFilterSearch();
@@ -198,7 +200,8 @@ sap.ui.define([
 		_applyFilterSearch: function() {
 			var aFilters = this._oListFilterState.aSearch.concat(this._oListFilterState.aFilter),
 				oViewModel = this.getModel("masterView");
-			jQuery.sap.log.error("Filters: " + JSON.stringify(aFilters));
+//			jQuery.sap.log.error("Filters: " + JSON.stringify(aFilters));
+			
 			this._oList.getBinding("items").filter(aFilters, "Application");
 			// changes the noDataText of the list in case there are no filter results
 			if (aFilters.length !== 0) {

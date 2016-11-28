@@ -22,6 +22,6 @@
 				<TextArea growing="true" editable="false" value="{testModel>Text}" width="100%"/>
 			</CustomListItem>
 		</List>
-		<Button text="Bearbeiten"/>
+		<Button text="Bearbeiten" press="onKommentareBearbeiten"/>
 	</VBox>
 </core:FragmentDefinition>
