@@ -2324,11 +2324,6 @@ sap.ui.define([
 							}
 						}
 					},
-					"DokumentDetails": {
-						"__deferred": {
-							"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/DokumentDetails"
-						}
-					},
 					"KommentarDetails": {
 						"results": [{
 							"__metadata": {
@@ -2401,7 +2396,7 @@ sap.ui.define([
 									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
+								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w), http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)/BewerbungStelleDetails",
 								"StelleId": 7,
 								"BewerbungStelleDetails": {
 									"__deferred": {
@@ -2436,6 +2431,29 @@ sap.ui.define([
 								"Bezeichnung": "Gymnasium und Realschule Walter-Rathenau",
 								"QuelleId": 2
 							}
+						}]
+					},
+					"DokumentDetails": {
+						"results": [{
+							"Bewerbung": 10,
+							"DokumentId": 1,
+							"Typ": "Anschreiben",
+							"Dateiname": "Tom_Koch (Anschreiben).pdf"
+						}, {
+							"Bewerbung": 10,
+							"DokumentId": 2,
+							"Typ": "Lebenslauf",
+							"Dateiname": "Tom_Koch (Lebenslauf).pdf"
+						}, {
+							"Bewerbung": 10,
+							"DokumentId": 3,
+							"Typ": "Zeugnis",
+							"Dateiname": "Tom_Koch (Zeugnis DV-Schule 2015).pdf"
+						}, {
+							"Bewerbung": 10,
+							"DokumentId": 2,
+							"Typ": "Praktikumsbestätigung",
+							"Dateiname": "Tom_Koch (Praktikum SALT-Solutions).pdf"
 						}]
 					}
 				}]

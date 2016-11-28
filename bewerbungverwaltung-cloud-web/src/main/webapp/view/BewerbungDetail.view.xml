@@ -48,7 +48,7 @@
 					<Label text="Stellen" design="Bold"/>
 					<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
 						<items>
-							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiTinyMarginBottom"/>
+							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiTinyMarginBottom sapUiSmallMarginBegin"/>
 						</items>
 					</VBox>
 				</VBox>

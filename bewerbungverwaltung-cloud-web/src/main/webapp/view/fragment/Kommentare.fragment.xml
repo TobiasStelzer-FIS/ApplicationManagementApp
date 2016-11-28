@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
 	<VBox>
-		<List items="{path: 'testModel>KommentarDetails/results'}" class="listKommentare">
+		<List items="{path: 'testModel>KommentarDetails/results'}" class="listKommentare" height="">
 			<CustomListItem class="sapUiSmallMarginBottom" height="auto">
 				<Title width="100%" text="{testModel>Thema}" titleStyle="H4" class="themaKommentar"/>
 				<FlexBox width="100%" alignItems="Start">
@@ -19,7 +19,7 @@
 					</Label>
 					<Text text="{path: 'testModel>Zeitstempel', formatter: '.formatter.formatZeitstempel'}"/>
 				</FlexBox>
-				<TextArea growing="true" editable="false" value="{testModel>Text}" width="100%"/>
+				<TextArea growing="true" growingMaxLines="4" editable="false" value="{testModel>Text}" width="100%" height="auto"/>
 			</CustomListItem>
 		</List>
 		<Button text="Bearbeiten" press="onKommentareBearbeiten"/>

@@ -1,37 +1,40 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
-	<Table>
-		<headerToolbar>
-			<Toolbar>
-				<Title text="Abteilungen"/>
-			</Toolbar>
-		</headerToolbar>
-		<columns>
-			<Column>
-				<header>
-					<Label text="Abteilung"/>
-				</header>
-			</Column>
-			<Column>
-				<header>
-					<Label text="Gesendet"/>
-				</header>
-			</Column>
-			<Column>
-				<header>
-					<Label text="Gelesen"/>
-				</header>
-			</Column>
-			<Column>
-				<header>
-					<Label text="Status"/>
-				</header>
-			</Column>
-		</columns>
-		<ColumnListItem>
-			<ObjectIdentifier title="KEP4"/>
-			<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
-			<Label text="23.11.2016"/>
-			<Label text="Interessiert"/>
-		</ColumnListItem>
-	</Table>
+	<VBox>
+		<Table>
+			<headerToolbar>
+				<Toolbar>
+					<Title text="Abteilungen"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<header>
+						<Label text="Abteilung"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Label text="Gesendet"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Label text="Gelesen"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Label text="Status"/>
+					</header>
+				</Column>
+			</columns>
+			<ColumnListItem>
+				<ObjectIdentifier title="KEP4"/>
+				<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
+				<Label text="23.11.2016"/>
+				<Label text="Interessiert"/>
+			</ColumnListItem>
+		</Table>
+		<Button text="Bearbeiten" press="onKommentareBearbeiten"/>
+	</VBox>
 </core:FragmentDefinition>
