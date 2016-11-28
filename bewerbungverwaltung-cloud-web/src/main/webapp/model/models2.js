@@ -2396,7 +2396,7 @@ sap.ui.define([
 									"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
 									"type": "de.fis.bewerbungtest.model.Stelle"
 								},
-								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w), http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)/BewerbungStelleDetails",
+								"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w), http://localhost:8080/bewerbungtest-cloud -web/bewerbungtest.svc/Stel les(7)/BewerbungStelleDetails",
 								"StelleId": 7,
 								"BewerbungStelleDetails": {
 									"__deferred": {

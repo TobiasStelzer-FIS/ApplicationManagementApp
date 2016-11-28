@@ -9,7 +9,7 @@
 				<core:Title text="Unterlagen"/>
 			</f:title>
 			<f:FormElement>
-				<Link text="• {testModel>Dateiname}" class="sapUiLargeMarginBegin"/>
+				<Link text="• {testModel>Dateiname}"/>
 			</f:FormElement>
 		</f:FormContainer>
 	</f:Form>

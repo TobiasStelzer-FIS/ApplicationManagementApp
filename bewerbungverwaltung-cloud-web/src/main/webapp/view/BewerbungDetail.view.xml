@@ -97,8 +97,8 @@
 								</VBox>
 								<HBox>
 									<Button id="btnKommentareEdit" text="Bearbeiten" press="onBearbeiten"/>
-									<Button id="btnKommentareSave" text="Speichern" press="onSave"/>
-									<Button id="btnKommentareCancel" text="Abbrechen" press="onCancel"/>
+									<Button id="btnKommentareSave" text="Speichern" press="onSave" visible="false"/>
+									<Button id="btnKommentareCancel" text="Abbrechen" press="onCancel" visible="false"/>
 								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
@@ -113,8 +113,8 @@
 								</VBox>
 								<HBox>
 									<Button id="btnUnterlagenEdit" text="Bearbeiten" press="onBearbeiten"/>
-									<Button id="btnUnterlagenSave" text="Speichern" press="onSave"/>
-									<Button id="btnUnterlagenCancel" text="Abbrechen" press="onCancel"/>
+									<Button id="btnUnterlagenSave" text="Speichern" press="onSave" visible="false"/>
+									<Button id="btnUnterlagenCancel" text="Abbrechen" press="onCancel" visible="false"/>
 								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
@@ -129,8 +129,8 @@
 								</VBox>
 								<HBox>
 									<Button id="btnUmlaufEdit" text="Bearbeiten" press="onBearbeiten"/>
-									<Button id="btnUmlaufSave" text="Speichern" press="onSave"/>
-									<Button id="btnUmlaufCancel" text="Abbrechen" press="onCancel"/>
+									<Button id="btnUmlaufSave" text="Speichern" press="onSave" visible="false"/>
+									<Button id="btnUmlaufCancel" text="Abbrechen" press="onCancel" visible="false"/>
 								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
