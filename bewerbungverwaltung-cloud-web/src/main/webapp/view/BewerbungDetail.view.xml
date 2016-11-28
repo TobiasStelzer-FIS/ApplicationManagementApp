@@ -3,7 +3,7 @@
 	xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m">
 	<semantic:DetailPage title="{i18n>detailTitle}" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" height="100%"
 		enableScrolling="false">
-<!--
+		<!--
 		<semantic:pagingAction>
 			<PagingButton count="10" positionChange="onPositionChange"/>
 		</semantic:pagingAction>
@@ -74,29 +74,49 @@
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Details">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title=" ">
-							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Details" type="XML"/>
+						<uxap:ObjectPageSubSection title="">
+							<VBox>
+								<FlexBox id="detailsContainer">
+									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Details" type="XML"/>
+								</FlexBox>
+								<Button id="btnDetailsBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
+							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Kommentare">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="">
-							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
+						<uxap:ObjectPageSubSection id="sectionKommentare" title="">
+							<VBox>
+								<FlexBox id="kommentareContainer">
+									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
+									<Button id="btnKommentareBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
+								</FlexBox>
+							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Unterlagen">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="">
-							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
+						<uxap:ObjectPageSubSection id="sectionUnterlagen" title="">
+							<VBox>
+								<FlexBox id="unterlagenContainer">
+									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
+									<Button id="btnUnterlagenBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
+								</FlexBox>
+							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Umlauf">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="">
-							<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Umlauf" type="XML"/>
+						<uxap:ObjectPageSubSection id="sectionUmlauf" title="">
+							<VBox>
+								<FlexBox id="umlaufContainer">
+									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Umlauf" type="XML"/>
+									<Button id="btnUmlaufBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
+								</FlexBox>
+							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>

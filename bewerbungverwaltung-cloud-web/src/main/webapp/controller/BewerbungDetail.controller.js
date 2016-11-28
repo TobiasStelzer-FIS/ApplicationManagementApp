@@ -1,8 +1,9 @@
 sap.ui.define([
 	"de/fis/bewerbungverwaltung/controller/BaseController",
 	"sap/ui/core/UIComponent",
+	"sap/ui/model/json/JSONModel",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(BaseController, UIComponent, formatter) {
+], function(BaseController, UIComponent, JSONModel, formatter) {
 	"use strict";
 
 	return BaseController.extend("de.fis.bewerbungverwaltung.controller.BewerbungDetail", {
@@ -11,6 +12,11 @@ sap.ui.define([
 
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
+
+			var oModel = new JSONModel({
+				fragments: []
+			});
+			this.getView().setModel(oModel, "sectionModel");
 
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
 		},
@@ -63,41 +69,57 @@ sap.ui.define([
 		onMessagesButtonPress: function(oEvent) {
 			sap.m.MessageToast.show("onMessagesButtonPress");
 		},
-/*
-		onPositionChange: function(oEvent) {
-			var newPosition = oEvent.getParameter("newPosition");
-			sap.m.MessageToast.show("Positioned changed to " + newPosition);
+		/*
+				onPositionChange: function(oEvent) {
+					var newPosition = oEvent.getParameter("newPosition");
+					sap.m.MessageToast.show("Positioned changed to " + newPosition);
 
-			this.getModel("testModel").read("/Bewerbungs/$count", {
-				async: true,
-				success: function(oData, response) {
-					console.log(response.body); //Its a string
-					if (newPosition > parseInt(response.body)) {
-						newPosition = 0;
-					}
+					this.getModel("testModel").read("/Bewerbungs/$count", {
+						async: true,
+						success: function(oData, response) {
+							console.log(response.body); //Its a string
+							if (newPosition > parseInt(response.body)) {
+								newPosition = 0;
+							}
 
-					this.getRouter().navTo("BewerbungDetail", {
-						Bewerbung: bindingContext.substr(12)
+							this.getRouter().navTo("BewerbungDetail", {
+								Bewerbung: bindingContext.substr(12)
+							});
+						}
 					});
-				}
-			});
-		},
-*/
+				},
+		*/
 		onPress: function(oEvent) {
 			sap.m.MessageToast.show("onPress");
 		},
 		onKommentareBearbeiten: function(oEvent) {
-			var oElementBinding = this.getView().getElementBinding("testModel");
-			this.getView().getModel("testModel").updateBindings();
-			jQuery.sap.log.error("oElementBinding: " + oElementBinding);
-			// No data for the binding
-			if (oElementBinding) {
-			//	this.getRouter().getTargets().display("detailObjectNotFound");
-				jQuery.sap.log.error("Yes");
+
+		},
+		onBearbeiten: function(oEvent) {
+			jQuery.sap.log.error("onBearbeiten");
+			var btnId = oEvent.getSource().getId();
+
+			switch (btnId) {
+				case "btnDetailsBearbeiten":
+					
+					break;
+				case "btnKommentareBearbeiten":
+					
+					break;
+				case "btnUnterlagenBearbeiten":
+					
+					break;
+				case "btnUmlaufBearbeiten":
+					
+					break;
 			}
-			else {
-				jQuery.sap.log.error("No");
-			}
+			var oSectionDetails = this.getView().byId("sectionDetails");
+
+			var oBlockAlt = oSectionDetails.getBlocks()[0];
+			var oFormFragment = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment." + "DetailsBearbeiten");
+			oSectionDetails.addBlock(oFormFragment);
+
+			oSectionDetails.removeBlock(oBlockAlt);
 		}
 
 	});

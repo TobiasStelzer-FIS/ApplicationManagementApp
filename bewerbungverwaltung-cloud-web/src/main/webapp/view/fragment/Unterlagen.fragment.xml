@@ -1,19 +1,16 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	xmlns="sap.m">
-	<VBox>
-		<f:Form>
-			<f:layout>
-				<f:ResponsiveGridLayout/>
-			</f:layout>
-			<f:FormContainer formElements="{path: 'testModel>DokumentDetails/results'}">
-				<f:title>
-					<core:Title text="Unterlagen"/>
-				</f:title>
-				<f:FormElement>
-					<Link text="• {testModel>Dateiname}" class="sapUiLargeMarginBegin"/>
-				</f:FormElement>
-			</f:FormContainer>
-		</f:Form>
-		<Button text="Bearbeiten" press="onKommentareBearbeiten"/>
-	</VBox>
+	<f:Form>
+		<f:layout>
+			<f:ResponsiveGridLayout/>
+		</f:layout>
+		<f:FormContainer formElements="{path: 'testModel>DokumentDetails/results'}">
+			<f:title>
+				<core:Title text="Unterlagen"/>
+			</f:title>
+			<f:FormElement>
+				<Link text="• {testModel>Dateiname}" class="sapUiLargeMarginBegin"/>
+			</f:FormElement>
+		</f:FormContainer>
+	</f:Form>
 </core:FragmentDefinition>

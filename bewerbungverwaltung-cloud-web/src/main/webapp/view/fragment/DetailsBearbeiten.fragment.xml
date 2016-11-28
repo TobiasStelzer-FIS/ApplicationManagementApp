@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
+	<VBox>
+		<f:Form editable="true" class="editableForm">
+			<f:layout>
+				<f:ResponsiveGridLayout columnsM="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" emptySpanM="0"/>
+			</f:layout>
+			<f:FormContainer>
+				<f:title>
+					<core:Title text="Persönliche Daten"/>
+				</f:title>
+				<f:FormElement label="Nachname">
+					<Input text="{testModel>BewerberDetails/Nachname}"/>
+				</f:FormElement>
+				<f:FormElement label="Vorname">
+					<Input text="{testModel>BewerberDetails/Vorname}"/>
+				</f:FormElement>
+				<f:FormElement label="Straße">
+					<Input text="{testModel>BewerberDetails/StrasseHnr}"/>
+				</f:FormElement>
+				<f:FormElement label="PLZ / Ort">
+					<Input text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
+				<f:title>
+					<core:Title text="Beworben als"/>
+				</f:title>
+				<f:FormElement>
+					<Input text="• {testModel>StelleDetails/Bezeichnung}"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer>
+				<f:title>
+					<core:Title text="Kontaktinformationen"/>
+				</f:title>
+				<f:FormElement label="Email">
+					<Input text="{testModel>BewerberDetails/Email}"/>
+				</f:FormElement>
+				<f:FormElement label="Telefon">
+					<Input text="{testModel>BewerberDetails/Telefonnummer}"/>
+				</f:FormElement>
+				<f:FormElement label="Mobil">
+					<Input text="{testModel>BewerberDetails/Handynummer}"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
+				<f:title>
+					<core:Title text="Quellen"/>
+				</f:title>
+				<f:FormElement>
+					<Input text="• {testModel>QuelleDetails/Bezeichnung}"/>
+				</f:FormElement>
+			</f:FormContainer>
+		</f:Form>
+		<Button text="Bearbeiten" press="onDetailsBearbeiten"/>
+	</VBox>
+</core:FragmentDefinition>
