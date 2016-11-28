@@ -1,5 +1,69 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m">
 	<VBox class="sapUiSmallMargin">
+		<!--
+		<l:BlockLayout>
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell title="Persönliche Daten">
+-->
+		<f:Form>
+			<f:layout>
+				<f:ResponsiveGridLayout/>
+			</f:layout>
+			<f:FormContainer>
+				<f:title>
+					<core:Title text="Persönliche Daten"/>
+				</f:title>
+				<f:FormElement label="Nachname">
+					<Text text="{testModel>BewerberDetails/Nachname}"/>
+				</f:FormElement>
+				<f:FormElement label="Vorname">
+					<Text text="{testModel>BewerberDetails/Vorname}"/>
+				</f:FormElement>
+				<f:FormElement label="Straße">
+					<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
+				</f:FormElement>
+				<f:FormElement label="PLZ / Ort">
+					<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
+				<f:title>
+					<core:Title text="Beworben als"/>
+				</f:title>
+				<f:FormElement>
+					<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiLargeMarginBegin"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer>
+				<f:title>
+					<core:Title text="Kontaktinformationen"/>
+				</f:title>
+				<f:FormElement label="Email">
+					<Text text="{testModel>BewerberDetails/Email}"/>
+				</f:FormElement>
+				<f:FormElement label="Telefon">
+					<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
+				</f:FormElement>
+				<f:FormElement label="Mobil">
+					<Text text="{testModel>BewerberDetails/Handynummer}"/>
+				</f:FormElement>
+			</f:FormContainer>
+			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
+				<f:title>
+					<core:Title text="Quellen"/>
+				</f:title>
+				<f:FormElement>
+					<Text text="• {testModel>QuelleDetails/Bezeichnung}" class="sapUiLargeMarginBegin"/>
+				</f:FormElement>
+			</f:FormContainer>
+		</f:Form>
+		<!--
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+		</l:BlockLayout>
+-->
+		<!--
 		<f:SimpleForm id="SimpleFormDisplay480_Trial" maxContainerCols="3" editable="false" layout="ResponsiveGridLayout" title="Address"
 			labelSpanXL="4" labelSpanL="4" labelSpanM="4" emptySpanXL="0" emptySpanL="0" emptySpanM="0" columnsXL="3" columnsL="2" columnsM="2">
 			<f:content>
@@ -28,5 +92,6 @@
 				<Text text="{testModel>BewerberDetails/Handynummer}"/>
 			</f:content>
 		</f:SimpleForm>
+-->
 	</VBox>
 </core:FragmentDefinition>

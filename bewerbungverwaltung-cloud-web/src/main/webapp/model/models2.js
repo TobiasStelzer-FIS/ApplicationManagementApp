@@ -2410,6 +2410,33 @@ sap.ui.define([
 								}
 							}
 						}]
+					},
+					"BewerbungQuelleDetails": {
+						"results": [{
+							"Bewerbung": 10,
+							"BewerbungQuelleId": 1,
+							"Quelle": 1,
+							"QuelleDetails": {
+								"Bezeichnung": "Homepage FIS",
+								"QuelleId": 1
+							}
+						}, {
+							"Bewerbung": 10,
+							"BewerbungQuelleId": 2,
+							"Quelle": 2,
+							"QuelleDetails": {
+								"Bezeichnung": "FH WÜ/SW",
+								"QuelleId": 2
+							}
+						}, {
+							"Bewerbung": 10,
+							"BewerbungQuelleId": 3,
+							"Quelle": 3,
+							"QuelleDetails": {
+								"Bezeichnung": "Gymnasium und Realschule Walter-Rathenau",
+								"QuelleId": 2
+							}
+						}]
 					}
 				}]
 
