@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
-	<List items="{path: 'testModel>KommentarDetails/results'}" class="listKommentare" height="">
+	<List items="{path: 'testModel>KommentarDetails/results'}" class="listKommentare" width="100%">
 		<CustomListItem class="sapUiSmallMarginBottom" height="auto">
 			<Title width="100%" text="{testModel>Thema}" titleStyle="H4" class="themaKommentar"/>
 			<FlexBox width="100%" alignItems="Start">

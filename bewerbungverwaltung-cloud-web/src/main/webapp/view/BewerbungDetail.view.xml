@@ -76,10 +76,14 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
 							<VBox>
-								<FlexBox id="detailsContainer">
+								<VBox id="containerDetails">
 									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Details" type="XML"/>
-								</FlexBox>
-								<Button id="btnDetailsBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
+								</VBox>
+								<HBox>
+									<Button id="btnDetailsEdit" text="Bearbeiten" data="btnDetailsEdit" press="onBearbeiten"/>
+									<Button id="btnDetailsSave" text="Speichern" press="onSave" visible="false"/>
+									<Button id="btnDetailsCancel" text="Abbrechen" press="onCancel" visible="false"/>
+								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
@@ -88,10 +92,14 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionKommentare" title="">
 							<VBox>
-								<FlexBox id="kommentareContainer">
+								<VBox id="containerKommentare">
 									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Kommentare" type="XML"/>
-									<Button id="btnKommentareBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
-								</FlexBox>
+								</VBox>
+								<HBox>
+									<Button id="btnKommentareEdit" text="Bearbeiten" press="onBearbeiten"/>
+									<Button id="btnKommentareSave" text="Speichern" press="onSave"/>
+									<Button id="btnKommentareCancel" text="Abbrechen" press="onCancel"/>
+								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
@@ -100,10 +108,14 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionUnterlagen" title="">
 							<VBox>
-								<FlexBox id="unterlagenContainer">
+								<VBox id="containerUnterlagen">
 									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Unterlagen" type="XML"/>
-									<Button id="btnUnterlagenBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
-								</FlexBox>
+								</VBox>
+								<HBox>
+									<Button id="btnUnterlagenEdit" text="Bearbeiten" press="onBearbeiten"/>
+									<Button id="btnUnterlagenSave" text="Speichern" press="onSave"/>
+									<Button id="btnUnterlagenCancel" text="Abbrechen" press="onCancel"/>
+								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
@@ -112,10 +124,14 @@
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionUmlauf" title="">
 							<VBox>
-								<FlexBox id="umlaufContainer">
+								<VBox id="containerUmlauf">
 									<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.Umlauf" type="XML"/>
-									<Button id="btnUmlaufBearbeiten" text="Bearbeiten" press="onBearbeiten"/>
-								</FlexBox>
+								</VBox>
+								<HBox>
+									<Button id="btnUmlaufEdit" text="Bearbeiten" press="onBearbeiten"/>
+									<Button id="btnUmlaufSave" text="Speichern" press="onSave"/>
+									<Button id="btnUmlaufCancel" text="Abbrechen" press="onCancel"/>
+								</HBox>
 							</VBox>
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>

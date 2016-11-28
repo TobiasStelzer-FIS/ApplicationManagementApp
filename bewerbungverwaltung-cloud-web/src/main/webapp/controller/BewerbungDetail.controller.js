@@ -62,13 +62,7 @@ sap.ui.define([
 		},
 		onBeforeRendering: function() {
 
-		},
-		onSemanticButtonPress: function(oEvent) {
-			sap.m.MessageToast.show("onSemanticButtonPress");
-		},
-		onMessagesButtonPress: function(oEvent) {
-			sap.m.MessageToast.show("onMessagesButtonPress");
-		},
+		}
 		/*
 				onPositionChange: function(oEvent) {
 					var newPosition = oEvent.getParameter("newPosition");
@@ -89,19 +83,29 @@ sap.ui.define([
 					});
 				},
 		*/
-		onPress: function(oEvent) {
-			sap.m.MessageToast.show("onPress");
-		},
-		onKommentareBearbeiten: function(oEvent) {
 
-		},
+/*		
 		onBearbeiten: function(oEvent) {
 			jQuery.sap.log.error("onBearbeiten");
 			var btnId = oEvent.getSource().getId();
-
+			var oView = this.getView();
+			var btnId2 = oView.byId("btnDetailsBearbeiten");
+			
+			jQuery.sap.log.error("oEvent.getSource.getId(): " + btnId);
+			jQuery.sap.log.error("btnId2: " + btnId2);
+			btnId = "btnDetailsBearbeiten";
+			
 			switch (btnId) {
 				case "btnDetailsBearbeiten":
-					
+					var container = oView.byId("containerDetails");
+					// Content aus dem container entfernen
+					// Fragment "DetailsBearbeiten" zum container hinzufügen
+					// btnDetailsEdit unsichtbar machen
+					oView.byId("btnDetailsEdit").setVisible(false);
+					// btnDetailsSave sichtbar machen
+					oView.byId("btnDetailsSave").setVisible(true);
+					// btnDetailsCancel sichtbar machen
+					oView.byId("btnDetailsCancel").setVisible(true);
 					break;
 				case "btnKommentareBearbeiten":
 					
@@ -113,6 +117,7 @@ sap.ui.define([
 					
 					break;
 			}
+
 			var oSectionDetails = this.getView().byId("sectionDetails");
 
 			var oBlockAlt = oSectionDetails.getBlocks()[0];
@@ -120,8 +125,15 @@ sap.ui.define([
 			oSectionDetails.addBlock(oFormFragment);
 
 			oSectionDetails.removeBlock(oBlockAlt);
-		}
 
+		},
+		onSave: function(oEvent) {
+			
+		},
+		onCancel: function(oEvent) {
+			
+		}
+*/
 	});
 
 });
