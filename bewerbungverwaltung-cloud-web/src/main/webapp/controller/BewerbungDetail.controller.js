@@ -12,12 +12,12 @@ sap.ui.define([
 
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
-
+/*
 			var oModel = new JSONModel({
 				fragments: []
 			});
 			this.getView().setModel(oModel, "sectionModel");
-
+*/
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
 		},
 		_handleRouteMatched: function(oEvent) {
@@ -25,13 +25,6 @@ sap.ui.define([
 
 			this._bindView(sBindingEntity);
 		},
-		/**
-		 * Binds the view to the object path. Makes sure that detail view displays
-		 * a busy indicator while data for the corresponding element binding is loaded.
-		 * @function
-		 * @param {string} sObjectPath path to the object to be bound to the view.
-		 * @private
-		 */
 		_bindView: function(sObjectPath) {
 			this.getView().bindElement({
 				path: sObjectPath,
@@ -45,14 +38,15 @@ sap.ui.define([
 		_onBindingChange: function() {
 			var oElementBinding = this.getView().getElementBinding("testModel");
 			this.getView().getModel("testModel").updateBindings();
-			jQuery.sap.log.error("oElementBinding: " + oElementBinding);
+			
 			// No data for the binding
 			if (!oElementBinding) {
-				this.getRouter().getTargets().display("detailObjectNotFound");
+//				this.getRouter().getTargets().display("DetailObjectNotFound");
+				this.getRouter().navTo("DetailObjectNotFound");
 			}
 		},
 		onNavButtonPressed: function(oEvent) {
-			UIComponent.getRouterFor(this).navTo("BewerbungenMaster");
+			this.getRouter().navTo("BewerbungenMaster");
 		},
 		onExit: function() {
 
@@ -63,27 +57,6 @@ sap.ui.define([
 		onBeforeRendering: function() {
 
 		}
-		/*
-				onPositionChange: function(oEvent) {
-					var newPosition = oEvent.getParameter("newPosition");
-					sap.m.MessageToast.show("Positioned changed to " + newPosition);
-
-					this.getModel("testModel").read("/Bewerbungs/$count", {
-						async: true,
-						success: function(oData, response) {
-							console.log(response.body); //Its a string
-							if (newPosition > parseInt(response.body)) {
-								newPosition = 0;
-							}
-
-							this.getRouter().navTo("BewerbungDetail", {
-								Bewerbung: bindingContext.substr(12)
-							});
-						}
-					});
-				},
-		*/
-
 /*		
 		onBearbeiten: function(oEvent) {
 			jQuery.sap.log.error("onBearbeiten");

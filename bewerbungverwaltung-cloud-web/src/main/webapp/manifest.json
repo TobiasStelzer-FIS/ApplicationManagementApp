@@ -89,6 +89,9 @@
 					"target": "BewerbungDetail"
 				}]
 			}, {
+				"name": "DetailObjectNotFound",
+				"target": "detailObjectNotFound"
+			}, {
 				"pattern": "{all*}",
 				"name": "NotFound",
 				"target": "notFound"

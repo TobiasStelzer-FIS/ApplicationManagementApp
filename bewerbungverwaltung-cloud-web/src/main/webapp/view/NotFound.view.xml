@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="de.fis.bewerbungverwaltung.controller.BaseController"
+	controllerName="de.fis.bewerbungverwaltung.controller.EmptyController"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
 
