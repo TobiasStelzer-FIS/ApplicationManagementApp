@@ -4,21 +4,18 @@
 	<ViewSettingsDialog
 		confirm="onConfirmViewSettingsDialog">
 		<sortItems>
-			<ViewSettingsItem text="Datum" key="EingetragenAm" selected="true" />
-			<ViewSettingsItem text="Vorname" key="BewerberDetails/Vorname" />
-			<ViewSettingsItem text="Nachname" key="BewerberDetails/Nachname" />
-			<ViewSettingsItem text="Status" key="StatusDetails/Bezeichnung" />
+			<ViewSettingsItem text="{i18n>ViewSettingsDate}" key="EingetragenAm" selected="true" />
+			<ViewSettingsItem text="{i18n>ViewSettingsForename}" key="BewerberDetails/Vorname" />
+			<ViewSettingsItem text="{i18n>ViewSettingsSurname}" key="BewerberDetails/Nachname" />
+			<ViewSettingsItem text="{i18n>ViewSettingsStatus}" key="StatusDetails/Bezeichnung" />
 		</sortItems>
-		<groupItems>
-			<ViewSettingsItem text="Status" key="StatusDetails/StatusId" />
-		</groupItems>
 		<filterItems>
-			<ViewSettingsFilterItem text="Status" key="Status" items="{path: 'testModel>/Statuss'}">
+			<ViewSettingsFilterItem text="{i18n>ViewSettingsStatus}" key="Status" items="{path: 'testModel>/Statuss'}">
 				<items>
-					<ViewSettingsItem text="{testModel>Bezeichnung}" key="{testModel>StatusId}" />
+					<ViewSettingsItem text="{testModel>ViewSettingsBezeichnung}" key="{testModel>StatusId}" />
 				</items>
 			</ViewSettingsFilterItem>
-			<ViewSettingsFilterItem text="Stelle" key="Stelle" items="{path: 'testModel>/Stelles'}">
+			<ViewSettingsFilterItem text="{i18n>ViewSettingsPosition}" key="Stelle" items="{path: 'testModel>/Stelles'}">
 				<items>
 					<ViewSettingsItem text="{testModel>Bezeichnung}" key="{testModel>StelleId}"/>
 				</items>

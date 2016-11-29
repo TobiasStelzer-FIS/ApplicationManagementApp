@@ -2,28 +2,28 @@
 	<Table>
 		<headerToolbar>
 			<Toolbar>
-				<Title text="Abteilungen"/>
+				<Title text="{i18n>UmlaufDepartments}"/>
 			</Toolbar>
 		</headerToolbar>
 		<columns>
 			<Column>
 				<header>
-					<Label text="Abteilung"/>
+					<Label text="{i18n>UmlaufDepartment}"/>
 				</header>
 			</Column>
 			<Column>
 				<header>
-					<Label text="Gesendet"/>
+					<Label text="{i18n>UmlaufSent}"/>
 				</header>
 			</Column>
 			<Column>
 				<header>
-					<Label text="Gelesen"/>
+					<Label text="{i18n>UmlaufRead}"/>
 				</header>
 			</Column>
 			<Column>
 				<header>
-					<Label text="Status"/>
+					<Label text="{i18n>UmlaufStatus}"/>
 				</header>
 			</Column>
 		</columns>

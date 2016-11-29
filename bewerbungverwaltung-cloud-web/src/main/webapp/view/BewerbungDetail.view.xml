@@ -1,7 +1,7 @@
 <mvc:View controllerName="de.fis.bewerbungverwaltung.controller.BewerbungDetail" displayBlock="true" height="100%"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:custom="de.fis.bewerbungverwaltung.control"
 	xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m">
-	<semantic:DetailPage title="{i18n>Title}" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" height="100%"
+	<semantic:DetailPage title="{i18n>DetailTitle}" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPressed" height="100%"
 		enableScrolling="false">
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
@@ -49,7 +49,7 @@
 				</VBox>
 				<VBox width="auto">
 					<FlexBox width="auto">
-						<Label text="Eingetragen von: ">
+						<Label text="{i18n>DetailEnteredBy}:">
 							<layoutData>
 								<FlexItemData minWidth="115px"/>
 							</layoutData>
@@ -57,7 +57,7 @@
 						<Label text="{testModel>EingetragenVon}"/>
 					</FlexBox>
 					<FlexBox width="auto" alignItems="End">
-						<Label text="Eingetragen am: ">
+						<Label text="{i18n>DetailEnteredOn}:">
 							<layoutData>
 								<FlexItemData minWidth="115px"/>
 							</layoutData>
@@ -67,7 +67,7 @@
 				</VBox>
 			</uxap:headerContent>
 			<uxap:sections>
-				<uxap:ObjectPageSection title="Details">
+				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleDetails}">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="">
 							<VBox>
@@ -83,7 +83,7 @@
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
-				<uxap:ObjectPageSection title="Kommentare">
+				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleComments}">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionKommentare" title="">
 							<VBox>
@@ -99,7 +99,7 @@
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
-				<uxap:ObjectPageSection title="Unterlagen">
+				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleDocuments}">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionUnterlagen" title="">
 							<VBox>
@@ -115,7 +115,7 @@
 						</uxap:ObjectPageSubSection>
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
-				<uxap:ObjectPageSection title="Umlauf">
+				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleCirculation}">
 					<uxap:subSections>
 						<uxap:ObjectPageSubSection id="sectionUmlauf" title="">
 							<VBox>

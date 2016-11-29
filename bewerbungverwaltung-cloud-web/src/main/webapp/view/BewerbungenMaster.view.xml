@@ -3,13 +3,12 @@
 	<semantic:MasterPage title="{masterView>/title}" showSubHeader="true">
 		<semantic:subHeader>
 			<Toolbar>
-				<SearchField width="100%" placeholder="Suchen" search="onSearch" liveChange="onSearch"/>
+				<SearchField width="100%" placeholder="{i18n>MasterSearchFieldPlaceholder}" search="onSearch" liveChange="onSearch"/>
 			</Toolbar>
 		</semantic:subHeader>
 		<semantic:content>
 			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
-			<List id="listBewerbungen" class="listBewerbungen"
-				items="{path: 'testModel>/Bewerbungs', sorter: {path: 'testModel>EingetragenAm'}, groupHeaderFactory: '.createGroupHeader'}"
+			<List id="listBewerbungen" class="listBewerbungen" items="{path: 'testModel>/Bewerbungs', sorter: {path: 'testModel>EingetragenAm'}}"
 				busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}" updateFinished="onUpdateFinished">
 				<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.BewerbungListItem" type="XML"/>
 				<infoToolbar>
@@ -21,25 +20,14 @@
 		</semantic:content>
 		<semantic:sort>
 			<semantic:SortAction press="onSortPressed"/>
-			<!--
-			<semantic:SortSelect id="sort" selectedKey="{masterView>/sortBy}" change="onSort">
-				<core:Item id="masterSort1" key="BewerberDetails/Vorname" text="{i18n>Sort1}"/>
-				<core:Item id="masterSort2" key="BewerberDetails/Nachname" text="{i18n>Sort2}"/>
-				<core:Item id="masterSort3" key="EingetragenAm" text="{i18n>Sort3}"/>
-			</semantic:SortSelect>
--->
 		</semantic:sort>
 		<semantic:filter>
 			<semantic:FilterAction press="onFilterPressed"/>
 		</semantic:filter>
+		<!--
 		<semantic:group>
 			<semantic:GroupAction press="onGroupPressed"/>
-			<!--
-			<semantic:GroupSelect id="group" selectedKey="{masterView>/groupBy}" change="onGroup">
-				<core:Item id="masterGroupNone" key="None" text="{i18n>GroupNone}"/>
-				<core:Item id="masterGroup1" key="StatusDetails/Bezeichnung" text="{i18n>Group1}"/>
-			</semantic:GroupSelect>
--->
 		</semantic:group>
+-->
 	</semantic:MasterPage>
 </mvc:View>

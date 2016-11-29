@@ -5,8 +5,8 @@
 
 	<MessagePage
 		id="page"
-		title="{i18n>notAvailableViewTitle}"
-		text="{i18n>noObjectsAvailableText}"
+		title="{i18n>NoObjectsAvailableTitle}"
+		text="{i18n>NoObjectsAvailableText}"
 		icon="{sap-icon://product}"
 		description=""
 		showNavButton="{device>/system/phone}"

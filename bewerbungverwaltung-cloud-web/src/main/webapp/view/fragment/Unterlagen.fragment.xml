@@ -6,7 +6,7 @@
 		</f:layout>
 		<f:FormContainer formElements="{path: 'testModel>DokumentDetails/results'}">
 			<f:title>
-				<core:Title text="Unterlagen"/>
+				<core:Title text="{i18n>UnterlagenDocuments}"/>
 			</f:title>
 			<f:FormElement>
 				<Link text="• {testModel>Dateiname}"/>

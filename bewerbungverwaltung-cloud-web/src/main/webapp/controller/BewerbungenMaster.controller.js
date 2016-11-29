@@ -37,8 +37,8 @@ sap.ui.define([
 				isPullToRefreshVisible: false,
 				filterBarLabel: "",
 				delay: 0,
-				title: this.getResourceBundle().getText("masterTitleCount", [0]),
-				noDataText: this.getResourceBundle().getText("masterListNoDataText"),
+				title: this.getResourceBundle().getText("MasterTitleWithCount", [0]),
+				noDataText: this.getResourceBundle().getText("MasterListNoDataText"),
 				filterStellen: [],
 				sortBy: "EingetragenAm",
 				groupBy: "None"
@@ -55,18 +55,14 @@ sap.ui.define([
 				var sTitle = this.getResourceBundle().getText("TitleWithCount", [totalItems]); // aktualisiere die Itemanzahl
 				this.getModel("masterView").setProperty("/title", sTitle); // im Titel der Page
 			}
-
-			/* // PullToRefresh verstecken
-			this.byId("pullToRefresh").hide();
-			this.getModel("masterView").setProperty("/isPullToRefreshVisible", false);
-			*/
 		},
-		/*
-		onRefresh: function(oEvent) {
-			// EventHandler für "refresh"-Event vom PullToRefresh-Control
-			this._oList.getBinding("items").refresh();
-		},
-		*/
+		/**
+		 * Creates the ViewSettingsDialog if not already created
+		 * (onFilterPressed --> _getViewSettingsDialog)
+		 * (onSortPressed	--> _getViewSettingsDialog)
+		 * @return {sap.ui.xmlfragment} viewSettingsDialog
+		 * @private
+		 */	
 		_getViewSettingsDialog: function() {
 			// Gibt den ViewSettingsDialog zurück und
 			// erstellt ihn vorher, wenn nötig
@@ -76,8 +72,18 @@ sap.ui.define([
 			}
 			return this._oDialog;
 		},
+		
+		/* =========================================================== */
+		/* event handlers                                              */
+		/* =========================================================== */
+		
+		/**
+		 * Navigates to the detail view of the chosen application
+		 * @handler "press" event of BewerbungListItem
+		 * @param oEvent: The press event
+		 * @public
+		 */
 		onListItemPressed: function(oEvent) {
-			// EventHandler für das "press"-Event der CustomListItems für die einzelnen Bewerbungen
 			var bindingContext = oEvent.getSource().getBindingContextPath();
 
 			var oRouter = UIComponent.getRouterFor(this);
@@ -85,30 +91,18 @@ sap.ui.define([
 				Bewerbung: bindingContext.substr(12)
 			});
 		},
-		
 		/**
-		 * Bla Bla 
+		 * Determines the search query string and creates a corresponding filter
+		 * @handler "search" event of SearchField
+		 * @handler "liveChange" event of SearchField
+		 * @param oEvent: The search or liveChange event
+		 * @public
 		 */
-		onSort: function(oEvent) {
-			// EventHandler für das "change"-Event der SortSelection (anstatt ViewSettingsDialog)
-			var sKey = oEvent.getSource().getSelectedItem().getKey(),
-				aSorters = this._oGroupSortState.sort(sKey);
-
-			this._applyGroupSort(aSorters);
-		},
-		onGroup: function(oEvent) {
-			// EventHandler für das "change"-Event der GroupSelection (anstatt ViewSettingsDialog)
-			var sKey = oEvent.getSource().getSelectedItem().getKey(),
-				aSorters = this._oGroupSortState.group(sKey);
-
-			this._applyGroupSort(aSorters);
-		},
 		onSearch: function(oEvent) {
-			// EventHandler für "search"-Event und "liveChange"-Event des SearchFields
 			var aFilter = [];
 			var sQuery = oEvent.getParameter("newValue"); // Parameter "newValue" enthält den Suchstring beim "liveChange"-Event
 			if (sQuery == null) {
-				sQuery = oEvent.getParameter("query"); // Falls es den nicht gibt, hole den vom "search"-Event (Parameter "query")
+				sQuery = oEvent.getParameter("query"); // Falls es den nicht gibt, hole den vom "search"-Event
 			}
 
 			if (sQuery !== "") { // Wenn etwas im SearchField steht,
@@ -123,57 +117,70 @@ sap.ui.define([
 
 			this._applyFilterSearch(); // Filter anwenden
 		},
+		/**
+		 * Opens the ViewSettingsDialog at the filter tab
+		 * @handler "press" event of FilterAction
+		 * @param oEvent: The press event
+		 * @public
+		 */
 		onFilterPressed: function(oEvent) {
-			// EventHandler für "press"-Event der FilterAction
 			var oDialog = this._getViewSettingsDialog();
 			oDialog.open("filter");
 		},
+		/**
+		 * Opens the ViewSettingsDialog at the sort tab
+		 * @handler "press" event of SortAction
+		 * @param oEvent: The press event
+		 * @public
+		 */
 		onSortPressed: function(oEvent) {
-			// EventHandler für "press"-Event der SortAction
 			var oDialog = this._getViewSettingsDialog();
 			oDialog.open("sort");
 		},
-		onGroupPressed: function(oEvent) {
-			// EventHandler für "press"-Event der GroupAction
-			var oDialog = this._getViewSettingsDialog();
-			oDialog.open("group");
-		},
+		/**
+		 * Gets the filter- and sort-options and calls methods 
+		 * which create and eventually apply the corresponding filters/sorters
+		 * @handler "confirm" event of ViewSettingsDialog
+		 * @param oEvent: The confirm event
+		 * @public
+		 */
 		onConfirmViewSettingsDialog: function(oEvent) {
 			var aFilterItems = oEvent.getParameters().filterItems,
 				oSortItem = oEvent.getParameters().sortItem,
-				oGroupItem = oEvent.getParameters().groupItem,
-				bSortDescending = oEvent.getParameters().sortDescending,
-				bGroupDescending = oEvent.getParameters().groupDescending;
+				bSortDescending = oEvent.getParameters().sortDescending;
 
-			this.handleSorting(oSortItem, bSortDescending);
-			this.handleGrouping(oGroupItem, bGroupDescending);
-			this.handleFiltering(aFilterItems);
+			this._handleSorting(oSortItem, bSortDescending);
+			this._handleFiltering(aFilterItems);
 		},
-		handleSorting: function(oSortItem, bDescending) {
+		/**
+		 * Handles the creation of the sorter
+		 * (onConfirmViewSettingsDialog --> _handleSorting)
+		 * @param oSortItem: The SortItem as received from the ViewSettingsDialog
+		 * @param bDescending: Wether the sorting should be descending or ascending
+		 * @private
+		 */
+		_handleSorting: function(oSortItem, bDescending) {
 			if (oSortItem === undefined) {
 				return;
 			}
 			var sKey = oSortItem.mProperties.key,
 				aSorters = this._oGroupSortState.sort(sKey, bDescending);
 
-			this._applyGroupSort(aSorters);
+			this._applySort(aSorters);
 		},
-		handleGrouping: function(oGroupItem, bDescending) {
-			if (oGroupItem === undefined) {
-				return;
-			}
-			var sKey = oGroupItem.mProperties.key,
-				aSorters = this._oGroupSortState.group(sKey, bDescending);
-
-			this._applyGroupSort(aSorters);
-		},
-		handleFiltering: function(aFilterItems) {
+		/**
+		 * Handles the creation of the filters and text for the FilterBar 
+		 * (onConfirmViewSettingsDialog --> _handleFiltering)
+		 * @param aFilterItems: The array of FilterItems as received from the ViewSettingsDialog
+		 * @private
+		 */
+		_handleFiltering: function(aFilterItems) {
 			if (aFilterItems === undefined) {
 				return;
 			}
-			var aFilters = [],			// Temporärer Array für die erstellten Filter
-				aCaptions = [], 		// Temporärer Array für den Text, der in der FilterBar angezeigt wird
-				aFilterStellen = [],	// Temporärer Array für die IDs der Stellen, nach denen gefiltert wird
+			var aFilters = [], // Temporärer Array für die erstellten Filter
+				aCaptions = [], // Temporärer Array für den Text, der in der FilterBar angezeigt wird
+				aFilterStellen = [], // Temporärer Array für die IDs der Stellen, nach denen gefiltert wird
 				sText = "";
 
 			// Alle FilterItems durchgehen und erstellte Filter
@@ -197,7 +204,7 @@ sap.ui.define([
 					path: "BewerbungStelleDetails/results", // Array mit den Stellen der Bewerbung
 					test: filter.fnFilterStellen.bind(this) // an eine eigene Filterfunktion
 				})); // (überprüft, ob der Array eine der gefilterten Stellen enthält)
-				
+
 				if (sText !== "") {
 					sText += " und ";
 				}
@@ -207,25 +214,28 @@ sap.ui.define([
 			// Speichere die gefilterten Stellen in einer Instanzvariable, dass die eigene Filterfunktion später darauf zugreifen kann
 			this.getModel("masterView").setProperty("/filterStellen", aFilterStellen);
 
-			this._oFilterSearchState.aFilter = aFilters; //
+			this._oFilterSearchState.aFilter = aFilters;
 			this._updateFilterBar(sText); // Text in der FilterBar anzeigen
 			this._applyFilterSearch();
 		},
-		createGroupHeader: function(oGroup) {
-			jQuery.sap.log.error("CreateGroupHeader");
-			return new GroupHeaderListItem({
-				title: oGroup.text,
-				upperCase: false
-			});
-		},
+		/**
+		 * Updates the visibility and the text of the FilterBar
+		 * (onConfirmViewSettingsDialog --> _handleFiltering --> _updateFilterBar)
+		 * @param oSortItem: The SortItem as received from the ViewSettingsDialog
+		 * @param bDescending: Wether the sorting should be descending or ascending
+		 * @private
+		 */		
 		_updateFilterBar: function(sFilterBarText) {
 			var oViewModel = this.getModel("masterView");
 			oViewModel.setProperty("/isFilterBarVisible", (this._oFilterSearchState.aFilter.length > 0));
-			oViewModel.setProperty("/filterBarLabel", this.getResourceBundle().getText("FilterBarText", [sFilterBarText]));
+			oViewModel.setProperty("/filterBarLabel", this.getResourceBundle().getText("MasterFilterBarText", [sFilterBarText]));
 		},
 		/**
-		 * Wendet die Filter und Search an (weil beide Filter-Objekte sind)
-		 */
+		 * Applys the filters and the search to the Lists "item" binding (because both are Filter objects)
+		 * (onConfirmViewSettingsDialog --> _handleFiltering --> _applyFilterSearch)
+		 * (onSearch --> _applyFilterSearch)
+		 * @private
+		 */	
 		_applyFilterSearch: function() {
 			var aFilters = this._oFilterSearchState.aSearch.concat(this._oFilterSearchState.aFilter),
 				oViewModel = this.getModel("masterView");
@@ -233,16 +243,19 @@ sap.ui.define([
 			this._oList.getBinding("items").filter(aFilters, "Application");
 			// Ändert den noDataText der List je nachdem, ob Filter angewendet werden oder nicht
 			if (aFilters.length !== 0) {
-				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("ListNoDataWithFilterOrSearchText"));
+				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("MasterListNoDataWithFilterOrSearchText"));
 			} else if (this._oFilterSearchState.aSearch.length > 0) {
 				// only reset the no data text to default when no new search was triggered
-				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("ListNoDataText"));
+				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("MasterListNoDataText"));
 			}
 		},
 		/**
-		 * Wendet die Grouper und Sorter an (weil beide Sorter-Objekte sind)
-		 */
-		_applyGroupSort: function(aSorters) {
+		 * Applys the sorters to the Lists "item" binding
+		 * (onConfirmViewSettingsDialog --> _handleSorting --> _applySort)
+		 * @param aSorters: The array of Sorters as created by _handleSorting
+		 * @private
+		 */	
+		_applySort: function(aSorters) {
 			this._oList.getBinding("items").sort(aSorters);
 		}
 

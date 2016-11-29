@@ -3,20 +3,6 @@ sap.ui.define(function() {
 
 	return {
 
-		formatStatus: function(status) {
-			switch (status) {
-				case "Eingeladen":
-				case "Eingestellt":
-					return "Success";
-
-				case "Offen":
-					return "Warning";
-
-				case "Abgelehnt":
-					return "Error";
-			}
-		},
-
 		formatDatum: function(date) {
 			if (date == null) {
 				return "";
@@ -53,7 +39,7 @@ sap.ui.define(function() {
 //			return (theday + "." + themonth + "." + theyear + " " + thehour + ":" + theminute + ":" + thesecond);
 		},
 
-		formatTage: function(date) {
+		formatTage: function(sI18nKey, date) {
 			var msPerDay = 1000 * 60 * 60 * 24; // 1000 * 60 * 60 * 24 == MS_PER_DAY
 
 			var millis = parseInt(date.substring(6, 19));
@@ -62,8 +48,10 @@ sap.ui.define(function() {
 			millis = Date.now();
 			millis -= millis % msPerDay; // abrunden auf 00:00 Uhr des Tages
 			var today = new Date(millis);
+			
+			var result = Math.trunc((today - eingetragenAm) / msPerDay);
 
-			return Math.trunc((today - eingetragenAm) / msPerDay);
+			return jQuery.sap.formatMessage(sI18nKey, result);
 		}
 
 	};

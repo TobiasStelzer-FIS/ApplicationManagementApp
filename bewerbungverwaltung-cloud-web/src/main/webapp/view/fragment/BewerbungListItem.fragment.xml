@@ -9,7 +9,7 @@
 			<HBox>
 				<VBox>
 					<Label text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" width="100%"/>
-					<Table noDataText="Initiativbewerbung" class="tableStellen sapUiTinyMarginBottom" width="auto" showSeparators="Inner"
+					<Table noDataText="{i18n>ItemTableStellenNoDataText}" class="tableStellen sapUiTinyMarginBottom" width="auto" showSeparators="Inner"
 						backgroundDesign="Transparent" items="{path: 'testModel>BewerbungStelleDetails/results', templateShareable: false}">
 						<ColumnListItem width="auto" type="Inactive">
 							<cells>
@@ -28,7 +28,7 @@
 			<HBox width="auto">
 				<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}" width="auto"/>
 				<FlexBox width="100%"/>
-				<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatTage'} {i18n>Tage}" width="auto" textAlign="End"/>
+				<Label text="{parts: ['i18n>ItemNumberOfDays', 'testModel>EingetragenAm'], formatter: '.formatter.formatTage'}" width="auto" textAlign="End"/>
 			</HBox>
 		</VBox>
 	</CustomListItem>
