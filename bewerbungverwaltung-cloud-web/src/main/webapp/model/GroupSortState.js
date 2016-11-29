@@ -29,7 +29,10 @@ sap.ui.define([
 		 * @param {string} sKey - the key of the field used for grouping
 		 * @returns {sap.ui.model.Sorter[]} an array of sorters
 		 */
-		sort: function(sKey) {
+		sort: function(sKey, bDescending) {
+			if (bDescending === undefined) {
+				bDescending = false;
+			}
 			var sGroupedBy = this._oViewModel.getProperty("/groupBy");
 
 			if (sGroupedBy !== "None") {
@@ -38,7 +41,7 @@ sap.ui.define([
 				this._oViewModel.setProperty("/groupBy", "None");
 			}
 
-			return [new Sorter(sKey, false)];
+			return [new Sorter(sKey, bDescending)];
 		},
 
 		/**
@@ -47,34 +50,31 @@ sap.ui.define([
 		 * @param {string} sKey - the key of the field used for grouping
 		 * @returns {sap.ui.model.Sorter[]} an array of sorters
 		 */
-		group: function(sKey) {
-			var aSorters = [];
-			var groupBy = this._oViewModel.getProperty("/groupBy");
-			var descending = this._oViewModel.getProperty("/descending");
-
-			jQuery.sap.log.error("sKey: " + sKey);
-			jQuery.sap.log.error("descending: " + descending);
-			if (sKey === groupBy) { // Wenn wieder aufs gleiche geklickt wurde, dann drehe die Sortierungsrichtung um
-				descending = !descending;
-				this._oViewModel.setProperty("/descending", descending);
+		group: function(sKey, bDescending) {
+			if (bDescending === undefined) {
+				bDescending = false;
 			}
+			var aSorters = [];
+			
+			jQuery.sap.log.error("sKey: " + sKey);
+			jQuery.sap.log.error("descending: " + bDescending);
 
 			var fnGroupFunction;
 			switch (sKey) {
-				case "StatusDetails/Bezeichnung":
+				case "StatusDetails/StatusId":
 					fnGroupFunction = grouper.groupStatus;
 					break;
 				case "None":
 					// select the default sorting again
 					this._oViewModel.setProperty("/sortBy", "EingetragenAm");
-					return [new Sorter("EingetragenAm", descending)];
+					return [new Sorter("EingetragenAm", bDescending)];
 			}
 
 			// Grouping means sorting so we set the select to the same Entity used for grouping
 			this._oViewModel.setProperty("/sortBy", sKey);
 
 			aSorters.push(
-				new Sorter(sKey, descending,
+				new Sorter(sKey, bDescending,
 					fnGroupFunction.bind(this))
 			);
 

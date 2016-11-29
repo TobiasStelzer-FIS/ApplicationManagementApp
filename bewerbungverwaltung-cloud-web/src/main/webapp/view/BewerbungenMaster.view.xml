@@ -23,9 +23,9 @@
 			<semantic:SortAction press="onSortPressed"/>
 			<!--
 			<semantic:SortSelect id="sort" selectedKey="{masterView>/sortBy}" change="onSort">
-				<core:Item id="masterSort1" key="BewerberDetails/Vorname" text="{i18n>masterSort1}"/>
-				<core:Item id="masterSort2" key="BewerberDetails/Nachname" text="{i18n>masterSort2}"/>
-				<core:Item id="masterSort3" key="EingetragenAm" text="{i18n>masterSort3}"/>
+				<core:Item id="masterSort1" key="BewerberDetails/Vorname" text="{i18n>Sort1}"/>
+				<core:Item id="masterSort2" key="BewerberDetails/Nachname" text="{i18n>Sort2}"/>
+				<core:Item id="masterSort3" key="EingetragenAm" text="{i18n>Sort3}"/>
 			</semantic:SortSelect>
 -->
 		</semantic:sort>
@@ -36,8 +36,8 @@
 			<semantic:GroupAction press="onGroupPressed"/>
 			<!--
 			<semantic:GroupSelect id="group" selectedKey="{masterView>/groupBy}" change="onGroup">
-				<core:Item id="masterGroupNone" key="None" text="{i18n>masterGroupNone}"/>
-				<core:Item id="masterGroup1" key="StatusDetails/Bezeichnung" text="{i18n>masterGroup1}"/>
+				<core:Item id="masterGroupNone" key="None" text="{i18n>GroupNone}"/>
+				<core:Item id="masterGroup1" key="StatusDetails/Bezeichnung" text="{i18n>Group1}"/>
 			</semantic:GroupSelect>
 -->
 		</semantic:group>
