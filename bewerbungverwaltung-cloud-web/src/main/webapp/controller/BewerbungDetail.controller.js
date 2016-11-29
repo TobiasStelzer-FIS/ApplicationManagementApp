@@ -38,7 +38,7 @@ sap.ui.define([
 		_onBindingChange: function() {
 			var oElementBinding = this.getView().getElementBinding("testModel");
 			this.getView().getModel("testModel").updateBindings();
-			
+
 			// No data for the binding
 			if (!oElementBinding) {
 //				this.getRouter().getTargets().display("DetailObjectNotFound");

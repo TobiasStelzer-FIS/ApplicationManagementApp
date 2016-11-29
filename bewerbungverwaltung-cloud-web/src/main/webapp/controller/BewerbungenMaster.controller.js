@@ -61,10 +61,12 @@ sap.ui.define([
 			this.getModel("masterView").setProperty("/isPullToRefreshVisible", false);
 			*/
 		},
+		/*
 		onRefresh: function(oEvent) {
 			// EventHandler für "refresh"-Event vom PullToRefresh-Control
 			this._oList.getBinding("items").refresh();
 		},
+		*/
 		_getViewSettingsDialog: function() {
 			// Gibt den ViewSettingsDialog zurück und
 			// erstellt ihn vorher, wenn nötig
@@ -83,6 +85,10 @@ sap.ui.define([
 				Bewerbung: bindingContext.substr(12)
 			});
 		},
+		
+		/**
+		 * Bla Bla 
+		 */
 		onSort: function(oEvent) {
 			// EventHandler für das "change"-Event der SortSelection (anstatt ViewSettingsDialog)
 			var sKey = oEvent.getSource().getSelectedItem().getKey(),
