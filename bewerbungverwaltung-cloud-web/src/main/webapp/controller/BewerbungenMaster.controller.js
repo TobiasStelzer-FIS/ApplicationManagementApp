@@ -52,7 +52,7 @@ sap.ui.define([
 			var totalItems = oEvent.getParameter("total");
 
 			if (this._oList.getBinding("items").isLengthFinal()) { // Wenn die Länge der geladenen Items "final" ist, 
-				var sTitle = this.getResourceBundle().getText("TitleWithCount", [totalItems]); // aktualisiere die Itemanzahl
+				var sTitle = this.getResourceBundle().getText("MasterTitleWithCount", [totalItems]); // aktualisiere die Itemanzahl
 				this.getModel("masterView").setProperty("/title", sTitle); // im Titel der Page
 			}
 		},

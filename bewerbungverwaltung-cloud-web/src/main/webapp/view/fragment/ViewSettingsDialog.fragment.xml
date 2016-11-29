@@ -12,7 +12,7 @@
 		<filterItems>
 			<ViewSettingsFilterItem text="{i18n>ViewSettingsStatus}" key="Status" items="{path: 'testModel>/Statuss'}">
 				<items>
-					<ViewSettingsItem text="{testModel>ViewSettingsBezeichnung}" key="{testModel>StatusId}" />
+					<ViewSettingsItem text="{testModel>Bezeichnung}" key="{testModel>StatusId}" />
 				</items>
 			</ViewSettingsFilterItem>
 			<ViewSettingsFilterItem text="{i18n>ViewSettingsPosition}" key="Stelle" items="{path: 'testModel>/Stelles'}">
