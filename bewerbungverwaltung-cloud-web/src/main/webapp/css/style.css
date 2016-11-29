@@ -1,11 +1,3 @@
-.sapUxAPObjectPageHeaderContent .sapUxAPObjectPageHeaderContentItem {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 0rem;
-    margin-bottom: 1rem;
-    line-height: 1.5rem;
-}
-
 .themaKommentar {
 	padding: 4px 4px 4px 4px;
 	background: #eff4f9;
@@ -15,7 +7,6 @@
 .sapMListUl>li {
 	background: inherit;
 	border-bottom: 0px;
-	height: auto;
 }
 
 .listBewerbungen
@@ -45,14 +36,6 @@
 .sapMListTblCell {
 	padding-top: 4px;
 	padding-bottom: 4px;
-}
-
-.tableStellen
-.sapMListTbl
-.sapMListTblRow
-.sapMListTblCellNoData {
-	color: #808080;
-	font-size: 0.9em;
 }
 
 .tableStellen

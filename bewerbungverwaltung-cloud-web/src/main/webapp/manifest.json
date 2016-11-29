@@ -91,7 +91,7 @@
 			}, {
 				"pattern": "{all*}",
 				"name": "NotFound",
-				"target": "NotFound"
+				"target": "notFound"
 			}],
 			"targets": {
 				"BewerbungenMaster": {
@@ -114,7 +114,8 @@
 				},
 				"notFound": {
 					"viewName": "NotFound",
-					"viewId": "notFound"
+					"viewId": "notFound",
+					"controlAggregation": "detailPages"
 				}
 			}
 		},
