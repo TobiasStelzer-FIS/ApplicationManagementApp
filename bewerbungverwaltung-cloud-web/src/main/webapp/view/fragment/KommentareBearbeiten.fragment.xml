@@ -25,7 +25,8 @@
 			</List>
 		</VBox>
 		<HBox>
-			<Button id="btnKommentareEdit" text="Bearbeiten" press="onKommentareEdit"/>
+			<Button id="btnKommentareSave" text="Speichern" press="onKommentareSave"/>
+			<Button id="btnKommentareCancel" text="Abbrechen" press="onKommentareCancel"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>

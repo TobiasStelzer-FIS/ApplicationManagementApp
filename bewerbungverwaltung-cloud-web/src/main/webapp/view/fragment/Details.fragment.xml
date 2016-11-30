@@ -1,55 +1,62 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	xmlns="sap.m">
-	<f:Form editable="false">
-		<f:layout>
-			<f:ResponsiveGridLayout columnsM="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" emptySpanM="0"/>
-		</f:layout>
-		<f:FormContainer>
-			<f:title>
-				<core:Title text="{i18n>DetailsPersonalData}"/>
-			</f:title>
-			<f:FormElement label="{i18n>DetailsSurname}">
-				<Text text="{testModel>BewerberDetails/Nachname}"/>
-			</f:FormElement>
-			<f:FormElement label="{i18n>DetailsForename}">
-				<Text text="{testModel>BewerberDetails/Vorname}"/>
-			</f:FormElement>
-			<f:FormElement label="{i18n>DetailsStreet}">
-				<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
-			</f:FormElement>
-			<f:FormElement label="{i18n>DetailsZipCity}">
-				<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
-			</f:FormElement>
-		</f:FormContainer>
-		<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
-			<f:title>
-				<core:Title text="{i18n>DetailsAppliedFor}"/>
-			</f:title>
-			<f:FormElement>
-				<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
-			</f:FormElement>
-		</f:FormContainer>
-		<f:FormContainer>
-			<f:title>
-				<core:Title text="{i18n>DetailsContactDetails}"/>
-			</f:title>
-			<f:FormElement label="{i18n>DetailsEmail}">
-				<Text text="{testModel>BewerberDetails/Email}"/>
-			</f:FormElement>
-			<f:FormElement label="{i18n>DetailsPhone}">
-				<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
-			</f:FormElement>
-			<f:FormElement label="{i18n>DetailsMobile}">
-				<Text text="{testModel>BewerberDetails/Handynummer}"/>
-			</f:FormElement>
-		</f:FormContainer>
-		<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
-			<f:title>
-				<core:Title text="{i18n>DetailsSources}"/>
-			</f:title>
-			<f:FormElement>
-				<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
-			</f:FormElement>
-		</f:FormContainer>
-	</f:Form>
+	<VBox>
+		<VBox>
+			<f:Form editable="false">
+				<f:layout>
+					<f:ResponsiveGridLayout columnsM="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" emptySpanM="0"/>
+				</f:layout>
+				<f:FormContainer>
+					<f:title>
+						<core:Title text="{i18n>DetailsPersonalData}"/>
+					</f:title>
+					<f:FormElement label="{i18n>DetailsSurname}">
+						<Text text="{testModel>BewerberDetails/Nachname}"/>
+					</f:FormElement>
+					<f:FormElement label="{i18n>DetailsForename}">
+						<Text text="{testModel>BewerberDetails/Vorname}"/>
+					</f:FormElement>
+					<f:FormElement label="{i18n>DetailsStreet}">
+						<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
+					</f:FormElement>
+					<f:FormElement label="{i18n>DetailsZipCity}">
+						<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+					</f:FormElement>
+				</f:FormContainer>
+				<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
+					<f:title>
+						<core:Title text="{i18n>DetailsAppliedFor}"/>
+					</f:title>
+					<f:FormElement>
+						<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+					</f:FormElement>
+				</f:FormContainer>
+				<f:FormContainer>
+					<f:title>
+						<core:Title text="{i18n>DetailsContactDetails}"/>
+					</f:title>
+					<f:FormElement label="{i18n>DetailsEmail}">
+						<Text text="{testModel>BewerberDetails/Email}"/>
+					</f:FormElement>
+					<f:FormElement label="{i18n>DetailsPhone}">
+						<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
+					</f:FormElement>
+					<f:FormElement label="{i18n>DetailsMobile}">
+						<Text text="{testModel>BewerberDetails/Handynummer}"/>
+					</f:FormElement>
+				</f:FormContainer>
+				<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
+					<f:title>
+						<core:Title text="{i18n>DetailsSources}"/>
+					</f:title>
+					<f:FormElement>
+						<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
+					</f:FormElement>
+				</f:FormContainer>
+			</f:Form>
+		</VBox>
+		<HBox>
+			<Button id="btnDetailsEdit" text="Bearbeiten" press="onDetailsEdit"/>
+		</HBox>
+	</VBox>
 </core:FragmentDefinition>

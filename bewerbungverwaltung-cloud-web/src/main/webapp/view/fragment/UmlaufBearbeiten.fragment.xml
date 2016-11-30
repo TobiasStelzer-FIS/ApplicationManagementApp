@@ -38,7 +38,8 @@
 			</Table>
 		</VBox>
 		<HBox>
-			<Button id="btnUmlaufEdit" text="Bearbeiten" press="onUmlaufEdit"/>
+			<Button id="btnUmlaufSave" text="Speichern" press="onUmlaufSave"/>
+			<Button id="btnUmlaufCancel" text="Abbrechen" press="onUmlaufCancel"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>

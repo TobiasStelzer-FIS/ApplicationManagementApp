@@ -10,15 +10,21 @@ sap.ui.define([
 
 		formatter: formatter,
 
+		/* =========================================================== */
+		/* lifecycle methods                                           */
+		/* =========================================================== */
+		
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
-/*
-			var oModel = new JSONModel({
-				fragments: []
-			});
-			this.getView().setModel(oModel, "sectionModel");
-*/
+
+			this._fragments = []; // this will store the instantiated fragments
+
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
+
+			this._showFragment("Details", "containerDetails");
+			this._showFragment("Kommentare", "containerKommentare");
+			this._showFragment("Unterlagen", "containerUnterlagen");
+			this._showFragment("Umlauf", "containerUmlauf");
 		},
 		_handleRouteMatched: function(oEvent) {
 			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
@@ -35,13 +41,13 @@ sap.ui.define([
 				}
 			});
 		},
-		_onBindingChange: function() {
+		_onBindingChange: function(oEvent) {
 			var oElementBinding = this.getView().getElementBinding("testModel");
 			this.getView().getModel("testModel").updateBindings();
 
 			// No data for the binding
 			if (!oElementBinding) {
-//				this.getRouter().getTargets().display("DetailObjectNotFound");
+				//				this.getRouter().getTargets().display("DetailObjectNotFound");
 				this.getRouter().navTo("DetailObjectNotFound");
 			}
 		},
@@ -56,57 +62,90 @@ sap.ui.define([
 		},
 		onBeforeRendering: function() {
 
-		}
-/*		
-		onBearbeiten: function(oEvent) {
-			jQuery.sap.log.error("onBearbeiten");
-			var btnId = oEvent.getSource().getId();
-			var oView = this.getView();
-			var btnId2 = oView.byId("btnDetailsBearbeiten");
-			
-			jQuery.sap.log.error("oEvent.getSource.getId(): " + btnId);
-			jQuery.sap.log.error("btnId2: " + btnId2);
-			btnId = "btnDetailsBearbeiten";
-			
-			switch (btnId) {
-				case "btnDetailsBearbeiten":
-					var container = oView.byId("containerDetails");
-					// Content aus dem container entfernen
-					// Fragment "DetailsBearbeiten" zum container hinzufügen
-					// btnDetailsEdit unsichtbar machen
-					oView.byId("btnDetailsEdit").setVisible(false);
-					// btnDetailsSave sichtbar machen
-					oView.byId("btnDetailsSave").setVisible(true);
-					// btnDetailsCancel sichtbar machen
-					oView.byId("btnDetailsCancel").setVisible(true);
-					break;
-				case "btnKommentareBearbeiten":
-					
-					break;
-				case "btnUnterlagenBearbeiten":
-					
-					break;
-				case "btnUmlaufBearbeiten":
-					
-					break;
+		},
+
+		/* =========================================================== */
+		/* event handlers for the fragment buttons                     */
+		/* =========================================================== */
+		
+		onDetailsEdit: function(oEvent) {
+			this._showFragment("DetailsBearbeiten", "containerDetails");
+		},
+		onDetailsSave: function(oEvent) {
+			this._showFragment("Details", "containerDetails");
+		},
+		onDetailsCancel: function(oEvent) {
+			this._showFragment("Details", "containerDetails");
+		},
+		onKommentareEdit: function(oEvent) {
+			this._showFragment("KommentareBearbeiten", "containerKommentare");
+		},
+		onKommentareSave: function(oEvent) {
+			this._showFragment("Kommentare", "containerKommentare");
+		},
+		onKommentareCancel: function(oEvent) {
+			this._showFragment("Kommentare", "containerKommentare");
+		},
+		onUnterlagenEdit: function(oEvent) {
+			this._showFragment("UnterlagenBearbeiten", "containerUnterlagen");
+		},
+		onUnterlagenSave: function(oEvent) {
+			this._showFragment("Unterlagen", "containerUnterlagen");
+		},
+		onUnterlagenCancel: function(oEvent) {
+			this._showFragment("Unterlagen", "containerUnterlagen");
+		},
+		onUmlaufEdit: function(oEvent) {
+			this._showFragment("UmlaufBearbeiten", "containerUmlauf");
+		},
+		onUmlaufSave: function(oEvent) {
+			this._showFragment("Umlauf", "containerUmlauf");
+		},
+		onUmlaufCancel: function(oEvent) {
+			this._showFragment("Umlauf", "containerUmlauf");
+		},
+
+		/* =========================================================== */
+		/* internal methods                                            */
+		/* =========================================================== */
+		
+		/**
+		 * Creates a new fragment or returns an existing one
+		 * Newly created fragments are stored in an array for later use
+		 * 
+		 * @param sFragmentName: The name of the fragment
+		 * @return {sap.ui.xmlfragment}: The requested xml fragment
+		 * @public
+		 */
+		_getFragment: function(sFragmentName) {
+			var oFragment = this._fragments[sFragmentName];
+
+			if (oFragment) {
+				return oFragment;
 			}
 
-			var oSectionDetails = this.getView().byId("sectionDetails");
-
-			var oBlockAlt = oSectionDetails.getBlocks()[0];
-			var oFormFragment = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment." + "DetailsBearbeiten");
-			oSectionDetails.addBlock(oFormFragment);
-
-			oSectionDetails.removeBlock(oBlockAlt);
-
+			oFragment = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment." + sFragmentName, this);
+			this._fragments[sFragmentName] = oFragment;
+			return oFragment;
 		},
-		onSave: function(oEvent) {
-			
-		},
-		onCancel: function(oEvent) {
-			
+		
+		/**
+		 * Replaces the content in the container with
+		 * the specified fragment
+		 * (onInit --> _showFragment)
+		 * ([event handlers for fragment buttons] --> _showFragment)
+		 * 
+		 * @param sFragmentName: The name of the fragment to show
+		 * @param sContainerId: The id of the container whose content should be replaced
+		 * @public
+		 */
+		_showFragment: function(sFragmentName, sContainerId) {
+			var oContainer = this.getView().byId(sContainerId);
+
+			oContainer.removeAllItems();
+			oContainer.addItem(this._getFragment(sFragmentName));
 		}
-*/
+
 	});
 
 });

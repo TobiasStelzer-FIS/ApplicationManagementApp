@@ -24,10 +24,5 @@
 		<semantic:filter>
 			<semantic:FilterAction press="onFilterPressed"/>
 		</semantic:filter>
-		<!--
-		<semantic:group>
-			<semantic:GroupAction press="onGroupPressed"/>
-		</semantic:group>
--->
 	</semantic:MasterPage>
 </mvc:View>

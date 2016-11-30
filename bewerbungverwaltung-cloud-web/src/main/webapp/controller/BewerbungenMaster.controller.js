@@ -17,6 +17,10 @@ sap.ui.define([
 
 		formatter: formatter,
 
+		/* =========================================================== */
+		/* lifecycle methods, etc.                                     */
+		/* =========================================================== */
+		
 		onInit: function() {
 			var oViewModel = this._createViewModel();
 			this.getView().setModel(oViewModel, "masterView");
@@ -47,38 +51,14 @@ sap.ui.define([
 		onExit: function() {},
 		onAfterRendering: function() {},
 		onBeforeRendering: function() {},
-		onUpdateFinished: function(oEvent) {
-			// EventHandler für "updateFinished"-Event der Bewerbungen-Liste
-			var totalItems = oEvent.getParameter("total");
 
-			if (this._oList.getBinding("items").isLengthFinal()) { // Wenn die Länge der geladenen Items "final" ist, 
-				var sTitle = this.getResourceBundle().getText("MasterTitleWithCount", [totalItems]); // aktualisiere die Itemanzahl
-				this.getModel("masterView").setProperty("/title", sTitle); // im Titel der Page
-			}
-		},
-		/**
-		 * Creates the ViewSettingsDialog if not already created
-		 * (onFilterPressed --> _getViewSettingsDialog)
-		 * (onSortPressed	--> _getViewSettingsDialog)
-		 * @return {sap.ui.xmlfragment} viewSettingsDialog
-		 * @private
-		 */	
-		_getViewSettingsDialog: function() {
-			// Gibt den ViewSettingsDialog zurück und
-			// erstellt ihn vorher, wenn nötig
-			if (!this._oDialog) {
-				this._oDialog = sap.ui.xmlfragment("de.fis.bewerbungverwaltung.view.fragment.ViewSettingsDialog", this);
-				this.getView().addDependent(this._oDialog);
-			}
-			return this._oDialog;
-		},
-		
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
-		
+
 		/**
 		 * Navigates to the detail view of the chosen application
+		 * 
 		 * @handler "press" event of BewerbungListItem
 		 * @param oEvent: The press event
 		 * @public
@@ -91,8 +71,27 @@ sap.ui.define([
 				Bewerbung: bindingContext.substr(12)
 			});
 		},
+
+		/**
+		 * Updates the title of the page with the number of items in the list
+		 * 
+		 * @handler "updateFinished" event of the List
+		 * @param oEvent: The updateFinished event
+		 * @public
+		 */		
+		onUpdateFinished: function(oEvent) {
+			// EventHandler für "updateFinished"-Event der Bewerbungen-Liste
+			var totalItems = oEvent.getParameter("total");
+
+			if (this._oList.getBinding("items").isLengthFinal()) { // Wenn die Länge der geladenen Items "final" ist, 
+				var sTitle = this.getResourceBundle().getText("MasterTitleWithCount", [totalItems]); // aktualisiere die Itemanzahl
+				this.getModel("masterView").setProperty("/title", sTitle); // im Titel der Page
+			}
+		},
+		
 		/**
 		 * Determines the search query string and creates a corresponding filter
+		 * 
 		 * @handler "search" event of SearchField
 		 * @handler "liveChange" event of SearchField
 		 * @param oEvent: The search or liveChange event
@@ -117,8 +116,10 @@ sap.ui.define([
 
 			this._applyFilterSearch(); // Filter anwenden
 		},
+		
 		/**
 		 * Opens the ViewSettingsDialog at the filter tab
+		 * 
 		 * @handler "press" event of FilterAction
 		 * @param oEvent: The press event
 		 * @public
@@ -129,6 +130,7 @@ sap.ui.define([
 		},
 		/**
 		 * Opens the ViewSettingsDialog at the sort tab
+		 * 
 		 * @handler "press" event of SortAction
 		 * @param oEvent: The press event
 		 * @public
@@ -140,6 +142,7 @@ sap.ui.define([
 		/**
 		 * Gets the filter- and sort-options and calls methods 
 		 * which create and eventually apply the corresponding filters/sorters
+		 * 
 		 * @handler "confirm" event of ViewSettingsDialog
 		 * @param oEvent: The confirm event
 		 * @public
@@ -152,9 +155,33 @@ sap.ui.define([
 			this._handleSorting(oSortItem, bSortDescending);
 			this._handleFiltering(aFilterItems);
 		},
+
+		/* =========================================================== */
+		/* internal methods                                            */
+		/* =========================================================== */
+
+		/**
+		 * Creates the ViewSettingsDialog if not already created
+		 * (onFilterPressed --> _getViewSettingsDialog)
+		 * (onSortPressed	--> _getViewSettingsDialog)
+		 * 
+		 * @return {sap.ui.xmlfragment} viewSettingsDialog
+		 * @private
+		 */
+		_getViewSettingsDialog: function() {
+			// Gibt den ViewSettingsDialog zurück und
+			// erstellt ihn vorher, wenn nötig
+			if (!this._oDialog) {
+				this._oDialog = sap.ui.xmlfragment("de.fis.bewerbungverwaltung.view.fragment.ViewSettingsDialog", this);
+				this.getView().addDependent(this._oDialog);
+			}
+			return this._oDialog;
+		},
+
 		/**
 		 * Handles the creation of the sorter
 		 * (onConfirmViewSettingsDialog --> _handleSorting)
+		 * 
 		 * @param oSortItem: The SortItem as received from the ViewSettingsDialog
 		 * @param bDescending: Wether the sorting should be descending or ascending
 		 * @private
@@ -171,6 +198,7 @@ sap.ui.define([
 		/**
 		 * Handles the creation of the filters and text for the FilterBar 
 		 * (onConfirmViewSettingsDialog --> _handleFiltering)
+		 * 
 		 * @param aFilterItems: The array of FilterItems as received from the ViewSettingsDialog
 		 * @private
 		 */
@@ -221,10 +249,11 @@ sap.ui.define([
 		/**
 		 * Updates the visibility and the text of the FilterBar
 		 * (onConfirmViewSettingsDialog --> _handleFiltering --> _updateFilterBar)
+		 * 
 		 * @param oSortItem: The SortItem as received from the ViewSettingsDialog
 		 * @param bDescending: Wether the sorting should be descending or ascending
 		 * @private
-		 */		
+		 */
 		_updateFilterBar: function(sFilterBarText) {
 			var oViewModel = this.getModel("masterView");
 			oViewModel.setProperty("/isFilterBarVisible", (this._oFilterSearchState.aFilter.length > 0));
@@ -234,8 +263,9 @@ sap.ui.define([
 		 * Applys the filters and the search to the Lists "item" binding (because both are Filter objects)
 		 * (onConfirmViewSettingsDialog --> _handleFiltering --> _applyFilterSearch)
 		 * (onSearch --> _applyFilterSearch)
+		 * 
 		 * @private
-		 */	
+		 */
 		_applyFilterSearch: function() {
 			var aFilters = this._oFilterSearchState.aSearch.concat(this._oFilterSearchState.aFilter),
 				oViewModel = this.getModel("masterView");
@@ -252,9 +282,10 @@ sap.ui.define([
 		/**
 		 * Applys the sorters to the Lists "item" binding
 		 * (onConfirmViewSettingsDialog --> _handleSorting --> _applySort)
+		 * 
 		 * @param aSorters: The array of Sorters as created by _handleSorting
 		 * @private
-		 */	
+		 */
 		_applySort: function(aSorters) {
 			this._oList.getBinding("items").sort(aSorters);
 		}
