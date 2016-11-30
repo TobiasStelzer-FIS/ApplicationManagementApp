@@ -1,5 +1,11 @@
 .sapUxAPObjectPageHeaderObjectImage {
-	
+	transition: transform 2s, -webkit-transform 2s;	/* transition: IE10, Opera, Firefox, Chrome 26  */
+	-webkit-transition: -webkit-transform 2s; 		/* -webkit-transition: Safari, Android Browser, BB Browser, Chrome 25 */
+}
+
+.sapUxAPObjectPageHeaderObjectImage:active {
+	transform: rotate(360deg); 						/* transform: IE10, Opera, Firefox */
+	-webkit-transform: rotate(360deg); 				/* -webkit-transform: Chrome, Safari, Android Browser, BB Browser */
 }
 
 .themaKommentar {
