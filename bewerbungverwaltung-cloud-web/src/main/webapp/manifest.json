@@ -12,12 +12,12 @@
 		"description": "{{appDescription}}",
 		"resources": "resources.json",
 		"ach": "ach",
-		"dataSources": {
-
-		},
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.32.0"
+		},
+		"dataSources": {
+
 		}
 	},
 	"sap.ui": {

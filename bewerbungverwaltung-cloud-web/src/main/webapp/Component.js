@@ -20,10 +20,7 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
-			
-			// make icons available
-//			jQuery.sap.require("sap.ui.core.IconPool");
-			
+
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
 			this.setModel(models2.createTestModel(), "testModel");

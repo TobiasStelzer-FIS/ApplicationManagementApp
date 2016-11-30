@@ -80,7 +80,6 @@ sap.ui.define([
 		 * @public
 		 */		
 		onUpdateFinished: function(oEvent) {
-			// EventHandler für "updateFinished"-Event der Bewerbungen-Liste
 			var totalItems = oEvent.getParameter("total");
 
 			if (this._oList.getBinding("items").isLengthFinal()) { // Wenn die Länge der geladenen Items "final" ist, 
