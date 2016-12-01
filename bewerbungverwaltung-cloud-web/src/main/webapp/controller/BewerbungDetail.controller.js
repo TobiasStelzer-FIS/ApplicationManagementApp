@@ -26,11 +26,29 @@ sap.ui.define([
 			this._showFragment("Unterlagen", "containerUnterlagen");
 			this._showFragment("Umlauf", "containerUmlauf");
 		},
+		onExit: function() {
+
+		},
+		onAfterRendering: function() {
+
+		},
+		onBeforeRendering: function() {
+
+		},
+		
 		_handleRouteMatched: function(oEvent) {
 			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
 
 			this._bindView(sBindingEntity);
 		},
+		
+		/**
+		 * Binds the view to the Entity with the specified path
+		 * (_handleRouteMatched --> _bindView)
+		 * 
+		 * @param sObjectPath: The path to the Entity which should be bound
+		 * @private
+		 */
 		_bindView: function(sObjectPath) {
 			this.getView().bindElement({
 				path: sObjectPath,
@@ -41,27 +59,32 @@ sap.ui.define([
 				}
 			});
 		},
+		
+		/**
+		 * Event handler for the "change" event of the bindElement function
+		 * 
+		 * @param oEvent: The change event
+		 * @private
+		 */
 		_onBindingChange: function(oEvent) {
 			var oElementBinding = this.getView().getElementBinding("testModel");
 			this.getView().getModel("testModel").updateBindings();
 
 			// No data for the binding
 			if (!oElementBinding) {
-				//				this.getRouter().getTargets().display("DetailObjectNotFound");
-				this.getRouter().navTo("DetailObjectNotFound");
+				this.getRouter().getTargets().display("DetailObjectNotFound");
 			}
 		},
+		
+		/**
+		 * Event handler for the "press" event of the Back button
+		 * (the back button is only shown on Phones)
+		 * 
+		 * @param oEvent: The press event
+		 * @public
+		 */
 		onNavButtonPressed: function(oEvent) {
 			this.getRouter().navTo("BewerbungenMaster");
-		},
-		onExit: function() {
-
-		},
-		onAfterRendering: function() {
-
-		},
-		onBeforeRendering: function() {
-
 		},
 
 		/* =========================================================== */

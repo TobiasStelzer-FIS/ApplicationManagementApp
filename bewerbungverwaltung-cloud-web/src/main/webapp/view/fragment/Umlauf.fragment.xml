@@ -38,7 +38,7 @@
 			</Table>
 		</VBox>
 		<HBox>
-			<Button id="btnUmlaufEdit" text="Bearbeiten" press="onUmlaufEdit"/>
+			<Button id="btnUmlaufEdit" text="{i18n>DetailEditButton}" press="onUmlaufEdit"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>

@@ -23,12 +23,17 @@
 						<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
 					</f:FormElement>
 				</f:FormContainer>
-				<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
+				<f:FormContainer>
 					<f:title>
 						<core:Title text="{i18n>DetailsAppliedFor}"/>
 					</f:title>
 					<f:FormElement>
-						<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+						<VBox>
+							<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
+								<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+							</VBox>
+							<Text text="{i18n>DetailsStellenNoDataText}" visible="{= ${testModel>BewerbungStelleDetails/results}.length === 0}"/>
+						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
 				<f:FormContainer>
@@ -45,18 +50,23 @@
 						<Text text="{testModel>BewerberDetails/Handynummer}"/>
 					</f:FormElement>
 				</f:FormContainer>
-				<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
+				<f:FormContainer>
 					<f:title>
 						<core:Title text="{i18n>DetailsSources}"/>
 					</f:title>
 					<f:FormElement>
-						<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
+						<VBox>
+							<VBox items="{path: 'testModel>BewerbungQuelleDetails/results'}">
+								<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
+							</VBox>
+							<Text text="{i18n>DetailsQuellenNoDataText}" visible="{= ${testModel>BewerbungQuelleDetails/results}.length === 0}"/>
+						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
 			</f:Form>
 		</VBox>
 		<HBox>
-			<Button id="btnDetailsEdit" text="Bearbeiten" press="onDetailsEdit"/>
+			<Button id="btnDetailsEdit" text="{i18n>DetailEditButton}" press="onDetailsEdit"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>

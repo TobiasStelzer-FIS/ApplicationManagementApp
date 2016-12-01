@@ -8,7 +8,7 @@
 		</semantic:subHeader>
 		<semantic:content>
 			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
-			<List id="listBewerbungen" class="listBewerbungen" items="{path: 'testModel>/Bewerbungs', sorter: {path: 'testModel>EingetragenAm'}}"
+			<List id="listBewerbungen" class="listBewerbungen" items="{path: 'testModel>/Bewerbungs', sorter: {path: 'EingetragenAm'}}"
 				busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}" updateFinished="onUpdateFinished">
 				<core:Fragment fragmentName="de.fis.bewerbungverwaltung.view.fragment.BewerbungListItem" type="XML"/>
 				<infoToolbar>

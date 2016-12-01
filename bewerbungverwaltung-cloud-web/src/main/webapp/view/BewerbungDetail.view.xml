@@ -14,38 +14,39 @@
 			</uxap:headerTitle>
 			<uxap:headerContent>
 				<VBox width="200px">
-					<FlexBox width="100%" alignItems="Start">
-						<core:Icon src="sap-icon://phone" size="1.3rem" class="sapUiTinyMarginEnd">
+					<HBox>
+						<core:Icon src="sap-icon://phone" size="1.3rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
 						<Label text="{testModel>BewerberDetails/Telefonnummer}"/>
-					</FlexBox>
-					<FlexBox width="auto" alignItems="Start">
-						<core:Icon src="sap-icon://iphone" size="1.3rem" class="sapUiTinyMarginEnd">
+					</HBox>
+					<HBox>
+						<core:Icon src="sap-icon://iphone" size="1.3rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
 						<Label text="{testModel>BewerberDetails/Handynummer}"/>
-					</FlexBox>
-					<FlexBox width="auto" alignItems="Start">
-						<core:Icon src="sap-icon://email" size="1.3rem" class="sapUiTinyMarginEnd">
+					</HBox>
+					<HBox>
+						<core:Icon src="sap-icon://email" size="1.3rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
 						<Label text="{testModel>BewerberDetails/Email}"/>
-					</FlexBox>
+					</HBox>
 				</VBox>
 				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
 					<Label text="Stellen" design="Bold"/>
 					<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
 						<items>
-							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiTinyMarginBottom sapUiSmallMarginBegin"/>
+							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiSmallMarginBegin"/>
 						</items>
 					</VBox>
+					<Text text="Initiativbewerbung" visible="{= ${testModel>BewerbungStelleDetails/results}.length === 0}" class="sapUiSmallMarginBegin"/>
 				</VBox>
 				<VBox width="auto">
 					<FlexBox width="auto">

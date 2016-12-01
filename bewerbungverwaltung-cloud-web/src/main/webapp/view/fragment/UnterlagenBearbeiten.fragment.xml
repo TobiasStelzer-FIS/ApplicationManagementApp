@@ -17,8 +17,8 @@
 			</f:Form>
 		</VBox>
 		<HBox>
-			<Button id="btnUnterlagenSave" text="Speichern" press="onUnterlagenSave"/>
-			<Button id="btnUnterlagenCancel" text="Abbrechen" press="onUnterlagenCancel"/>
+			<Button id="btnUnterlagenSave" text="{i18n>DetailSaveButton}" press="onUnterlagenSave"/>
+			<Button id="btnUnterlagenCancel" text="{i18n>DetailCancelButton}" press="onUnterlagenCancel"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>

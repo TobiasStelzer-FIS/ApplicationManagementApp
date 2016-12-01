@@ -24,6 +24,11 @@
 	background: #f0f0f0;
 }
 
+.listBewerbungen 
+.sapMLIB.sapMLIBActive {
+    background: #f0f0f0;
+}
+
 .listBewerbungen
 .sapMListUl>li .sapMLabel {
 	color: black;
@@ -46,6 +51,14 @@
 .sapMListTblCell {
 	padding-top: 4px;
 	padding-bottom: 4px;
+}
+
+.tableStellen
+.sapMListTbl
+.sapMListTblRow
+.sapMListTblCellNoData {
+	color: #808080;
+	font-size: 0.9em;
 }
 
 .tableStellen

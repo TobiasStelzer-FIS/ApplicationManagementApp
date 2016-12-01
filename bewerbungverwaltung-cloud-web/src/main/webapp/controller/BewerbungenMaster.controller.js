@@ -1,15 +1,13 @@
 sap.ui.define([
 	"de/fis/bewerbungverwaltung/controller/BaseController",
 	"sap/ui/core/UIComponent",
+	"sap/ui/model/Sorter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/GroupHeaderListItem",
-	"de/fis/bewerbungverwaltung/model/GroupSortState",
-	"de/fis/bewerbungverwaltung/model/grouper",
 	"de/fis/bewerbungverwaltung/model/filter",
 	"de/fis/bewerbungverwaltung/model/formatter"
-], function(BaseController, UIComponent, Filter, FilterOperator, JSONModel, GroupHeaderListItem, GroupSortState, grouper, filter,
+], function(BaseController, UIComponent, Sorter, Filter, FilterOperator, JSONModel, filter,
 	formatter) {
 	"use strict";
 
@@ -20,12 +18,10 @@ sap.ui.define([
 		/* =========================================================== */
 		/* lifecycle methods, etc.                                     */
 		/* =========================================================== */
-		
+
 		onInit: function() {
 			var oViewModel = this._createViewModel();
 			this.getView().setModel(oViewModel, "masterView");
-
-			this._oGroupSortState = new GroupSortState(oViewModel);
 
 			this._oList = this.getView().byId("listBewerbungen");
 
@@ -44,8 +40,7 @@ sap.ui.define([
 				title: this.getResourceBundle().getText("MasterTitleWithCount", [0]),
 				noDataText: this.getResourceBundle().getText("MasterListNoDataText"),
 				filterStellen: [],
-				sortBy: "EingetragenAm",
-				groupBy: "None"
+				sortBy: "EingetragenAm"
 			});
 		},
 		onExit: function() {},
@@ -78,7 +73,7 @@ sap.ui.define([
 		 * @handler "updateFinished" event of the List
 		 * @param oEvent: The updateFinished event
 		 * @public
-		 */		
+		 */
 		onUpdateFinished: function(oEvent) {
 			var totalItems = oEvent.getParameter("total");
 
@@ -87,7 +82,7 @@ sap.ui.define([
 				this.getModel("masterView").setProperty("/title", sTitle); // im Titel der Page
 			}
 		},
-		
+
 		/**
 		 * Determines the search query string and creates a corresponding filter
 		 * 
@@ -115,7 +110,7 @@ sap.ui.define([
 
 			this._applyFilterSearch(); // Filter anwenden
 		},
-		
+
 		/**
 		 * Opens the ViewSettingsDialog at the filter tab
 		 * 
@@ -189,8 +184,12 @@ sap.ui.define([
 			if (oSortItem === undefined) {
 				return;
 			}
-			var sKey = oSortItem.mProperties.key,
-				aSorters = this._oGroupSortState.sort(sKey, bDescending);
+			if (bDescending === undefined) {
+				bDescending = false;
+			}
+			
+			var sKey = oSortItem.mProperties.key;
+			var aSorters = [new Sorter(sKey, bDescending)];
 
 			this._applySort(aSorters);
 		},
