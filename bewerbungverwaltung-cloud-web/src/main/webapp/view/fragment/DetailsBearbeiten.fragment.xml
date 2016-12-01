@@ -23,12 +23,31 @@
 						<Input value="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
 					</f:FormElement>
 				</f:FormContainer>
-				<f:FormContainer formElements="{path: 'testModel>BewerbungStelleDetails/results'}">
+				<f:FormContainer>
 					<f:title>
 						<core:Title text="{i18n>DetailsAppliedFor}"/>
 					</f:title>
 					<f:FormElement>
-						<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+						<Table id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails/results'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}" inset="false" mode="Delete" delete="onDeleteStelle"
+						updateFinished="onStellenUpdateFinished">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="{i18n>DetailsBearbeitenStellenTitle}" level="H2"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://add" press="onAddStelle"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="{i18n>DetailsBearbeitenFirstColumnStellen}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<Text text="{testModel>StelleDetails/Bezeichnung}"/>
+							</ColumnListItem>
+						</items>
+					</Table>
 					</f:FormElement>
 				</f:FormContainer>
 				<f:FormContainer>
