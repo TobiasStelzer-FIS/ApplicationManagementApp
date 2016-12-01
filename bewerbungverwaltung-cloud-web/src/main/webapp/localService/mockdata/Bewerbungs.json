@@ -1,0 +1,541 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 12,
+	"BewerbungId": 12,
+	"EingetragenAm": "/Date(1455836400000)/",
+	"EingetragenVon": "Amelie Schröder",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(12)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 14,
+	"BewerbungId": 14,
+	"EingetragenAm": "/Date(1459634400000)/",
+	"EingetragenVon": "Sophie Walter",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(14)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 3,
+	"BewerbungId": 3,
+	"EingetragenAm": "/Date(1473026400000)/",
+	"EingetragenVon": "Hannah Hartmann",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(3)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 6,
+	"BewerbungId": 6,
+	"EingetragenAm": "/Date(1457910000000)/",
+	"EingetragenVon": "Maximilian Schmidt",
+	"Status": 3,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(6)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 15,
+	"BewerbungId": 15,
+	"EingetragenAm": "/Date(1470175200000)/",
+	"EingetragenVon": "Lina Fischer",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(15)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 5,
+	"BewerbungId": 5,
+	"EingetragenAm": "/Date(1466200800000)/",
+	"EingetragenVon": "Luca Schmidt",
+	"Status": 2,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(5)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 13,
+	"BewerbungId": 13,
+	"EingetragenAm": "/Date(1477346400000)/",
+	"EingetragenVon": "Anna Mueller",
+	"Status": 3,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(13)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 7,
+	"BewerbungId": 7,
+	"EingetragenAm": "/Date(1470952800000)/",
+	"EingetragenVon": "Sophie Hartmann",
+	"Status": 1,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(7)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 8,
+	"BewerbungId": 8,
+	"EingetragenAm": "/Date(1479423600000)/",
+	"EingetragenVon": "Anton Meyer",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(8)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 9,
+	"BewerbungId": 9,
+	"EingetragenAm": "/Date(1467410400000)/",
+	"EingetragenVon": "Leonie Zimmermann",
+	"Status": 2,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(9)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 2,
+	"BewerbungId": 2,
+	"EingetragenAm": "/Date(1471212000000)/",
+	"EingetragenVon": "Leon Fischer",
+	"Status": 1,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(2)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 10,
+	"BewerbungId": 10,
+	"EingetragenAm": "/Date(1458774000000)/",
+	"EingetragenVon": "Tom Fischer",
+	"Status": 3,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(10)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 1,
+	"BewerbungId": 1,
+	"EingetragenAm": "/Date(1456959600000)/",
+	"EingetragenVon": "Emil Hartmann",
+	"Status": 3,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(1)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 11,
+	"BewerbungId": 11,
+	"EingetragenAm": "/Date(1452207600000)/",
+	"EingetragenVon": "Stefanie Hartmann",
+	"Status": 4,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(11)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)",
+		"type": "de.fis.bewerbungtest.model.Bewerbung"
+	},
+	"Bewerber": 4,
+	"BewerbungId": 4,
+	"EingetragenAm": "/Date(1470952800000)/",
+	"EingetragenVon": "Anna Schneider",
+	"Status": 2,
+	"BewerberDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/BewerberDetails"
+		}
+	},
+	"DokumentDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/DokumentDetails"
+		}
+	},
+	"KommentarDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/KommentarDetails"
+		}
+	},
+	"StatusDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/StatusDetails"
+		}
+	},
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbungs(4)/BewerbungStelleDetails"
+		}
+	}
+}]

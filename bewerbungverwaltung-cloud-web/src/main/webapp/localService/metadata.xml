@@ -1,0 +1,205 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="de.fis.bewerbungtest.model">
+			<EntityType Name="BewerbungStelle">
+				<Key>
+					<PropertyRef Name="BewerbungStelleId"/>
+				</Key>
+				<Property Name="Bewerbung" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="BewerbungStelleId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Stelle" Type="Edm.Int32" Nullable="false"/>
+				<NavigationProperty Name="BewerbungDetails" Relationship="de.fis.bewerbungtest.model.BewerbungStelle_Bewerbung_Many_One0"
+					FromRole="BewerbungStelle" ToRole="Bewerbung"/>
+				<NavigationProperty Name="StelleDetails" Relationship="de.fis.bewerbungtest.model.BewerbungStelle_Stelle_Many_One0"
+					FromRole="BewerbungStelle" ToRole="Stelle"/>
+			</EntityType>
+			<EntityType Name="Stelle">
+				<Key>
+					<PropertyRef Name="StelleId"/>
+				</Key>
+				<Property Name="Bezeichnung" Type="Edm.String" Nullable="false" MaxLength="80"/>
+				<Property Name="StelleId" Type="Edm.Int32" Nullable="false"/>
+				<NavigationProperty Name="BewerbungStelleDetails" Relationship="de.fis.bewerbungtest.model.BewerbungStelle_Stelle_Many_One0"
+					FromRole="Stelle" ToRole="BewerbungStelle"/>
+			</EntityType>
+			<EntityType Name="Dokument">
+				<Key>
+					<PropertyRef Name="DokumentId"/>
+				</Key>
+				<Property Name="Bewerbung" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="DokumentId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Dokumentpfad" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="Dokumenttyp" Type="Edm.String" Nullable="true" MaxLength="30"/>
+				<NavigationProperty Name="BewerbungDetails" Relationship="de.fis.bewerbungtest.model.Dokument_Bewerbung_Many_One0" FromRole="Dokument"
+					ToRole="Bewerbung"/>
+			</EntityType>
+			<EntityType Name="Bewerber">
+				<Key>
+					<PropertyRef Name="BewerberId"/>
+				</Key>
+				<Property Name="Anrede" Type="Edm.String" Nullable="true" MaxLength="50"/>
+				<Property Name="BewerberId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Email" Type="Edm.String" Nullable="true" MaxLength="80"/>
+				<Property Name="Fotopfad" Type="Edm.String" Nullable="true" MaxLength="40"/>
+				<Property Name="Geburtsdatum" Type="Edm.DateTime" Nullable="true"/>
+				<Property Name="Geschlecht" Type="Edm.String" Nullable="true" MaxLength="2"/>
+				<Property Name="Handynummer" Type="Edm.String" Nullable="true" MaxLength="40"/>
+				<Property Name="Nachname" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<Property Name="Ort" Type="Edm.String" Nullable="true" MaxLength="40"/>
+				<Property Name="Postleitzahl" Type="Edm.String" Nullable="true" MaxLength="10"/>
+				<Property Name="StrasseHnr" Type="Edm.String" Nullable="true" MaxLength="60"/>
+				<Property Name="Telefonnummer" Type="Edm.String" Nullable="true" MaxLength="40"/>
+				<Property Name="Vorname" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<NavigationProperty Name="BewerbungDetails" Relationship="de.fis.bewerbungtest.model.Bewerber_Bewerbung_One_Many0" FromRole="Bewerber"
+					ToRole="Bewerbung"/>
+			</EntityType>
+			<EntityType Name="Kommentar">
+				<Key>
+					<PropertyRef Name="KommentarId"/>
+				</Key>
+				<Property Name="Bewerbung" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="KommentarId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100"/>
+				<Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="500"/>
+				<Property Name="Thema" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<Property Name="Zeitstempel" Type="Edm.DateTime" Nullable="false"/>
+				<NavigationProperty Name="BewerbungDetails" Relationship="de.fis.bewerbungtest.model.Kommentar_Bewerbung_Many_One0" FromRole="Kommentar"
+					ToRole="Bewerbung"/>
+			</EntityType>
+			<EntityType Name="Bewerbung">
+				<Key>
+					<PropertyRef Name="BewerbungId"/>
+				</Key>
+				<Property Name="Bewerber" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="BewerbungId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="EingetragenAm" Type="Edm.DateTime" Nullable="false"/>
+				<Property Name="EingetragenVon" Type="Edm.String" Nullable="false" MaxLength="100"/>
+				<Property Name="Status" Type="Edm.Int32" Nullable="true"/>
+				<NavigationProperty Name="BewerberDetails" Relationship="de.fis.bewerbungtest.model.Bewerber_Bewerbung_One_Many0" FromRole="Bewerbung"
+					ToRole="Bewerber"/>
+				<NavigationProperty Name="DokumentDetails" Relationship="de.fis.bewerbungtest.model.Dokument_Bewerbung_Many_One0" FromRole="Bewerbung"
+					ToRole="Dokument"/>
+				<NavigationProperty Name="KommentarDetails" Relationship="de.fis.bewerbungtest.model.Kommentar_Bewerbung_Many_One0" FromRole="Bewerbung"
+					ToRole="Kommentar"/>
+				<NavigationProperty Name="StatusDetails" Relationship="de.fis.bewerbungtest.model.Bewerbung_Status_Many_One0" FromRole="Bewerbung"
+					ToRole="Status"/>
+				<NavigationProperty Name="BewerbungStelleDetails" Relationship="de.fis.bewerbungtest.model.BewerbungStelle_Bewerbung_Many_One0"
+					FromRole="Bewerbung" ToRole="BewerbungStelle"/>
+			</EntityType>
+			<EntityType Name="Status">
+				<Key>
+					<PropertyRef Name="StatusId"/>
+				</Key>
+				<Property Name="Bezeichnung" Type="Edm.String" Nullable="true" MaxLength="20"/>
+				<Property Name="StatusId" Type="Edm.Int32" Nullable="false"/>
+				<NavigationProperty Name="BewerbungDetails" Relationship="de.fis.bewerbungtest.model.Bewerbung_Status_Many_One0" FromRole="Status"
+					ToRole="Bewerbung"/>
+			</EntityType>
+			<Association Name="BewerbungStelle_Bewerbung_Many_One0">
+				<End Type="de.fis.bewerbungtest.model.BewerbungStelle" Multiplicity="*" Role="BewerbungStelle"/>
+				<End Type="de.fis.bewerbungtest.model.Bewerbung" Multiplicity="1" Role="Bewerbung"/>
+				<ReferentialConstraint>
+					<Principal Role="Bewerbung">
+						<PropertyRef Name="BewerbungId"/>
+					</Principal>
+					<Dependent Role="BewerbungStelle">
+						<PropertyRef Name="Bewerbung"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="BewerbungStelle_Stelle_Many_One0">
+				<End Type="de.fis.bewerbungtest.model.BewerbungStelle" Multiplicity="*" Role="BewerbungStelle"/>
+				<End Type="de.fis.bewerbungtest.model.Stelle" Multiplicity="1" Role="Stelle"/>
+				<ReferentialConstraint>
+					<Principal Role="Stelle">
+						<PropertyRef Name="StelleId"/>
+					</Principal>
+					<Dependent Role="BewerbungStelle">
+						<PropertyRef Name="Stelle"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Dokument_Bewerbung_Many_One0">
+				<End Type="de.fis.bewerbungtest.model.Dokument" Multiplicity="*" Role="Dokument"/>
+				<End Type="de.fis.bewerbungtest.model.Bewerbung" Multiplicity="1" Role="Bewerbung"/>
+				<ReferentialConstraint>
+					<Principal Role="Bewerbung">
+						<PropertyRef Name="BewerbungId"/>
+					</Principal>
+					<Dependent Role="Dokument">
+						<PropertyRef Name="Bewerbung"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Kommentar_Bewerbung_Many_One0">
+				<End Type="de.fis.bewerbungtest.model.Kommentar" Multiplicity="*" Role="Kommentar"/>
+				<End Type="de.fis.bewerbungtest.model.Bewerbung" Multiplicity="1" Role="Bewerbung"/>
+				<ReferentialConstraint>
+					<Principal Role="Bewerbung">
+						<PropertyRef Name="BewerbungId"/>
+					</Principal>
+					<Dependent Role="Kommentar">
+						<PropertyRef Name="Bewerbung"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Bewerber_Bewerbung_One_Many0">
+				<End Type="de.fis.bewerbungtest.model.Bewerber" Multiplicity="1" Role="Bewerber"/>
+				<End Type="de.fis.bewerbungtest.model.Bewerbung" Multiplicity="*" Role="Bewerbung"/>
+				<ReferentialConstraint>
+					<Principal Role="Bewerber">
+						<PropertyRef Name="BewerberId"/>
+					</Principal>
+					<Dependent Role="Bewerbung">
+						<PropertyRef Name="Bewerber"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Bewerbung_Status_Many_One0">
+				<End Type="de.fis.bewerbungtest.model.Bewerbung" Multiplicity="*" Role="Bewerbung"/>
+				<End Type="de.fis.bewerbungtest.model.Status" Multiplicity="1" Role="Status"/>
+				<ReferentialConstraint>
+					<Principal Role="Status">
+						<PropertyRef Name="StatusId"/>
+					</Principal>
+					<Dependent Role="Bewerbung">
+						<PropertyRef Name="Status"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="de.fis.bewerbungtest.modelContainer" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="BewerbungStelles" EntityType="de.fis.bewerbungtest.model.BewerbungStelle"/>
+				<EntitySet Name="Stelles" EntityType="de.fis.bewerbungtest.model.Stelle"/>
+				<EntitySet Name="Dokuments" EntityType="de.fis.bewerbungtest.model.Dokument"/>
+				<EntitySet Name="Bewerbers" EntityType="de.fis.bewerbungtest.model.Bewerber"/>
+				<EntitySet Name="Kommentars" EntityType="de.fis.bewerbungtest.model.Kommentar"/>
+				<EntitySet Name="Bewerbungs" EntityType="de.fis.bewerbungtest.model.Bewerbung"/>
+				<EntitySet Name="Statuss" EntityType="de.fis.bewerbungtest.model.Status"/>
+				<AssociationSet Name="BewerbungStelle_Bewerbung_Many_One0Set" Association="de.fis.bewerbungtest.model.BewerbungStelle_Bewerbung_Many_One0">
+					<End EntitySet="BewerbungStelles" Role="BewerbungStelle"/>
+					<End EntitySet="Bewerbungs" Role="Bewerbung"/>
+				</AssociationSet>
+				<AssociationSet Name="BewerbungStelle_Stelle_Many_One0Set" Association="de.fis.bewerbungtest.model.BewerbungStelle_Stelle_Many_One0">
+					<End EntitySet="BewerbungStelles" Role="BewerbungStelle"/>
+					<End EntitySet="Stelles" Role="Stelle"/>
+				</AssociationSet>
+				<AssociationSet Name="Dokument_Bewerbung_Many_One0Set" Association="de.fis.bewerbungtest.model.Dokument_Bewerbung_Many_One0">
+					<End EntitySet="Dokuments" Role="Dokument"/>
+					<End EntitySet="Bewerbungs" Role="Bewerbung"/>
+				</AssociationSet>
+				<AssociationSet Name="Kommentar_Bewerbung_Many_One0Set" Association="de.fis.bewerbungtest.model.Kommentar_Bewerbung_Many_One0">
+					<End EntitySet="Kommentars" Role="Kommentar"/>
+					<End EntitySet="Bewerbungs" Role="Bewerbung"/>
+				</AssociationSet>
+				<AssociationSet Name="Bewerber_Bewerbung_One_Many0Set" Association="de.fis.bewerbungtest.model.Bewerber_Bewerbung_One_Many0">
+					<End EntitySet="Bewerbers" Role="Bewerber"/>
+					<End EntitySet="Bewerbungs" Role="Bewerbung"/>
+				</AssociationSet>
+				<AssociationSet Name="Bewerbung_Status_Many_One0Set" Association="de.fis.bewerbungtest.model.Bewerbung_Status_Many_One0">
+					<End EntitySet="Bewerbungs" Role="Bewerbung"/>
+					<End EntitySet="Statuss" Role="Status"/>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

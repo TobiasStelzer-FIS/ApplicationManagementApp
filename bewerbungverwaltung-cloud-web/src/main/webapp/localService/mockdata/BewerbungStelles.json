@@ -1,0 +1,305 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 9,
+	"BewerbungStelleId": 7,
+	"Stelle": 7,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(7)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 10,
+	"BewerbungStelleId": 10,
+	"Stelle": 11,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(10)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 3,
+	"BewerbungStelleId": 4,
+	"Stelle": 6,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(4)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 1,
+	"BewerbungStelleId": 1,
+	"Stelle": 13,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(1)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 9,
+	"BewerbungStelleId": 8,
+	"Stelle": 17,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(8)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 15,
+	"BewerbungStelleId": 14,
+	"Stelle": 7,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(14)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 5,
+	"BewerbungStelleId": 5,
+	"Stelle": 10,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(5)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 9,
+	"BewerbungStelleId": 6,
+	"Stelle": 3,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(6)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 15,
+	"BewerbungStelleId": 16,
+	"Stelle": 12,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(16)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 10,
+	"BewerbungStelleId": 11,
+	"Stelle": 12,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(11)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 11,
+	"BewerbungStelleId": 12,
+	"Stelle": 1,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(12)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 15,
+	"BewerbungStelleId": 15,
+	"Stelle": 8,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(15)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 10,
+	"BewerbungStelleId": 9,
+	"Stelle": 8,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(9)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 1,
+	"BewerbungStelleId": 3,
+	"Stelle": 19,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(3)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 1,
+	"BewerbungStelleId": 2,
+	"Stelle": 17,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(2)/StelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(13)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(13)",
+		"type": "de.fis.bewerbungtest.model.BewerbungStelle"
+	},
+	"Bewerbung": 12,
+	"BewerbungStelleId": 13,
+	"Stelle": 7,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(13)/BewerbungDetails"
+		}
+	},
+	"StelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/BewerbungStelles(13)/StelleDetails"
+		}
+	}
+}]

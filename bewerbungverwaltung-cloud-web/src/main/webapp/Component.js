@@ -23,8 +23,15 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			this.setModel(models2.createTestModel(), "testModel");
-			
+			//			this.setModel(models2.createTestModel(), "testModel");
+
+			var sServiceUrl = this.getMetadata().getManifestEntry("sap.app").dataSources.bewerbungverwaltungDataModel.uri;
+			var oBewerbungverwaltungModel = new sap.ui.model.odata.ODataModel(sServiceUrl, {
+				json: true,
+				loadMetadataAsync: true
+			});
+			this.setModel(oBewerbungverwaltungModel, "testModel");
+
 			// initialize router
 			this.getRouter().initialize();
 		}

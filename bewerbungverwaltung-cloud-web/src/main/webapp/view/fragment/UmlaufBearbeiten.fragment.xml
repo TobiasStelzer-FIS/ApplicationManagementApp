@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
-	<VBox>
+	<Dialog title="{i18n>UmlaufBearbeitenTitle}">
 		<VBox>
 			<Table>
 				<headerToolbar>
@@ -37,9 +37,9 @@
 				</ColumnListItem>
 			</Table>
 		</VBox>
-		<HBox>
+		<buttons>
 			<Button id="btnUmlaufSave" text="{i18n>DetailSaveButton}" press="onUmlaufSave"/>
 			<Button id="btnUmlaufCancel" text="{i18n>DetailCancelButton}" press="onUmlaufCancel"/>
-		</HBox>
-	</VBox>
+		</buttons>
+	</Dialog>
 </core:FragmentDefinition>

@@ -1,0 +1,53 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)",
+		"type": "de.fis.bewerbungtest.model.Status"
+	},
+	"Bezeichnung": "Abgelehnt",
+	"StatusId": 4,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(4)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)",
+		"type": "de.fis.bewerbungtest.model.Status"
+	},
+	"Bezeichnung": "Offen",
+	"StatusId": 1,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(1)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)",
+		"type": "de.fis.bewerbungtest.model.Status"
+	},
+	"Bezeichnung": "Eingeladen",
+	"StatusId": 2,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(2)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)",
+		"type": "de.fis.bewerbungtest.model.Status"
+	},
+	"Bezeichnung": "Eingestellt",
+	"StatusId": 3,
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Statuss(3)/BewerbungDetails"
+		}
+	}
+}]

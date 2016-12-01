@@ -1,0 +1,358 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 13,
+	"KommentarId": 21,
+	"Name": "Lea Hermann",
+	"Text": "Carolin.König@gmail.de --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1470906042000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(21)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 5,
+	"KommentarId": 9,
+	"Name": "Lia Schmidt",
+	"Text": "Finn.Lehrmann@gmx.com --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1463581395000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(9)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 12,
+	"KommentarId": 18,
+	"Name": "Leon Schneider",
+	"Text": "Amelie.Hofmann@web.net --- Klingt ganz gut",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1461046734000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(18)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 12,
+	"KommentarId": 20,
+	"Name": "Lukas König",
+	"Text": "Amelie.Hofmann@web.net --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 3",
+	"Zeitstempel": "/Date(1466495273000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(20)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 10,
+	"KommentarId": 16,
+	"Name": "Marie Fischer",
+	"Text": "Mila.Schmidt@web.net --- Toller Bewerber",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1466867378000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(16)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 10,
+	"KommentarId": 15,
+	"Name": "Hannah Lange",
+	"Text": "Mila.Schmidt@web.net --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1468922326000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(15)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 9,
+	"KommentarId": 14,
+	"Name": "David Koch",
+	"Text": "Anton.Hartmann@gmx.de --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1464942434000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(14)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 2,
+	"KommentarId": 4,
+	"Name": "Ben Hermann",
+	"Text": "Anna.Fischer@hotmail.com --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1456068220000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(4)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 4,
+	"KommentarId": 7,
+	"Name": "Emma Hofmann",
+	"Text": "Carolin.König@gmail.de --- Klingt ganz gut",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1470578815000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(7)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 1,
+	"KommentarId": 2,
+	"Name": "Theo Schneider",
+	"Text": "Lena.Hermann@gmail.de --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1456831374000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(2)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 1,
+	"KommentarId": 1,
+	"Name": "Maximilian Lehrmann",
+	"Text": "Lena.Hermann@gmail.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1459698981000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(1)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 7,
+	"KommentarId": 13,
+	"Name": "Lara Meyer",
+	"Text": "Anna.Schneider@gmail.com --- Klingt ganz gut",
+	"Thema": "Thema 3",
+	"Zeitstempel": "/Date(1456151253000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(13)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 1,
+	"KommentarId": 3,
+	"Name": "Paul Mustermann",
+	"Text": "Lena.Hermann@gmail.de --- Toller Bewerber",
+	"Thema": "Thema 3",
+	"Zeitstempel": "/Date(1460398912000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(3)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 3,
+	"KommentarId": 6,
+	"Name": "Lia Walter",
+	"Text": "Hannah.Walter@gmail.de --- Toller Bewerber",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1455985273000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(6)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 11,
+	"KommentarId": 17,
+	"Name": "Paul Hartmann",
+	"Text": "Amelie.Lange@hotmail.com --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1468756122000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(17)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 3,
+	"KommentarId": 5,
+	"Name": "Finn Schröder",
+	"Text": "Hannah.Walter@gmail.de --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1471843055000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(5)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 5,
+	"KommentarId": 10,
+	"Name": "Noah Walter",
+	"Text": "Finn.Lehrmann@gmx.com --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 3",
+	"Zeitstempel": "/Date(1467439140000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(10)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 12,
+	"KommentarId": 19,
+	"Name": "Elisabeth Zimmermann",
+	"Text": "Amelie.Hofmann@web.net --- Schlechte Noten, aber angeblich hohe Motivation und passt gut ins Profil",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1458285497000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(19)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 5,
+	"KommentarId": 8,
+	"Name": "Emily Lehrmann",
+	"Text": "Finn.Lehrmann@gmx.com --- Klingt ganz gut",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1478460219000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(8)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 7,
+	"KommentarId": 11,
+	"Name": "Emilia Walter",
+	"Text": "Anna.Schneider@gmail.com --- Dieser Bewerber hat eine vielversprechende Laufbahn hinter sich und verspricht hohe Motivation. Außerdem passt er perfekt ins Profil. Empfehlung: Einladen",
+	"Thema": "Thema 1",
+	"Zeitstempel": "/Date(1457948130000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(11)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)",
+		"type": "de.fis.bewerbungtest.model.Kommentar"
+	},
+	"Bewerbung": 7,
+	"KommentarId": 12,
+	"Name": "Luca Lange",
+	"Text": "Anna.Schneider@gmail.com --- Gute Noten. Trotzdem aufpassen, war längere Zeit arbeitslos.",
+	"Thema": "Thema 2",
+	"Zeitstempel": "/Date(1473158426000)/",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Kommentars(12)/BewerbungDetails"
+		}
+	}
+}]

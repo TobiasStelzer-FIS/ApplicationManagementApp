@@ -1,0 +1,248 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Solution Architect/Presales Consultant für Grafenrheinfeld oder Leonberg (m/w)",
+	"StelleId": 18,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(18)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant für Windows-basierende Anwendungssysteme (m/w)",
+	"StelleId": 8,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(8)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant SAP FI für Grafenrheinfeld, Leonberg oder Offenbach (m/w)",
+	"StelleId": 12,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(12)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant oder Senior Consultant SAP LES/WM (m/w)",
+	"StelleId": 14,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(14)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Web-Entwickler (m/w)",
+	"StelleId": 16,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(16)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Inhouse Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
+	"StelleId": 6,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(6)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Presales Consultant für SAP-Lösungserweiterungen (m/w)",
+	"StelleId": 19,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(19)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant für Integrationsprozesse in der IT (m/w)",
+	"StelleId": 9,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(9)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "SAP Vertriebsbeauftragter Lager-Logistik (m/w)",
+	"StelleId": 2,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(2)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Junior Consultant SAP FI (m/w)",
+	"StelleId": 13,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(13)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(4)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Inhouse Consultant SAP CO (m/w)",
+	"StelleId": 4,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(4)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Inhouse Consultant SAP MM, SD oder PP (m/w)",
+	"StelleId": 5,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(5)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "(Junior) Inhouse Consultant für Integrationsprozesse in der IT (m/w)",
+	"StelleId": 10,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(10)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "SAP-Software-Entwickler/ABAP (m/w)",
+	"StelleId": 17,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(17)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant für SAP HCM (m/w)",
+	"StelleId": 15,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(15)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant für Stammdatenlösungen im SAP-Umfeld (m/w)",
+	"StelleId": 7,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(7)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Senior Consultant für SAP MM oder FI mit Projektmanagementerfahrung (m/w)",
+	"StelleId": 3,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(3)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Senior Account Manager Neukundenvertrieb DACH (m/w)",
+	"StelleId": 1,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(1)/BewerbungStelleDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)",
+		"type": "de.fis.bewerbungtest.model.Stelle"
+	},
+	"Bezeichnung": "Consultant SAP MM, SD oder PP für Grafenrheinfeld oder Leonberg (m/w)",
+	"StelleId": 11,
+	"BewerbungStelleDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Stelles(11)/BewerbungStelleDetails"
+		}
+	}
+}]

@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
 	xmlns="sap.m">
-	<VBox>
+	<Dialog>
 		<VBox>
 			<f:Form>
 				<f:layout>
@@ -16,9 +16,9 @@
 				</f:FormContainer>
 			</f:Form>
 		</VBox>
-		<HBox>
+		<buttons>
 			<Button id="btnUnterlagenSave" text="{i18n>DetailSaveButton}" press="onUnterlagenSave"/>
 			<Button id="btnUnterlagenCancel" text="{i18n>DetailCancelButton}" press="onUnterlagenCancel"/>
-		</HBox>
-	</VBox>
+		</buttons>
+	</Dialog>
 </core:FragmentDefinition>

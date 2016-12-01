@@ -1,0 +1,361 @@
+[{
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 2,
+	"Email": "Anna.Fischer@hotmail.com",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1481583600000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+41 123 173646980",
+	"Nachname": "Fischer",
+	"Ort": "Köln",
+	"Postleitzahl": "87612",
+	"StrasseHnr": "Dehmelstraße 11",
+	"Telefonnummer": "0783 4127652",
+	"Vorname": "Anna",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(2)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 6,
+	"Email": "Mia.Hermann@gmail.de",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1004914800000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+47 186 376580740",
+	"Nachname": "Hermann",
+	"Ort": "Nürnberg",
+	"Postleitzahl": "85816",
+	"StrasseHnr": "Aachener Straße 99",
+	"Telefonnummer": "0841 1858093",
+	"Vorname": "Mia",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(6)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 4,
+	"Email": "Carolin.König@gmail.de",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1481670000000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+47 141 947218737",
+	"Nachname": "König",
+	"Ort": "Schnackenwerth",
+	"Postleitzahl": "96878",
+	"StrasseHnr": "Birkenweg 49",
+	"Telefonnummer": "0877 466531",
+	"Vorname": "Carolin",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(4)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Herr",
+	"BewerberId": 14,
+	"Email": "David.Meyer@gmx.com",
+	"Fotopfad": "./images/Mustermann.png",
+	"Geburtsdatum": "/Date(308268000000)/",
+	"Geschlecht": "m",
+	"Handynummer": "+43 187 166468256",
+	"Nachname": "Meyer",
+	"Ort": "Würzburg",
+	"Postleitzahl": "92696",
+	"StrasseHnr": "Artilleriestraße 118",
+	"Telefonnummer": "0897 9758100",
+	"Vorname": "David",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(14)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 12,
+	"Email": "Amelie.Hofmann@web.net",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(82332000000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+47 170 844378861",
+	"Nachname": "Hofmann",
+	"Ort": "Nürnberg",
+	"Postleitzahl": "86654",
+	"StrasseHnr": "Am Langen Graben 67",
+	"Telefonnummer": "0980 5936646",
+	"Vorname": "Amelie",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(12)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 3,
+	"Email": "Hannah.Walter@gmail.de",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(146959200000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+48 148 617300857",
+	"Nachname": "Walter",
+	"Ort": "Hergolshausen",
+	"Postleitzahl": "91877",
+	"StrasseHnr": "Dehmelstraße 88",
+	"Telefonnummer": "0835 162835",
+	"Vorname": "Hannah",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(3)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 11,
+	"Email": "Amelie.Lange@hotmail.com",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(221871600000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+40 167 725987070",
+	"Nachname": "Lange",
+	"Ort": "Köln",
+	"Postleitzahl": "94080",
+	"StrasseHnr": "Akademiestraße 54",
+	"Telefonnummer": "0900 3288806",
+	"Vorname": "Amelie",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(11)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 7,
+	"Email": "Anna.Schneider@gmail.com",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(928879200000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+41 199 819297533",
+	"Nachname": "Schneider",
+	"Ort": "Stuttgart",
+	"Postleitzahl": "91792",
+	"StrasseHnr": "Artilleriestraße 114",
+	"Telefonnummer": "0860 7652580",
+	"Vorname": "Anna",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(7)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 1,
+	"Email": "Lena.Hermann@gmail.de",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1481670000000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+47 138 310999407",
+	"Nachname": "Hermann",
+	"Ort": "Schweinfurt",
+	"Postleitzahl": "83543",
+	"StrasseHnr": "Feigstraße 70",
+	"Telefonnummer": "0900 3055724",
+	"Vorname": "Lena",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(1)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Herr",
+	"BewerberId": 8,
+	"Email": "Milan.Schröder@gmail.com",
+	"Fotopfad": "./images/Mustermann.png",
+	"Geburtsdatum": "/Date(27730800000)/",
+	"Geschlecht": "m",
+	"Handynummer": "+48 176 902559839",
+	"Nachname": "Schröder",
+	"Ort": "Köln",
+	"Postleitzahl": "84905",
+	"StrasseHnr": "Birkenweg 62",
+	"Telefonnummer": "0862 4109984",
+	"Vorname": "Milan",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(8)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Herr",
+	"BewerberId": 9,
+	"Email": "Anton.Hartmann@gmx.de",
+	"Fotopfad": "./images/Mustermann.png",
+	"Geburtsdatum": "/Date(1481583600000)/",
+	"Geschlecht": "m",
+	"Handynummer": "+40 167 92024873",
+	"Nachname": "Hartmann",
+	"Ort": "Hamburg",
+	"Postleitzahl": "86286",
+	"StrasseHnr": "Goldnesselweg 40",
+	"Telefonnummer": "0953 3006117",
+	"Vorname": "Anton",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(9)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Herr",
+	"BewerberId": 5,
+	"Email": "Finn.Lehrmann@gmx.com",
+	"Fotopfad": "./images/Mustermann.png",
+	"Geburtsdatum": "/Date(1480978800000)/",
+	"Geschlecht": "m",
+	"Handynummer": "+41 169 916793038",
+	"Nachname": "Lehrmann",
+	"Ort": "Berlin",
+	"Postleitzahl": "84454",
+	"StrasseHnr": "Darmstädter Straße 9",
+	"Telefonnummer": "0915 8085894",
+	"Vorname": "Finn",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(5)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 13,
+	"Email": "Carolin.König@gmail.de",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1481065200000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+39 178 539777794",
+	"Nachname": "König",
+	"Ort": "Frankfurt",
+	"Postleitzahl": "97235",
+	"StrasseHnr": "Aachener Straße 115",
+	"Telefonnummer": "0712 7716127",
+	"Vorname": "Carolin",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(13)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Herr",
+	"BewerberId": 15,
+	"Email": "Anton.Lehrmann@gmx.com",
+	"Fotopfad": "./images/Mustermann.png",
+	"Geburtsdatum": "/Date(1481151600000)/",
+	"Geschlecht": "m",
+	"Handynummer": "+41 197 458805830",
+	"Nachname": "Lehrmann",
+	"Ort": "Stuttgart",
+	"Postleitzahl": "96709",
+	"StrasseHnr": "Baumgartnerstraße 123",
+	"Telefonnummer": "0918 1923878",
+	"Vorname": "Anton",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(15)/BewerbungDetails"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)",
+		"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)",
+		"type": "de.fis.bewerbungtest.model.Bewerber"
+	},
+	"Anrede": "Frau",
+	"BewerberId": 10,
+	"Email": "Mila.Schmidt@web.net",
+	"Fotopfad": "./images/Musterfrau.png",
+	"Geburtsdatum": "/Date(1480719600000)/",
+	"Geschlecht": "w",
+	"Handynummer": "+49 169 216200444",
+	"Nachname": "Schmidt",
+	"Ort": "Roth a. d. Saale",
+	"Postleitzahl": "95915",
+	"StrasseHnr": "Ackermannstraße 122",
+	"Telefonnummer": "0748 703450",
+	"Vorname": "Mila",
+	"BewerbungDetails": {
+		"__deferred": {
+			"uri": "http://localhost:8080/bewerbungtest-cloud-web/bewerbungtest.svc/Bewerbers(10)/BewerbungDetails"
+		}
+	}
+}]

@@ -10,7 +10,7 @@
 				<VBox>
 					<Label text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" width="100%"/>
 					<Table noDataText="{i18n>ItemTableStellenNoDataText}" class="tableStellen sapUiTinyMarginBottom" width="auto" showSeparators="Inner"
-						backgroundDesign="Transparent" items="{path: 'testModel>BewerbungStelleDetails/results', templateShareable: false}">
+						backgroundDesign="Transparent" items="{path: 'testModel>BewerbungStelleDetails', templateShareable: false}">
 						<ColumnListItem width="auto" type="Inactive">
 							<cells>
 								<Text text="{testModel>StelleDetails/Bezeichnung}" width="auto"/>

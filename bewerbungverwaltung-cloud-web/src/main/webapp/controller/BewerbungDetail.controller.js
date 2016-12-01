@@ -13,11 +13,13 @@ sap.ui.define([
 		/* =========================================================== */
 		/* lifecycle methods                                           */
 		/* =========================================================== */
-		
+
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
-			this._fragments = []; // this will store the instantiated fragments
+			this._currentDialog = {};
+			this._dialogs = [];		// this will store the instantiated dialogs 
+			this._fragments = [];	// this will store the instantiated fragments
 
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
 
@@ -35,13 +37,13 @@ sap.ui.define([
 		onBeforeRendering: function() {
 
 		},
-		
+
 		_handleRouteMatched: function(oEvent) {
 			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
 
 			this._bindView(sBindingEntity);
 		},
-		
+
 		/**
 		 * Binds the view to the Entity with the specified path
 		 * (_handleRouteMatched --> _bindView)
@@ -59,7 +61,7 @@ sap.ui.define([
 				}
 			});
 		},
-		
+
 		/**
 		 * Event handler for the "change" event of the bindElement function
 		 * 
@@ -75,7 +77,7 @@ sap.ui.define([
 				this.getRouter().getTargets().display("DetailObjectNotFound");
 			}
 		},
-		
+
 		/**
 		 * Event handler for the "press" event of the Back button
 		 * (the back button is only shown on Phones)
@@ -90,47 +92,63 @@ sap.ui.define([
 		/* =========================================================== */
 		/* event handlers for the fragment buttons                     */
 		/* =========================================================== */
-		
+
 		onDetailsEdit: function(oEvent) {
-			this._showFragment("DetailsBearbeiten", "containerDetails");
+			this._openDialog("DetailsBearbeiten");
 		},
 		onDetailsSave: function(oEvent) {
-			this._showFragment("Details", "containerDetails");
 		},
 		onDetailsCancel: function(oEvent) {
-			this._showFragment("Details", "containerDetails");
+			this._closeDialog();
 		},
 		onKommentareEdit: function(oEvent) {
-			this._showFragment("KommentareBearbeiten", "containerKommentare");
+			this._openDialog("KommentareBearbeiten");
 		},
 		onKommentareSave: function(oEvent) {
-			this._showFragment("Kommentare", "containerKommentare");
 		},
 		onKommentareCancel: function(oEvent) {
-			this._showFragment("Kommentare", "containerKommentare");
+			this._closeDialog();
 		},
 		onUnterlagenEdit: function(oEvent) {
-			this._showFragment("UnterlagenBearbeiten", "containerUnterlagen");
+			this._openDialog("UnterlagenBearbeiten");
 		},
 		onUnterlagenSave: function(oEvent) {
-			this._showFragment("Unterlagen", "containerUnterlagen");
 		},
 		onUnterlagenCancel: function(oEvent) {
-			this._showFragment("Unterlagen", "containerUnterlagen");
+			this._closeDialog();
 		},
 		onUmlaufEdit: function(oEvent) {
-			this._showFragment("UmlaufBearbeiten", "containerUmlauf");
+			this._openDialog("UmlaufBearbeiten");
 		},
 		onUmlaufSave: function(oEvent) {
-			this._showFragment("Umlauf", "containerUmlauf");
 		},
 		onUmlaufCancel: function(oEvent) {
-			this._showFragment("Umlauf", "containerUmlauf");
+			this._closeDialog();
 		},
 
 		/* =========================================================== */
 		/* internal methods                                            */
 		/* =========================================================== */
+
+		_getDialog: function(sFragmentName) {
+			var oDialog = this._dialogs[sFragmentName];
+			
+			if (!oDialog) {
+				oDialog = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment." + sFragmentName, this);
+				this.getView().addDependent(oDialog);
+				this._dialogs[sFragmentName] = oDialog;
+			}
+			return oDialog;
+		},
+
+		_openDialog: function(sFragmentName) {
+			this._currentDialog = this._getDialog(sFragmentName);
+			this._currentDialog.open();
+		},
+		
+		_closeDialog: function() {
+			this._currentDialog.close();
+		},
 		
 		/**
 		 * Creates a new fragment or returns an existing one
@@ -151,7 +169,7 @@ sap.ui.define([
 			this._fragments[sFragmentName] = oFragment;
 			return oFragment;
 		},
-		
+
 		/**
 		 * Replaces the content in the container with
 		 * the specified fragment

@@ -1,0 +1,9 @@
+{
+  "mockpreview": {
+    "loadJSONFiles": true,
+    "mockUri": "/destinations/somewhere/",
+    "metadataFilePath": "../localService/metadata.xml",
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  }
+}
