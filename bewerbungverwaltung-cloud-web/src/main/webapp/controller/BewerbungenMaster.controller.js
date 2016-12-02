@@ -63,7 +63,7 @@ sap.ui.define([
 
 			var oRouter = UIComponent.getRouterFor(this);
 			oRouter.navTo("BewerbungDetail", {
-				Bewerbung: bindingContext.substring(12, bindingContext.length-1)
+				Bewerbung: bindingContext.substr(1)
 			});
 		},
 

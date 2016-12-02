@@ -11,10 +11,10 @@
 				</f:title>
 				<f:FormElement>
 					<VBox>
-						<VBox items="{path: 'testModel>DokumentDetails/results'}">
+						<VBox items="{path: 'testModel>DokumentDetails'}">
 							<Link text="• {testModel>Dateiname}"/>
 						</VBox>
-						<Text text="{i18n>UnterlagenNoDataText}" visible="{= ${testModel>DokumentDetails/results}.length === 0}"/>
+						<Text text="{i18n>UnterlagenNoDataText}" visible="{= ${testModel>DokumentDetails}.length === 0}"/>
 					</VBox>
 				</f:FormElement>
 			</f:FormContainer>

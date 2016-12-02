@@ -6,7 +6,7 @@
 				<f:layout>
 					<f:ResponsiveGridLayout/>
 				</f:layout>
-				<f:FormContainer formElements="{path: 'testModel>DokumentDetails/results'}">
+				<f:FormContainer formElements="{path: 'testModel>DokumentDetails'}">
 					<f:title>
 						<core:Title text="{i18n>UnterlagenDocuments}"/>
 					</f:title>

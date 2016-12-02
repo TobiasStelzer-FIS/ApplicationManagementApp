@@ -27,7 +27,7 @@
 					<core:Title text="{i18n>DetailsAppliedFor}"/>
 				</f:title>
 				<f:FormElement>
-					<Table id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails/results'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
+					<Table id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
 						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
 						<headerToolbar>
 							<Toolbar>
@@ -63,7 +63,8 @@
 					<Input value="{testModel>BewerberDetails/Handynummer}"/>
 				</f:FormElement>
 			</f:FormContainer>
-			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails/results'}">
+<!--
+			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails'}">
 				<f:title>
 					<core:Title text="{i18n>DetailsSources}"/>
 				</f:title>
@@ -71,6 +72,7 @@
 					<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
 				</f:FormElement>
 			</f:FormContainer>
+-->
 		</f:Form>
 		<buttons>
 			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDetailsSave"/>

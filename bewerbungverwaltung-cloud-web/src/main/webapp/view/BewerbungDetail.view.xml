@@ -41,12 +41,12 @@
 				</VBox>
 				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
 					<Label text="Stellen" design="Bold"/>
-					<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
+					<VBox items="{path: 'testModel>BewerbungStelleDetails'}">
 						<items>
 							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiSmallMarginBegin"/>
 						</items>
 					</VBox>
-					<Text text="Initiativbewerbung" visible="{= ${testModel>BewerbungStelleDetails/results}.length === 0}" class="sapUiSmallMarginBegin"/>
+					<Text text="Initiativbewerbung" visible="{= ${testModel>BewerbungStelleDetails}.length === 0}" class="sapUiSmallMarginBegin"/>
 				</VBox>
 				<VBox width="auto">
 					<FlexBox width="auto">
@@ -67,6 +67,7 @@
 					</FlexBox>
 				</VBox>
 			</uxap:headerContent>
+
 			<uxap:sections>
 				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleDetails}">
 					<uxap:subSections>
@@ -103,6 +104,7 @@
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 			</uxap:sections>
+
 		</uxap:ObjectPageLayout>
 	</semantic:DetailPage>
 </mvc:View>

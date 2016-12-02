@@ -39,7 +39,7 @@ sap.ui.define([
 		},
 
 		_handleRouteMatched: function(oEvent) {
-			var sBindingEntity = "testModel>/Bewerbungs/" + oEvent.getParameter("arguments").Bewerbung;
+			var sBindingEntity = "testModel>/" + oEvent.getParameter("arguments").Bewerbung;
 
 			this._bindView(sBindingEntity);
 		},
@@ -58,7 +58,8 @@ sap.ui.define([
 					change: this._onBindingChange.bind(this),
 					dataRequested: function() {},
 					dataReceived: function() {}
-				}
+				},
+				parameters: {expand : "BewerbungStelleDetails/StelleDetails,StatusDetails,BewerberDetails"}
 			});
 		},
 
@@ -94,6 +95,11 @@ sap.ui.define([
 		/* =========================================================== */
 
 		onDetailsEdit: function(oEvent) {
+			var oModel = this.getModel("testModel");
+			var oBinding = this.getView().getElementBinding("testModel");
+			var oContext = this.getView().getBindingContext("testModel");
+			var oBewerber = oModel.getProperty("BewerberDetails", oContext);
+			jQuery.sap.log.error(JSON.stringify(oBewerber));
 			this._openDialog("DetailsBearbeiten");
 		},
 		onDetailsSave: function(oEvent) {
@@ -144,6 +150,7 @@ sap.ui.define([
 		_openDialog: function(sFragmentName) {
 			this._currentDialog = this._getDialog(sFragmentName);
 			this._currentDialog.open();
+			return this._currentDialog;
 		},
 		
 		_closeDialog: function() {

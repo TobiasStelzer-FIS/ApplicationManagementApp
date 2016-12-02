@@ -29,10 +29,10 @@
 					</f:title>
 					<f:FormElement>
 						<VBox>
-							<VBox items="{path: 'testModel>BewerbungStelleDetails/results'}">
+							<VBox items="{path: 'testModel>BewerbungStelleDetails'}">
 								<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
 							</VBox>
-							<Text text="{i18n>DetailsStellenNoDataText}" visible="{= ${testModel>BewerbungStelleDetails/results}.length === 0}"/>
+							<Text text="{i18n>DetailsStellenNoDataText}" visible="{= ${testModel>BewerbungStelleDetails}.length === 0}"/>
 						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
@@ -56,10 +56,12 @@
 					</f:title>
 					<f:FormElement>
 						<VBox>
-							<VBox items="{path: 'testModel>BewerbungQuelleDetails/results'}">
+			<!--
+							<VBox items="{path: 'testModel>BewerbungQuelleDetails'}">
 								<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
 							</VBox>
 							<Text text="{i18n>DetailsQuellenNoDataText}" visible="{= ${testModel>BewerbungQuelleDetails/results}.length === 0}"/>
+			-->
 						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
