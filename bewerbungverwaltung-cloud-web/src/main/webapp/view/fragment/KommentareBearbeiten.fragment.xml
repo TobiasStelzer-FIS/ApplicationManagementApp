@@ -25,8 +25,8 @@
 			</List>
 		</VBox>
 		<buttons>
-			<Button id="btnKommentareSave" text="{i18n>DetailSaveButton}" press="onKommentareSave"/>
-			<Button id="btnKommentareCancel" text="{i18n>DetailCancelButton}" press="onKommentareCancel"/>
+			<Button id="btnKommentareSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnKommentareCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>
 </core:FragmentDefinition>

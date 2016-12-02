@@ -7,7 +7,7 @@ sap.ui.define([
 		init: function() {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "https://trial.apim1.hanatrial.ondemand.com:443/p1942281469trial/v1/fis/bewerbungservice/"
+				rootUri: "https://trial.apim1.hanatrial.ondemand.com:443/p1942281469trial/v1/fis/bewerbungtest/"
 			});
 			var oUriParameters = jQuery.sap.getUriParameters();
 			// configure

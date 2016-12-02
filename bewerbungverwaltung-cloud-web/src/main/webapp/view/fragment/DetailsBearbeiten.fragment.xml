@@ -19,34 +19,8 @@
 					<Input value="{testModel>BewerberDetails/StrasseHnr}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>ZipCity}">
-					<Input value="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
-				</f:FormElement>
-			</f:FormContainer>
-			<f:FormContainer>
-				<f:title>
-					<core:Title text="{i18n>DetailsAppliedFor}"/>
-				</f:title>
-				<f:FormElement>
-					<Table id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
-						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
-						<headerToolbar>
-							<Toolbar>
-								<Title text="{i18n>DetailsBearbeitenStellenTitle}" level="H2"/>
-								<ToolbarSpacer/>
-								<Button icon="sap-icon://add" press="onAddStelle"/>
-							</Toolbar>
-						</headerToolbar>
-						<columns>
-							<Column>
-								<Text text="{i18n>DetailsBearbeitenFirstColumnStellen}"/>
-							</Column>
-						</columns>
-						<items>
-							<ColumnListItem>
-								<Text text="{testModel>StelleDetails/Bezeichnung}"/>
-							</ColumnListItem>
-						</items>
-					</Table>
+					<Input value="{testModel>BewerberDetails/Postleitzahl}"/>
+					<Input value="{testModel>BewerberDetails/Ort}"/>
 				</f:FormElement>
 			</f:FormContainer>
 			<f:FormContainer>
@@ -63,7 +37,27 @@
 					<Input value="{testModel>BewerberDetails/Handynummer}"/>
 				</f:FormElement>
 			</f:FormContainer>
-<!--
+			<f:FormContainer>
+				<f:title>
+					<core:Title text="{i18n>DetailsAppliedFor}"/>
+				</f:title>
+				<f:FormElement>
+					<List id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
+						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="{i18n>DetailsBearbeitenStellenTitle}" level="H2"/>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://add" press="onAddStelle"/>
+							</Toolbar>
+						</headerToolbar>
+						<CustomListItem>
+							<Text text="{testModel>StelleDetails/Bezeichnung}"/>
+						</CustomListItem>
+					</List>
+				</f:FormElement>
+			</f:FormContainer>
+			<!--
 			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails'}">
 				<f:title>
 					<core:Title text="{i18n>DetailsSources}"/>
@@ -75,8 +69,8 @@
 -->
 		</f:Form>
 		<buttons>
-			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDetailsSave"/>
-			<Button id="btnDetailsCancel" text="{i18n>DetailCancelButton}" press="onDetailsCancel"/>
+			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnDetailsCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>
 </core:FragmentDefinition>

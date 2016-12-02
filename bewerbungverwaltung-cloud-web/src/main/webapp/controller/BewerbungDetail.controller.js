@@ -17,9 +17,10 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
+			this._batchOperations = [];
 			this._currentDialog = {};
-			this._dialogs = [];		// this will store the instantiated dialogs 
-			this._fragments = [];	// this will store the instantiated fragments
+			this._dialogs = []; // this will store the instantiated dialogs 
+			this._fragments = []; // this will store the instantiated fragments
 
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
 
@@ -59,7 +60,9 @@ sap.ui.define([
 					dataRequested: function() {},
 					dataReceived: function() {}
 				},
-				parameters: {expand : "BewerbungStelleDetails/StelleDetails,StatusDetails,BewerberDetails"}
+				parameters: {
+					expand: "BewerbungStelleDetails/StelleDetails,StatusDetails,BewerberDetails"
+				}
 			});
 		},
 
@@ -95,41 +98,78 @@ sap.ui.define([
 		/* =========================================================== */
 
 		onDetailsEdit: function(oEvent) {
-			var oModel = this.getModel("testModel");
-			var oBinding = this.getView().getElementBinding("testModel");
-			var oContext = this.getView().getBindingContext("testModel");
-			var oBewerber = oModel.getProperty("BewerberDetails", oContext);
-			jQuery.sap.log.error(JSON.stringify(oBewerber));
-			this._openDialog("DetailsBearbeiten");
-		},
-		onDetailsSave: function(oEvent) {
-		},
-		onDetailsCancel: function(oEvent) {
-			this._closeDialog();
+			/*
+						var oModel = this.getModel("testModel");
+						var oContext = this.getView().getBindingContext("testModel");
+						var oBewerber = oModel.getProperty("BewerberDetails", oContext);
+						var oEntry = oModel.createEntry("/Bewerbers", {
+							BewerberId:		oBewerber.BewerberId,
+							Geschlecht:		oBewerber.Geschlecht,
+							Anrede: 		oBewerber.Anrede,
+							Vorname:		oBewerber.Vorname,
+							Nachname:		oBewerber.Nachname,
+							Geburtsdatum:	oBewerber.Geburtsdatum,
+							Fotopfad:		oBewerber.Fotopfad,
+							Postleitzahl:	oBewerber.Postleitzahl,
+							Ort:			oBewerber.Ort,
+							StrasseHnr:		oBewerber.StrasseHnr,
+							Telefonnummer:	oBewerber.Telefonnummer,
+							Handynummer:	oBewerber.Handynummer,
+							Email:			oBewerber.Email
+						});
+			*/
+			var oDialog = this._openDialog("DetailsBearbeiten");
+			//			oDialog.bindElement(oEntry);
 		},
 		onKommentareEdit: function(oEvent) {
 			this._openDialog("KommentareBearbeiten");
 		},
-		onKommentareSave: function(oEvent) {
-		},
-		onKommentareCancel: function(oEvent) {
-			this._closeDialog();
-		},
 		onUnterlagenEdit: function(oEvent) {
 			this._openDialog("UnterlagenBearbeiten");
-		},
-		onUnterlagenSave: function(oEvent) {
-		},
-		onUnterlagenCancel: function(oEvent) {
-			this._closeDialog();
 		},
 		onUmlaufEdit: function(oEvent) {
 			this._openDialog("UmlaufBearbeiten");
 		},
-		onUmlaufSave: function(oEvent) {
-		},
-		onUmlaufCancel: function(oEvent) {
+		onDialogSave: function(oEvent) {
+			var oModel = this.getModel("testModel");
+			var changeGroups = oModel.getChangeGroups();
+			
 			this._closeDialog();
+			oModel.submitChanges(
+				function() {
+					sap.m.MessageToast.show("Successfully submitted changes");
+				},
+				function() {
+					sap.m.MessageToast.show("Error on submitting changes");
+				}
+			);
+			/*
+			oModel.submitBatch(function() {
+				jQuery.sap.log.error("successful batch operations");
+			}, function() {
+				jQuery.sap.log.error("failed batch operations");
+			}, true);
+			*/
+			oModel.refresh();
+			oModel.update();
+		},
+		onDialogCancel: function(oEvent) {
+			this._closeDialog();
+			this.getModel("testModel").resetChanges();
+		},
+
+		onDeleteStelle: function(oEvent) {
+			var oModel = this.getModel("testModel");
+			var oList = oEvent.getSource();
+			var oListItem = oEvent.getParameter("listItem");
+			var oContext = oListItem.getBindingContext("testModel");
+			var sPath = oContext.getPath();
+
+//			this._batchOperations.push(oModel.createBatchOperation(sPath, "DELETE"));
+//			oModel.addBatchChangeOperations(this._batchOperations);
+
+			oModel.remove(sPath);
+			oModel.updateBindings();
 		},
 
 		/* =========================================================== */
@@ -138,7 +178,7 @@ sap.ui.define([
 
 		_getDialog: function(sFragmentName) {
 			var oDialog = this._dialogs[sFragmentName];
-			
+
 			if (!oDialog) {
 				oDialog = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment." + sFragmentName, this);
 				this.getView().addDependent(oDialog);
@@ -152,11 +192,11 @@ sap.ui.define([
 			this._currentDialog.open();
 			return this._currentDialog;
 		},
-		
+
 		_closeDialog: function() {
 			this._currentDialog.close();
 		},
-		
+
 		/**
 		 * Creates a new fragment or returns an existing one
 		 * Newly created fragments are stored in an array for later use

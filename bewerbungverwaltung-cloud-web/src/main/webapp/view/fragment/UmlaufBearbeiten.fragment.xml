@@ -38,8 +38,8 @@
 			</Table>
 		</VBox>
 		<buttons>
-			<Button id="btnUmlaufSave" text="{i18n>DetailSaveButton}" press="onUmlaufSave"/>
-			<Button id="btnUmlaufCancel" text="{i18n>DetailCancelButton}" press="onUmlaufCancel"/>
+			<Button id="btnUmlaufSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnUmlaufCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>
 </core:FragmentDefinition>

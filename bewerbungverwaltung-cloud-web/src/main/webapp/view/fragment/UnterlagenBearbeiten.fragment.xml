@@ -17,8 +17,8 @@
 			</f:Form>
 		</VBox>
 		<buttons>
-			<Button id="btnUnterlagenSave" text="{i18n>DetailSaveButton}" press="onUnterlagenSave"/>
-			<Button id="btnUnterlagenCancel" text="{i18n>DetailCancelButton}" press="onUnterlagenCancel"/>
+			<Button id="btnUnterlagenSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnUnterlagenCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>
 </core:FragmentDefinition>
