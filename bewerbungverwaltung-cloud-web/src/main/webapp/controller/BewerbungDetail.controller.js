@@ -17,7 +17,6 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
-			this._batchOperations = [];
 			this._currentDialog = {};
 			this._dialogs = []; // this will store the instantiated dialogs 
 			this._fragments = []; // this will store the instantiated fragments

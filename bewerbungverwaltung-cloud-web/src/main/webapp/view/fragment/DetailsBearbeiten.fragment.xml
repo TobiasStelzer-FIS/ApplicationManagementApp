@@ -42,6 +42,10 @@
 					<core:Title text="{i18n>DetailsAppliedFor}"/>
 				</f:title>
 				<f:FormElement>
+					<MultiComboBox items="{path: 'testModel>/Stelles', sorter: {path: 'Bezeichnung'}}" selectedItems="{path: 'testModel>/BewerbungStelleDetails'}">
+						<core:Item key="{testModel>StelleId}" text="{testModel>Bezeichnung}"/>
+					</MultiComboBox>
+<!--
 					<List id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
 						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
 						<headerToolbar>
@@ -55,18 +59,19 @@
 							<Text text="{testModel>StelleDetails/Bezeichnung}"/>
 						</CustomListItem>
 					</List>
+-->
 				</f:FormElement>
 			</f:FormContainer>
-			<!--
-			<f:FormContainer formElements="{path: 'testModel>BewerbungQuelleDetails'}">
+			<f:FormContainer>
 				<f:title>
 					<core:Title text="{i18n>DetailsSources}"/>
 				</f:title>
 				<f:FormElement>
-					<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
+					<MultiComboBox items="{path: 'testModel>/Stelles', sorter: {path: 'Bezeichnung'}}" selectedItems="{path: 'testModel>/BewerbungStelleDetails'}">
+						<core:Item key="{testModel>StelleId}" text="{testModel>Bezeichnung}"/>
+					</MultiComboBox>
 				</f:FormElement>
 			</f:FormContainer>
--->
 		</f:Form>
 		<buttons>
 			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>

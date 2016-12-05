@@ -1,29 +1,19 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns="sap.m">
 	<Dialog title="{i18n>KommentareBearbeitenTitle}">
-		<VBox>
-			<List items="{path: 'testModel>KommentarDetails'}" class="listKommentare sapUiSmallMarginTop" width="100%">
-				<CustomListItem class="sapUiSmallMarginBottom" height="auto">
-					<Title width="100%" text="{testModel>Thema}" titleStyle="H4" class="themaKommentar"/>
-					<FlexBox width="100%" alignItems="Start">
-						<Label text="{i18n>KommentareName}:" class="sapUiTinyMarginEnd">
-							<layoutData>
-								<FlexItemData minWidth="60px"/>
-							</layoutData>
-						</Label>
-						<Text text="{testModel>Name}"/>
-					</FlexBox>
-					<FlexBox width="100%" alignItems="Start">
-						<Label text="{i18n>KommentareDate}:" class="sapUiTinyMarginEnd">
-							<layoutData>
-								<FlexItemData minWidth="60px"/>
-							</layoutData>
-						</Label>
-						<Text text="{path: 'testModel>Zeitstempel', formatter: '.formatter.formatZeitstempel'}"/>
-					</FlexBox>
-					<TextArea growing="true" growingMaxLines="4" editable="false" value="{testModel>Text}" width="100%" height="auto"/>
-				</CustomListItem>
-			</List>
-		</VBox>
+		<form:Form>
+			<form:layout>
+				<form:ResponsiveGridLayout columnsM="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" emptySpanM="0"/>
+			</form:layout>
+			<form:FormContainer>
+				<form:FormElement label="Thema">
+					<Input value="asdf"/>
+				</form:FormElement>
+				<form:FormElement label="Kommentar">
+					<TextArea value="asdf"/>
+				</form:FormElement>
+			</form:FormContainer>
+		</form:Form>
 		<buttons>
 			<Button id="btnKommentareSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
 			<Button id="btnKommentareCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>

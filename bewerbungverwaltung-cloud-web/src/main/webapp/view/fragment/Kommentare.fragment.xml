@@ -25,7 +25,7 @@
 			</List>
 		</VBox>
 		<HBox>
-			<Button id="btnKommentareEdit" text="{i18n>DetailEditButton}" press="onKommentareEdit"/>
+			<Button id="btnKommentareEdit" text="{i18n>DetailAddKommentarButton}" press="onKommentareEdit"/>
 		</HBox>
 	</VBox>
 </core:FragmentDefinition>
