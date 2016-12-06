@@ -3,7 +3,7 @@
 	<Dialog title="Details bearbeiten">
 		<f:Form editable="true" class="editableForm">
 			<f:layout>
-				<f:ResponsiveGridLayout columnsM="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" emptySpanM="0"/>
+				<f:ResponsiveGridLayout columnsM="2" columnsL="2" columnsXL="2"  singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" labelSpanL="4" labelSpanXL="4" emptySpanM="1"/>
 			</f:layout>
 			<f:FormContainer>
 				<f:title>
