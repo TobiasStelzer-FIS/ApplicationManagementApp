@@ -47,6 +47,15 @@ sap.ui.define([
 		onAfterRendering: function() {},
 		onBeforeRendering: function() {},
 
+		onAddPressed: function() {	// test
+			var oModel = this.getModel("newModel");
+			var oProperties = {
+				Name: "Testname"
+			};
+			var oEntry = oModel.createEntry("Tests", {properties: oProperties});
+			oModel.submitChanges();
+		},
+
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */

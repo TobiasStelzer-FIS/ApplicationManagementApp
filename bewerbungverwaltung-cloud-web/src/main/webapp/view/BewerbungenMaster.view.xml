@@ -18,6 +18,9 @@
 				</infoToolbar>
 			</List>
 		</semantic:content>
+		<semantic:addAction>
+			<semantic:AddAction press="onAddPressed"/>
+		</semantic:addAction>
 		<semantic:sort>
 			<semantic:SortAction press="onSortPressed"/>
 		</semantic:sort>
