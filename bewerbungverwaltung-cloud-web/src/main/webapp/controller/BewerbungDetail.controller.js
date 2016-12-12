@@ -39,7 +39,7 @@ sap.ui.define([
 		},
 
 		_handleRouteMatched: function(oEvent) {
-			var sBindingEntity = "testModel>/" + oEvent.getParameter("arguments").Bewerbung;
+			var sBindingEntity = "applmanModel>/" + oEvent.getParameter("arguments").Application;
 
 			this._bindView(sBindingEntity);
 		},
@@ -60,7 +60,7 @@ sap.ui.define([
 					dataReceived: function() {}
 				},
 				parameters: {
-					expand: "BewerbungStelleDetails/StelleDetails,StatusDetails,BewerberDetails"
+					expand: "Positions,StatusDetails,ApplicantDetails"
 				}
 			});
 		},
@@ -72,8 +72,8 @@ sap.ui.define([
 		 * @private
 		 */
 		_onBindingChange: function(oEvent) {
-			var oElementBinding = this.getView().getElementBinding("testModel");
-			this.getView().getModel("testModel").updateBindings();
+			var oElementBinding = this.getView().getElementBinding("applmanModel");
+			this.getView().getModel("applmanModel").updateBindings();
 
 			// No data for the binding
 			if (!oElementBinding) {
@@ -130,9 +130,8 @@ sap.ui.define([
 			this._openDialog("UmlaufBearbeiten");
 		},
 		onDialogSave: function(oEvent) {
-			var oModel = this.getModel("testModel");
-			var changeGroups = oModel.getChangeGroups();
-			
+			var oModel = this.getModel("applmanModel");
+
 			this._closeDialog();
 			oModel.submitChanges(
 				function() {
@@ -142,26 +141,20 @@ sap.ui.define([
 					sap.m.MessageToast.show("Error on submitting changes");
 				}
 			);
-			/*
-			oModel.submitBatch(function() {
-				jQuery.sap.log.error("successful batch operations");
-			}, function() {
-				jQuery.sap.log.error("failed batch operations");
-			}, true);
-			*/
+
 			oModel.refresh();
 			oModel.update();
 		},
 		onDialogCancel: function(oEvent) {
 			this._closeDialog();
-			this.getModel("testModel").resetChanges();
+			this.getModel("applmanModel").resetChanges();
 		},
 
 		onDeleteStelle: function(oEvent) {
-			var oModel = this.getModel("testModel");
+			var oModel = this.getModel("applmanModel");
 			var oList = oEvent.getSource();
 			var oListItem = oEvent.getParameter("listItem");
-			var oContext = oListItem.getBindingContext("testModel");
+			var oContext = oListItem.getBindingContext("applmanModel");
 			var sPath = oContext.getPath();
 
 //			this._batchOperations.push(oModel.createBatchOperation(sPath, "DELETE"));

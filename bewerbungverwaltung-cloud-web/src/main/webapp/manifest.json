@@ -23,7 +23,7 @@
 					"odataVersion": "2.0"
 				}
 			},
-			"newService": {
+			"ApplmanService": {
 				"uri": "/applman/odata.srv/",
 				"type": "OData",
 				"settings": {
@@ -84,8 +84,8 @@
 					"useBatch": false
 				}
 			},
-			"newModel": {
-				"dataSource": "newService",
+			"applmanModel": {
+				"dataSource": "ApplmanService",
 				"settings": {
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "TwoWay",
@@ -115,7 +115,7 @@
 				"name": "BewerbungenMaster",
 				"target": "BewerbungenMaster",
 				"subroutes": [{
-					"pattern": "Bewerbungs/{Bewerbung}",
+					"pattern": "Applications/{Application}",
 					"name": "BewerbungDetail",
 					"target": "BewerbungDetail"
 				}]

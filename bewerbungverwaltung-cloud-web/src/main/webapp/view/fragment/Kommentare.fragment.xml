@@ -1,16 +1,16 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns="sap.m">
 	<VBox>
 		<VBox>
-			<List items="{path: 'testModel>KommentarDetails'}" class="listKommentare sapUiSmallMarginTop" width="100%">
+			<List items="{path: 'applmanModel>Comments'}" class="listKommentare sapUiSmallMarginTop" width="100%">
 				<CustomListItem class="sapUiSmallMarginBottom" height="auto">
-					<Title width="100%" text="{testModel>Thema}" titleStyle="H4" class="themaKommentar"/>
+					<Title width="100%" text="{applmanModel>Subject}" titleStyle="H4" class="themaKommentar"/>
 					<FlexBox width="100%" alignItems="Start">
 						<Label text="{i18n>KommentareName}:" class="sapUiTinyMarginEnd">
 							<layoutData>
 								<FlexItemData minWidth="60px"/>
 							</layoutData>
 						</Label>
-						<Text text="{testModel>Name}"/>
+						<Text text="{applmanModel>Name}"/>
 					</FlexBox>
 					<FlexBox width="100%" alignItems="Start">
 						<Label text="{i18n>KommentareDate}:" class="sapUiTinyMarginEnd">
@@ -18,9 +18,9 @@
 								<FlexItemData minWidth="60px"/>
 							</layoutData>
 						</Label>
-						<Text text="{path: 'testModel>Zeitstempel', formatter: '.formatter.formatZeitstempel'}"/>
+						<Text text="{path: 'applmanModel>Timestamp', formatter: '.formatter.formatZeitstempel'}"/>
 					</FlexBox>
-					<TextArea growing="true" growingMaxLines="4" editable="false" value="{testModel>Text}" width="100%" height="auto"/>
+					<TextArea growing="true" growingMaxLines="4" editable="false" value="{applmanModel>Text}" width="100%" height="auto"/>
 				</CustomListItem>
 			</List>
 		</VBox>

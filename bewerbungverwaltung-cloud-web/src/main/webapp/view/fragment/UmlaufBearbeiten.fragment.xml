@@ -15,11 +15,6 @@
 					</Column>
 					<Column>
 						<header>
-							<Label text="{i18n>UmlaufSent}"/>
-						</header>
-					</Column>
-					<Column>
-						<header>
 							<Label text="{i18n>UmlaufRead}"/>
 						</header>
 					</Column>
@@ -30,9 +25,8 @@
 					</Column>
 				</columns>
 				<ColumnListItem>
-					<ObjectIdentifier title="KEP4"/>
-					<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
-					<Label text="23.11.2016"/>
+					<ObjectIdentifier title="TGH"/>
+					<Label text="Somebody"/>
 					<Label text="Interessiert"/>
 				</ColumnListItem>
 			</Table>

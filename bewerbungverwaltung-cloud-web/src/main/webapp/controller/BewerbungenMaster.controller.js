@@ -47,15 +47,6 @@ sap.ui.define([
 		onAfterRendering: function() {},
 		onBeforeRendering: function() {},
 
-		onAddPressed: function() {	// test
-			var oModel = this.getModel("newModel");
-			var oProperties = {
-				Name: "Testname"
-			};
-			var oEntry = oModel.createEntry("Tests", {properties: oProperties});
-			oModel.submitChanges();
-		},
-
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
@@ -109,8 +100,8 @@ sap.ui.define([
 
 			if (sQuery !== "") { // Wenn etwas im SearchField steht,
 				aFilter.push( // dann erstelle Filter für Vor- und Nachname
-					new Filter("BewerberDetails/Vorname", FilterOperator.Contains, sQuery),
-					new Filter("BewerberDetails/Nachname", FilterOperator.Contains, sQuery)
+					new Filter("ApplicantDetails/Firstname", FilterOperator.Contains, sQuery),
+					new Filter("ApplicantDetails/Lastname", FilterOperator.Contains, sQuery)
 				);
 				this._oFilterSearchState.aSearch = [new Filter(aFilter, false)]; // Füge die Filter mit 'OR' zusammen
 			} else {
@@ -226,7 +217,7 @@ sap.ui.define([
 						aFilters.push(new Filter("StatusDetails/StatusId", FilterOperator.EQ, oItem.getKey()));
 						aCaptions.push(oItem.getText()); // Den Anzeigetext für die FilterBar zusammenbauen
 						break;
-					case "Stelle": // Aus Stelle können nicht direkt die Filter gebaut werden, weil die Bewerbung einen Array von Stellen hat
+					case "Position": // Aus Stelle können nicht direkt die Filter gebaut werden, weil die Bewerbung einen Array von Stellen hat
 						aFilterStellen.push(oItem.getKey()); // Temporär die ID der gefilterten Stellen speichern
 						break;
 				}
@@ -236,7 +227,7 @@ sap.ui.define([
 
 			if (aFilterStellen.length > 0) { // Wenn nach Stellen gefiltert wird,
 				aFilters.push(new sap.ui.model.Filter({ // übergib den
-					path: "BewerbungStelleDetails/results", // Array mit den Stellen der Bewerbung
+					path: "Positions", // Array mit den Stellen der Bewerbung
 					test: filter.fnFilterStellen.bind(this) // an eine eigene Filterfunktion
 				})); // (überprüft, ob der Array eine der gefilterten Stellen enthält)
 

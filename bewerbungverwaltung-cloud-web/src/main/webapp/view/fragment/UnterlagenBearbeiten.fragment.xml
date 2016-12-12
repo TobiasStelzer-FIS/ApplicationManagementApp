@@ -6,12 +6,12 @@
 				<f:layout>
 					<f:ResponsiveGridLayout/>
 				</f:layout>
-				<f:FormContainer formElements="{path: 'testModel>DokumentDetails'}">
+				<f:FormContainer formElements="{path: 'applmanModel>Documents'}">
 					<f:title>
 						<core:Title text="{i18n>UnterlagenDocuments}"/>
 					</f:title>
 					<f:FormElement>
-						<Link text="• {testModel>Dateiname}"/>
+						<Link text="• {applmanModel>Displaytext}" href="{applmanModel>Documentpath}"/>
 					</f:FormElement>
 				</f:FormContainer>
 			</f:Form>

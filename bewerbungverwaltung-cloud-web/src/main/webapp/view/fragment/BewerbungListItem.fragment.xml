@@ -2,18 +2,18 @@
 	<CustomListItem type="Active" press="onListItemPressed">
 		<VBox width="auto" class="sapUiTinyMarginTop sapUiSmallMarginBeginEnd" direction="Column">
 			<HBox width="auto">
-				<Label text="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}" design="Bold" width="auto"/>
+				<Label text="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}" design="Bold" width="auto"/>
 				<FlexBox width="100%"/>
-				<Label text="{testModel>StatusDetails/Bezeichnung}" width="auto" textAlign="End"/>
+				<Label text="{applmanModel>StatusDetails/Name}" width="auto" textAlign="End"/>
 			</HBox>
 			<HBox>
 				<VBox>
-					<Label text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" width="100%"/>
+					<Label text="{applmanModel>ApplicantDetails/Zipcode} {applmanModel>ApplicantDetails/City}" width="100%"/>
 					<Table noDataText="{i18n>ItemTableStellenNoDataText}" class="tableStellen sapUiTinyMarginBottom" width="auto" showSeparators="Inner"
-						backgroundDesign="Transparent" items="{path: 'testModel>BewerbungStelleDetails', templateShareable: false}">
+						backgroundDesign="Transparent" items="{path: 'applmanModel>Positions', templateShareable: false}">
 						<ColumnListItem width="auto" type="Inactive">
 							<cells>
-								<Text text="{testModel>StelleDetails/Bezeichnung}" width="auto"/>
+								<Text text="{applmanModel>Name}" width="auto"/>
 							</cells>
 						</ColumnListItem>
 						<columns>
@@ -26,9 +26,9 @@
 				</HBox>
 			</HBox>
 			<HBox width="auto">
-				<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}" width="auto"/>
+				<Label text="{path: 'applmanModel>EnteredOn', formatter: '.formatter.formatDatum'}" width="auto"/>
 				<FlexBox width="100%"/>
-				<Label text="{parts: ['i18n>ItemNumberOfDays', 'testModel>EingetragenAm'], formatter: '.formatter.formatTage'}" width="auto" textAlign="End"/>
+				<Label text="{parts: ['i18n>ItemNumberOfDays', 'applmanModel>EnteredOn'], formatter: '.formatter.formatTage'}" width="auto" textAlign="End"/>
 			</HBox>
 		</VBox>
 	</CustomListItem>

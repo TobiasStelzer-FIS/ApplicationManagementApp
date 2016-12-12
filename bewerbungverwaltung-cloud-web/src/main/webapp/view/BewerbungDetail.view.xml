@@ -6,10 +6,10 @@
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectImageURI="{testModel>BewerberDetails/Fotopfad}"
-					objectTitle="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}" objectImageShape="Circle"
-					objectImageAlt="{testModel>BewerberDetails/Vorname} {testModel>BewerberDetails/Nachname}"
-					objectSubtitle="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}" isObjectIconAlwaysVisible="false"
+				<uxap:ObjectPageHeader objectImageURI="{applmanModel>ApplicantDetails/Picture}"
+					objectTitle="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}" objectImageShape="Circle"
+					objectImageAlt="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}"
+					objectSubtitle="{applmanModel>ApplicantDetails/Zipcode} {applmanModel>ApplicantDetails/City}" isObjectIconAlwaysVisible="false"
 					isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
@@ -20,7 +20,7 @@
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
-						<Label text="{testModel>BewerberDetails/Telefonnummer}"/>
+						<Label text="{applmanModel>ApplicantDetails/Phone}"/>
 					</HBox>
 					<HBox>
 						<core:Icon src="sap-icon://iphone" size="1.3rem">
@@ -28,7 +28,7 @@
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
-						<Label text="{testModel>BewerberDetails/Handynummer}"/>
+						<Label text="{applmanModel>ApplicantDetails/Mobile}"/>
 					</HBox>
 					<HBox>
 						<core:Icon src="sap-icon://email" size="1.3rem">
@@ -36,17 +36,17 @@
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
-						<Label text="{testModel>BewerberDetails/Email}"/>
+						<Label text="{applmanModel>ApplicantDetails/Email}"/>
 					</HBox>
 				</VBox>
 				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
 					<Label text="Stellen" design="Bold"/>
-					<VBox items="{path: 'testModel>BewerbungStelleDetails'}">
+					<VBox items="{path: 'applmanModel>Positions'}">
 						<items>
-							<Text text="• {testModel>StelleDetails/Bezeichnung}" class="sapUiSmallMarginBegin"/>
+							<Text text="• {applmanModel>Name}" class="sapUiSmallMarginBegin"/>
 						</items>
 					</VBox>
-					<Text text="Initiativbewerbung" visible="{= ${testModel>BewerbungStelleDetails}.length === 0}" class="sapUiSmallMarginBegin"/>
+					<Text text="Initiativbewerbung" visible="{= ${applmanModel>Positions}.length === 0}" class="sapUiSmallMarginBegin"/>
 				</VBox>
 				<VBox width="auto">
 					<FlexBox width="auto">
@@ -55,7 +55,7 @@
 								<FlexItemData minWidth="115px"/>
 							</layoutData>
 						</Label>
-						<Label text="{testModel>EingetragenVon}"/>
+						<Label text="{applmanModel>EnteredBy}"/>
 					</FlexBox>
 					<FlexBox width="auto" alignItems="End">
 						<Label text="{i18n>DetailEnteredOn}:">
@@ -63,7 +63,7 @@
 								<FlexItemData minWidth="115px"/>
 							</layoutData>
 						</Label>
-						<Label text="{path: 'testModel>EingetragenAm', formatter: '.formatter.formatDatum'}"/>
+						<Label text="{path: 'applmanModel>EnteredOn', formatter: '.formatter.formatDatum'}"/>
 					</FlexBox>
 				</VBox>
 			</uxap:headerContent>

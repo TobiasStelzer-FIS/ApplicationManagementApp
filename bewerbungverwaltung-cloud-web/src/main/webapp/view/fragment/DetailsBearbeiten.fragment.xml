@@ -10,17 +10,17 @@
 					<core:Title text="{i18n>DetailsPersonalData}"/>
 				</f:title>
 				<f:FormElement label="{i18n>DetailsSurname}">
-					<Input value="{testModel>BewerberDetails/Nachname}"/>
+					<Input value="{applmanModel>ApplicantDetails/Lastname}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>DetailsForename}">
-					<Input value="{testModel>BewerberDetails/Vorname}"/>
+					<Input value="{applmanModel>ApplicantDetails/Firstname}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>DetailsStreet}">
-					<Input value="{testModel>BewerberDetails/StrasseHnr}"/>
+					<Input value="{applmanModel>ApplicantDetails/Street}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>ZipCity}">
-					<Input value="{testModel>BewerberDetails/Postleitzahl}"/>
-					<Input value="{testModel>BewerberDetails/Ort}"/>
+					<Input value="{applmanModel>ApplicantDetails/Zipcode}"/>
+					<Input value="{applmanModel>ApplicantDetails/City}"/>
 				</f:FormElement>
 			</f:FormContainer>
 			<f:FormContainer>
@@ -28,13 +28,13 @@
 					<core:Title text="{i18n>DetailsContactDetails}"/>
 				</f:title>
 				<f:FormElement label="{i18n>DetailsEmail}">
-					<Input value="{testModel>BewerberDetails/Email}"/>
+					<Input value="{applmanModel>ApplicantDetails/Email}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>DetailsPhone}">
-					<Input value="{testModel>BewerberDetails/Telefonnummer}"/>
+					<Input value="{applmanModel>ApplicantDetails/Phone}"/>
 				</f:FormElement>
 				<f:FormElement label="{i18n>DetailsMobile}">
-					<Input value="{testModel>BewerberDetails/Handynummer}"/>
+					<Input value="{applmanModel>ApplicantDetails/Mobile}"/>
 				</f:FormElement>
 			</f:FormContainer>
 			<f:FormContainer>
@@ -42,11 +42,11 @@
 					<core:Title text="{i18n>DetailsAppliedFor}"/>
 				</f:title>
 				<f:FormElement>
-					<MultiComboBox items="{path: 'testModel>/Stelles', sorter: {path: 'Bezeichnung'}}" selectedItems="{path: 'testModel>/BewerbungStelleDetails'}">
-						<core:Item key="{testModel>StelleId}" text="{testModel>Bezeichnung}"/>
+					<MultiComboBox items="{path: 'applmanModel>/Positions', sorter: {path: 'Name'}}" selectedItems="{path: 'applmanModel>Positions'}">
+						<core:Item key="{applmanModel>PositionId}" text="{applmanModel>Name}"/>
 					</MultiComboBox>
 <!--
-					<List id="tableStellen" items="{path: 'testModel>BewerbungStelleDetails'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
+					<List id="tableStellen" items="{path: 'applmanModel>Positions'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
 						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
 						<headerToolbar>
 							<Toolbar>
@@ -56,7 +56,7 @@
 							</Toolbar>
 						</headerToolbar>
 						<CustomListItem>
-							<Text text="{testModel>StelleDetails/Bezeichnung}"/>
+							<Text text="{applmanModel>Name}"/>
 						</CustomListItem>
 					</List>
 -->
@@ -67,8 +67,8 @@
 					<core:Title text="{i18n>DetailsSources}"/>
 				</f:title>
 				<f:FormElement>
-					<MultiComboBox items="{path: 'testModel>/Stelles', sorter: {path: 'Bezeichnung'}}" selectedItems="{path: 'testModel>/BewerbungStelleDetails'}">
-						<core:Item key="{testModel>StelleId}" text="{testModel>Bezeichnung}"/>
+					<MultiComboBox items="{path: 'applmanModel>/Sources', sorter: {path: 'Name'}}" selectedItems="{path: 'applmanModel>Sources'}">
+						<core:Item key="{applmanModel>SourceId}" text="{applmanModel>Name}"/>
 					</MultiComboBox>
 				</f:FormElement>
 			</f:FormContainer>

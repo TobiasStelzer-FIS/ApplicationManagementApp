@@ -11,16 +11,16 @@
 						<core:Title text="{i18n>DetailsPersonalData}"/>
 					</f:title>
 					<f:FormElement label="{i18n>DetailsSurname}">
-						<Text text="{testModel>BewerberDetails/Nachname}"/>
+						<Text text="{applmanModel>ApplicantDetails/Lastname}"/>
 					</f:FormElement>
 					<f:FormElement label="{i18n>DetailsForename}">
-						<Text text="{testModel>BewerberDetails/Vorname}"/>
+						<Text text="{applmanModel>ApplicantDetails/Firstname}"/>
 					</f:FormElement>
 					<f:FormElement label="{i18n>DetailsStreet}">
-						<Text text="{testModel>BewerberDetails/StrasseHnr}"/>
+						<Text text="{applmanModel>ApplicantDetails/Street}"/>
 					</f:FormElement>
 					<f:FormElement label="{i18n>DetailsZipCity}">
-						<Text text="{testModel>BewerberDetails/Postleitzahl} {testModel>BewerberDetails/Ort}"/>
+						<Text text="{applmanModel>ApplicantDetails/Zipcode} {applmanModel>ApplicantDetails/City}"/>
 					</f:FormElement>
 				</f:FormContainer>
 				<f:FormContainer>
@@ -29,10 +29,10 @@
 					</f:title>
 					<f:FormElement>
 						<VBox>
-							<VBox items="{path: 'testModel>BewerbungStelleDetails'}">
-								<Text text="• {testModel>StelleDetails/Bezeichnung}"/>
+							<VBox items="{path: 'applmanModel>Positions'}">
+								<Text text="• {applmanModel>Name}"/>
 							</VBox>
-							<Text text="{i18n>DetailsStellenNoDataText}" visible="{= ${testModel>BewerbungStelleDetails}.length === 0}"/>
+							<Text text="{i18n>DetailsStellenNoDataText}" visible="{= ${applmanModel>Positions}.length === 0}"/>
 						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
@@ -41,13 +41,13 @@
 						<core:Title text="{i18n>DetailsContactDetails}"/>
 					</f:title>
 					<f:FormElement label="{i18n>DetailsEmail}">
-						<Text text="{testModel>BewerberDetails/Email}"/>
+						<Text text="{applmanModel>ApplicantDetails/Email}"/>
 					</f:FormElement>
 					<f:FormElement label="{i18n>DetailsPhone}">
-						<Text text="{testModel>BewerberDetails/Telefonnummer}"/>
+						<Text text="{applmanModel>ApplicantDetails/Phone}"/>
 					</f:FormElement>
 					<f:FormElement label="{i18n>DetailsMobile}">
-						<Text text="{testModel>BewerberDetails/Handynummer}"/>
+						<Text text="{applmanModel>ApplicantDetails/Mobile}"/>
 					</f:FormElement>
 				</f:FormContainer>
 				<f:FormContainer>
@@ -57,10 +57,10 @@
 					<f:FormElement>
 						<VBox>
 			<!--
-							<VBox items="{path: 'testModel>BewerbungQuelleDetails'}">
-								<Text text="• {testModel>QuelleDetails/Bezeichnung}"/>
+							<VBox items="{path: 'applmanModel>Sources'}">
+								<Text text="• {applmanModel>Name}"/>
 							</VBox>
-							<Text text="{i18n>DetailsQuellenNoDataText}" visible="{= ${testModel>BewerbungQuelleDetails/results}.length === 0}"/>
+							<Text text="{i18n>DetailsQuellenNoDataText}" visible="{= ${applmanModel>Sources}.length === 0}"/>
 			-->
 						</VBox>
 					</f:FormElement>
