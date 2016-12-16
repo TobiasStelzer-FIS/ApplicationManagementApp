@@ -24,7 +24,7 @@
 				}
 			},
 			"ApplmanService": {
-				"uri": "/applman/odata.srv/",
+				"uri": "http://localhost:8541/applman/odata.srv/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"

@@ -40,7 +40,7 @@ sap.ui.define([
 				title: this.getResourceBundle().getText("MasterTitleWithCount", [0]),
 				noDataText: this.getResourceBundle().getText("MasterListNoDataText"),
 				filterStellen: [],
-				sortBy: "EingetragenAm"
+				sortBy: "EnteredOn"
 			});
 		},
 		onExit: function() {},
@@ -63,7 +63,7 @@ sap.ui.define([
 
 			var oRouter = UIComponent.getRouterFor(this);
 			oRouter.navTo("BewerbungDetail", {
-				Bewerbung: bindingContext.substr(1)
+				Application: bindingContext.substr(1)
 			});
 		},
 
