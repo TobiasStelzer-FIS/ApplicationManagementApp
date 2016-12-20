@@ -3,6 +3,11 @@ sap.ui.define(function() {
 
 	return {
 
+		formatImageURI: function(filename, applicationId) {
+			return "/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
+//			return "/applman/picture?applicationId=" + applicationId + "&filename=" + filename;
+		},
+		
 		formatDatum: function(date) {
 			if (date == null) {
 				return "";

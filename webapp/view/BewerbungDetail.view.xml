@@ -6,7 +6,7 @@
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectImageURI="{applmanModel>ApplicantDetails/Picture}"
+				<uxap:ObjectPageHeader objectImageURI="{parts: [path: 'applmanModel>ApplicantDetails/Picture'], formatter: '.formatter.formatImageURI'}"
 					objectTitle="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}" objectImageShape="Circle"
 					objectImageAlt="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}"
 					objectSubtitle="{applmanModel>ApplicantDetails/Zipcode} {applmanModel>ApplicantDetails/City}" isObjectIconAlwaysVisible="false"
