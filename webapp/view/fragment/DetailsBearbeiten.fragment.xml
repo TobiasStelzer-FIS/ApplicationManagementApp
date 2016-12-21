@@ -3,7 +3,8 @@
 	<Dialog title="Details bearbeiten">
 		<f:Form editable="true" class="editableForm">
 			<f:layout>
-				<f:ResponsiveGridLayout columnsM="2" columnsL="2" columnsXL="2"  singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4" labelSpanL="4" labelSpanXL="4" emptySpanM="1"/>
+				<f:ResponsiveGridLayout columnsM="2" columnsL="2" columnsXL="2" singleContainerFullSize="false" adjustLabelSpan="false" labelSpanM="4"
+					labelSpanL="4" labelSpanXL="4" emptySpanM="1"/>
 			</f:layout>
 			<f:FormContainer>
 				<f:title>
@@ -18,8 +19,12 @@
 				<f:FormElement label="{i18n>DetailsStreet}">
 					<Input value="{applmanModel>ApplicantDetails/Street}"/>
 				</f:FormElement>
-				<f:FormElement label="{i18n>ZipCity}">
-					<Input value="{applmanModel>ApplicantDetails/Zipcode}"/>
+				<f:FormElement label="{i18n>DetailsZipCity}">
+					<Input value="{applmanModel>ApplicantDetails/Zipcode}">
+						<layoutData>
+							<l:GridData span="L3 M3 S12"/>
+						</layoutData>
+					</Input>
 					<Input value="{applmanModel>ApplicantDetails/City}"/>
 				</f:FormElement>
 			</f:FormContainer>
@@ -42,24 +47,10 @@
 					<core:Title text="{i18n>DetailsAppliedFor}"/>
 				</f:title>
 				<f:FormElement>
-					<MultiComboBox items="{path: 'applmanModel>/Positions', sorter: {path: 'Name'}}" selectedItems="{path: 'applmanModel>Positions'}">
+					<MultiComboBox id="multiComboBoxPositions" items="{path: 'applmanModel>/Positions', sorter: {path: 'Name'}}"
+						selectionFinish="onPositionsFinished">
 						<core:Item key="{applmanModel>PositionId}" text="{applmanModel>Name}"/>
 					</MultiComboBox>
-<!--
-					<List id="tableStellen" items="{path: 'applmanModel>Positions'}" noDataText="{i18n>DetailsBearbeitenNoDataTextStellen}"
-						inset="false" mode="Delete" delete="onDeleteStelle" updateFinished="onStellenUpdateFinished">
-						<headerToolbar>
-							<Toolbar>
-								<Title text="{i18n>DetailsBearbeitenStellenTitle}" level="H2"/>
-								<ToolbarSpacer/>
-								<Button icon="sap-icon://add" press="onAddStelle"/>
-							</Toolbar>
-						</headerToolbar>
-						<CustomListItem>
-							<Text text="{applmanModel>Name}"/>
-						</CustomListItem>
-					</List>
--->
 				</f:FormElement>
 			</f:FormContainer>
 			<f:FormContainer>
@@ -67,7 +58,7 @@
 					<core:Title text="{i18n>DetailsSources}"/>
 				</f:title>
 				<f:FormElement>
-					<MultiComboBox items="{path: 'applmanModel>/Sources', sorter: {path: 'Name'}}" selectedItems="{path: 'applmanModel>Sources'}">
+					<MultiComboBox id="multiComboBoxSources" items="{path: 'applmanModel>/Sources', sorter: {path: 'Name'}}" selectionFinish="onSourcesFinished">
 						<core:Item key="{applmanModel>SourceId}" text="{applmanModel>Name}"/>
 					</MultiComboBox>
 				</f:FormElement>

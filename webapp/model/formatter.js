@@ -7,7 +7,7 @@ sap.ui.define(function() {
 //			return "https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
 			var uri;
 			var picture = this.getModel("applmanModel").getProperty("/Applications('"+applicationId+"')/ApplicantDetails/Picture");
-			if (applicationId === null) {
+			if (!applicationId) {
 				uri = "";
 			} else {
 				uri = "/applman/picture/" + applicationId + "/" + picture;
