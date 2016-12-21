@@ -4,7 +4,7 @@ sap.ui.define(function() {
 	return {
 
 		formatImageURI: function(filename, applicationId) {
-			return "/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
+			return "https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
 //			return "/applman/picture?applicationId=" + applicationId + "&filename=" + filename;
 		},
 		

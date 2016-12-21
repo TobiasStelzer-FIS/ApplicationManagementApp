@@ -6,7 +6,8 @@
 		<uxap:ObjectPageLayout height="100%" enableScrolling="false" id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true"
 			editHeaderButtonPress="handleEditBtnPress">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectImageURI="{parts: [path: 'applmanModel>ApplicantDetails/Picture'], formatter: '.formatter.formatImageURI'}"
+				<uxap:ObjectPageHeader
+					objectImageURI="https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture/{applmanModel>ApplicationId}/{applmanModel>ApplicantDetails/Picture}"
 					objectTitle="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}" objectImageShape="Circle"
 					objectImageAlt="{applmanModel>ApplicantDetails/Firstname} {applmanModel>ApplicantDetails/Lastname}"
 					objectSubtitle="{applmanModel>ApplicantDetails/Zipcode} {applmanModel>ApplicantDetails/City}" isObjectIconAlwaysVisible="false"
@@ -67,7 +68,6 @@
 					</FlexBox>
 				</VBox>
 			</uxap:headerContent>
-
 			<uxap:sections>
 				<uxap:ObjectPageSection title="{i18n>DetailSectionTitleDetails}">
 					<uxap:subSections>
@@ -104,7 +104,6 @@
 					</uxap:subSections>
 				</uxap:ObjectPageSection>
 			</uxap:sections>
-
 		</uxap:ObjectPageLayout>
 	</semantic:DetailPage>
 </mvc:View>

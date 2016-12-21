@@ -1,9 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"de/fis/bewerbungverwaltung/model/models",
-	"de/fis/bewerbungverwaltung/model/models2"
-], function(UIComponent, Device, models, models2) {
+	"de/fis/bewerbungverwaltung/model/models"
+], function(UIComponent, Device, models) {
 	"use strict";
 
 	return UIComponent.extend("de.fis.bewerbungverwaltung.Component", {

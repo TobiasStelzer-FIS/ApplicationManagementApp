@@ -56,12 +56,10 @@
 					</f:title>
 					<f:FormElement>
 						<VBox>
-			<!--
 							<VBox items="{path: 'applmanModel>Sources'}">
 								<Text text="• {applmanModel>Name}"/>
 							</VBox>
 							<Text text="{i18n>DetailsQuellenNoDataText}" visible="{= ${applmanModel>Sources}.length === 0}"/>
-			-->
 						</VBox>
 					</f:FormElement>
 				</f:FormContainer>
