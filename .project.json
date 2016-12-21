@@ -5,5 +5,10 @@
     "metadataFilePath": "../localService/metadata.xml",
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
+  },
+  "hcpdeploy": {
+    "account": "p1942281469trial",
+    "name": "applicationmanagementapp",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

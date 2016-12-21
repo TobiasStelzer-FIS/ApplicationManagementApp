@@ -3,9 +3,16 @@ sap.ui.define(function() {
 
 	return {
 
-		formatImageURI: function(filename, applicationId) {
-			return "https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
-//			return "/applman/picture?applicationId=" + applicationId + "&filename=" + filename;
+		formatImageURI: function(applicationId) {
+//			return "https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
+			var uri;
+			var picture = this.getModel("applmanModel").getProperty("/Applications('"+applicationId+"')/ApplicantDetails/Picture");
+			if (applicationId === null) {
+				uri = "";
+			} else {
+				uri = "/applman/picture/" + applicationId + "/" + picture;
+			}
+			return uri;
 		},
 		
 		formatDatum: function(date) {

@@ -41,7 +41,11 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_bluecrystal", "sap_belize"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
@@ -94,23 +98,29 @@
 				},
 				"async": true
 			},
-			"routes": [{
-				"pattern": "",
-				"name": "BewerbungenMaster",
-				"target": "BewerbungenMaster",
-				"subroutes": [{
-					"pattern": "Applications/{Application}",
-					"name": "BewerbungDetail",
-					"target": "BewerbungDetail"
-				}]
-			}, {
-				"name": "DetailObjectNotFound",
-				"target": "detailObjectNotFound"
-			}, {
-				"pattern": "{all*}",
-				"name": "NotFound",
-				"target": "notFound"
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "BewerbungenMaster",
+					"target": "BewerbungenMaster",
+					"subroutes": [
+						{
+							"pattern": "Applications/{Application}",
+							"name": "BewerbungDetail",
+							"target": "BewerbungDetail"
+						}
+					]
+				},
+				{
+					"name": "DetailObjectNotFound",
+					"target": "detailObjectNotFound"
+				},
+				{
+					"pattern": "{all*}",
+					"name": "NotFound",
+					"target": "notFound"
+				}
+			],
 			"targets": {
 				"BewerbungenMaster": {
 					"viewName": "BewerbungenMaster",
@@ -138,9 +148,15 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }
