@@ -20,12 +20,17 @@ sap.ui.define([
 			this._currentDialog = {};
 			this._dialogs = []; // this will store the instantiated dialogs 
 			this._fragments = []; // this will store the instantiated fragments
+			this._linksCreated = 0;
+			this._linksRemoved = 0;
 
-			var oDataModel = new JSONModel({
-				Positions: [],
-				Sources: []
+			var oViewDataModel = new JSONModel({
+				"Comment": {
+					"Subject": "",
+					"Text": "",
+					"Name": "somebody"
+				}
 			});
-			this.setModel("dataModel", oDataModel);
+			this.setModel(oViewDataModel, "viewDataModel");
 
 			oRouter.getRoute("BewerbungDetail").attachPatternMatched(this._handleRouteMatched, this);
 
@@ -66,7 +71,7 @@ sap.ui.define([
 					dataReceived: function() {}
 				},
 				parameters: {
-					expand: "Positions,Sources,StatusDetails,ApplicantDetails"
+					expand: "Positions,Sources,Comments,StatusDetails,ApplicantDetails"
 				}
 			});
 		},
@@ -125,7 +130,7 @@ sap.ui.define([
 			*/
 			var oModel = this.getModel("applmanModel");
 			var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
-			var oDialog = this._openDialog("DetailsBearbeiten");
+			this._openDialog("DetailsBearbeiten");
 			var oBoxPositions = this.getView().byId("multiComboBoxPositions");
 			var oBoxSources = this.getView().byId("multiComboBoxSources");
 
@@ -157,11 +162,13 @@ sap.ui.define([
 		onUmlaufEdit: function(oEvent) {
 			this._openDialog("UmlaufBearbeiten");
 		},
-		onDialogSave: function(oEvent) {
+		onDetailsSave: function(oEvent) {
 			var oModel = this.getModel("applmanModel");
 			var aSelectedPositions = this.getView().byId("multiComboBoxPositions").getSelectedItems();
 			var aSelectedSources = this.getView().byId("multiComboBoxSources").getSelectedItems();
-			
+
+			this._linksCreated = 0;
+			this._linksRemoved = 0;
 			this._handleEntityUpdatesForSelectedItems(aSelectedPositions, "Positions", "Position");
 			this._handleEntityUpdatesForSelectedItems(aSelectedSources, "Sources", "Source");
 			oModel.submitChanges(
@@ -174,8 +181,30 @@ sap.ui.define([
 			);
 
 			this._closeDialog();
-			//			oModel.refresh();
-			//			oModel.update();
+			oModel.refresh();
+		},
+		onKommentareSave: function(oEvent) {
+			var oModel = this.getModel("applmanModel");
+			var oViewDataModel = this.getModel("viewDataModel");
+			
+			oViewDataModel.setProperty("/Comment/Timestamp", new Date());
+			var oComment = oViewDataModel.getProperty("/Comment");
+			oModel.create("/Comments", oComment, {
+				success: function(oData) {
+					var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
+					var applicationId = oModel.getProperty(sBindingPath + "/ApplicationId");
+
+					this._createLinks(oModel, {
+						fromName: "Applications",
+						fromIds: [applicationId],
+						toName: "Comments",
+						toIds: [oData.CommentId],
+						reverse: true
+					});
+				}.bind(this)
+			});
+
+			this._closeDialog();
 		},
 		onDialogCancel: function(oEvent) {
 			this._closeDialog();
@@ -333,10 +362,12 @@ sap.ui.define([
 			for (var i = 0; i < oParameters.fromIds.length; i++) {
 				for (var j = 0; j < oParameters.toIds.length; j++) {
 					// Source -> Destination
-					oModel.remove("/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')/$links/" + oParameters.toName + "('" + oParameters.toIds[j] + "')");
+					oModel.remove("/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')/$links/" + oParameters.toName + "('" + oParameters
+						.toIds[j] + "')");
 					// Destination -> Source
 					if (oParameters.reverse) {
-						oModel.remove("/" + oParameters.toName + "('" + oParameters.toIds[j] + "')/$links/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')");
+						oModel.remove("/" + oParameters.toName + "('" + oParameters.toIds[j] + "')/$links/" + oParameters.fromName + "('" + oParameters.fromIds[
+							i] + "')");
 					}
 				}
 			}

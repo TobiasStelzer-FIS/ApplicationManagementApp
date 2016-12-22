@@ -7,15 +7,15 @@
 			</form:layout>
 			<form:FormContainer>
 				<form:FormElement label="Thema">
-					<Input value="asdf"/>
+					<Input value="{viewDataModel>/Comment/Subject}"/>
 				</form:FormElement>
 				<form:FormElement label="Kommentar">
-					<TextArea value="asdf"/>
+					<TextArea value="{viewDataModel>/Comment/Text}"/>
 				</form:FormElement>
 			</form:FormContainer>
 		</form:Form>
 		<buttons>
-			<Button id="btnKommentareSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnKommentareSave" text="{i18n>DetailSaveButton}" press="onKommentareSave"/>
 			<Button id="btnKommentareCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>

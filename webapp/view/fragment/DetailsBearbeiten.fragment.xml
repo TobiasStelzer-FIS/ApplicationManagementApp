@@ -65,7 +65,7 @@
 			</f:FormContainer>
 		</f:Form>
 		<buttons>
-			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDialogSave"/>
+			<Button id="btnDetailsSave" text="{i18n>DetailSaveButton}" press="onDetailsSave"/>
 			<Button id="btnDetailsCancel" text="{i18n>DetailCancelButton}" press="onDialogCancel"/>
 		</buttons>
 	</Dialog>
