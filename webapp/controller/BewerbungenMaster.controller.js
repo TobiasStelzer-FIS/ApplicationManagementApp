@@ -14,7 +14,7 @@ sap.ui.define([
 	return BaseController.extend("de.fis.bewerbungverwaltung.controller.BewerbungenMaster", {
 
 		formatter: formatter,
-
+		
 		/* =========================================================== */
 		/* lifecycle methods, etc.                                     */
 		/* =========================================================== */
@@ -238,7 +238,7 @@ sap.ui.define([
 			}
 
 			// Speichere die gefilterten Stellen in einer Instanzvariable, dass die eigene Filterfunktion später darauf zugreifen kann
-			this.getModel("masterView").setProperty("/filterStellen", aFilterStellen);
+			this.getModel("masterView").setProperty("/filterPositions", aFilterStellen);
 
 			this._oFilterSearchState.aFilter = aFilters;
 			this._updateFilterBar(sText); // Text in der FilterBar anzeigen
@@ -268,7 +268,9 @@ sap.ui.define([
 			var aFilters = this._oFilterSearchState.aSearch.concat(this._oFilterSearchState.aFilter),
 				oViewModel = this.getModel("masterView");
 
-			this._oList.getBinding("items").filter(aFilters, "Application");
+			var oBinding = this._oList.getBinding("items");
+			oBinding.filter(aFilters, "Application");
+			
 			// Ändert den noDataText der List je nachdem, ob Filter angewendet werden oder nicht
 			if (aFilters.length !== 0) {
 				oViewModel.setProperty("/noDataText", this.getResourceBundle().getText("MasterListNoDataWithFilterOrSearchText"));

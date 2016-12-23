@@ -75,10 +75,10 @@
 			"applmanModel": {
 				"dataSource": "ApplmanService",
 				"settings": {
-					"defaultOperationMode": "Server",
+					"defaultOperationMode": "Client",
 					"defaultBindingMode": "TwoWay",
 					"defaultCountMode": "Inline",
-					"useBatch": false
+					"useBatch": true
 				},
 				"preload": true
 			}

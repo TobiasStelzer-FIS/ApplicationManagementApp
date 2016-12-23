@@ -48,7 +48,7 @@
 				</f:title>
 				<f:FormElement>
 					<MultiComboBox id="multiComboBoxPositions" items="{path: 'applmanModel>/Positions', sorter: {path: 'Name'}}"
-						selectionFinish="onPositionsFinished">
+						selectionFinish="onPositionsFinished" maxWidth="400px">
 						<core:Item key="{applmanModel>PositionId}" text="{applmanModel>Name}"/>
 					</MultiComboBox>
 				</f:FormElement>
@@ -59,7 +59,7 @@
 				</f:title>
 				<f:FormElement>
 					<MultiComboBox id="multiComboBoxSources" items="{path: 'applmanModel>/Sources', sorter: {path: 'Name'}}" selectionFinish="onSourcesFinished">
-						<core:Item key="{applmanModel>SourceId}" text="{applmanModel>Name}"/>
+						<core:Item key="{applmanModel>SourceId}" text="{applmanModel>Name}" maxWidth="400px"/>
 					</MultiComboBox>
 				</f:FormElement>
 			</f:FormContainer>

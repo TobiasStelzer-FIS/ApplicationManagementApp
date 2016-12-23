@@ -167,8 +167,6 @@ sap.ui.define([
 			var aSelectedPositions = this.getView().byId("multiComboBoxPositions").getSelectedItems();
 			var aSelectedSources = this.getView().byId("multiComboBoxSources").getSelectedItems();
 
-			this._linksCreated = 0;
-			this._linksRemoved = 0;
 			this._handleEntityUpdatesForSelectedItems(aSelectedPositions, "Positions", "Position");
 			this._handleEntityUpdatesForSelectedItems(aSelectedSources, "Sources", "Source");
 			oModel.submitChanges(
@@ -183,12 +181,16 @@ sap.ui.define([
 			this._closeDialog();
 			oModel.refresh();
 		},
+
 		onKommentareSave: function(oEvent) {
 			var oModel = this.getModel("applmanModel");
 			var oViewDataModel = this.getModel("viewDataModel");
-			
+
 			oViewDataModel.setProperty("/Comment/Timestamp", new Date());
 			var oComment = oViewDataModel.getProperty("/Comment");
+			oComment.Subject = oComment.Subject.length < 1 ? " " : oComment.Subject;
+			oComment.Text = oComment.Text.length < 1 ? " " : oComment.Text;
+			
 			oModel.create("/Comments", oComment, {
 				success: function(oData) {
 					var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
@@ -199,12 +201,19 @@ sap.ui.define([
 						fromIds: [applicationId],
 						toName: "Comments",
 						toIds: [oData.CommentId],
-						reverse: true
+						reverse: false
 					});
 				}.bind(this)
 			});
 
 			this._closeDialog();
+
+			oComment = {
+				"Subject": "",
+				"Text": "",
+				"Name": "somebody"
+			};
+			oViewDataModel.setProperty("/Comment", oComment);
 		},
 		onDialogCancel: function(oEvent) {
 			this._closeDialog();
