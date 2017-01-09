@@ -105,5 +105,11 @@
 				</uxap:ObjectPageSection>
 			</uxap:sections>
 		</uxap:ObjectPageLayout>
+		<semantic:deleteAction>
+			<semantic:DeleteAction press="onDeleteApplication"/>
+		</semantic:deleteAction>
+		<semantic:customShareMenuContent>
+			<Button text="Satus ändern" press="onOpenStatusPopover"/>
+		</semantic:customShareMenuContent>
 	</semantic:DetailPage>
 </mvc:View>

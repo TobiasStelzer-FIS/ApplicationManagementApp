@@ -17,6 +17,7 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
 
+			this._serviceURI = "https://applmanserverp1942281469trial.hanatrial.ondemand.com:443/applman/odata.srv";
 			this._currentDialog = {};
 			this._dialogs = []; // this will store the instantiated dialogs 
 			this._fragments = []; // this will store the instantiated fragments
@@ -103,10 +104,97 @@ sap.ui.define([
 			this.getRouter().navTo("BewerbungenMaster");
 		},
 
+		/**
+		 * Event handler for the "press" event of the Delete button
+		 * 
+		 * @param oEvent: The press event
+		 * @public
+		 */
+		onDeleteApplication: function(oEvent) {
+			var oModel = this.getModel("applmanModel");
+			var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
+
+			var applicationId = oModel.getProperty(sBindingPath + "/ApplicationId");
+			var positionIds = this._getIdsOfEntities("Positions", "Position");
+			var sourceIds = this._getIdsOfEntities("Sources", "Source");
+			
+			this._removeLinks(oModel, {
+				fromName: "Sources",
+				fromIds: sourceIds,
+				toName: "Applications",
+				toIds: [applicationId],
+				reverse: false
+			});
+			this._removeLinks(oModel, {
+				fromName: "Positions",
+				fromIds: positionIds,
+				toName: "Applications",
+				toIds: [applicationId],
+				reverse: false
+			});
+			oModel.remove(sBindingPath, {
+				success: function() {
+					oModel.refresh();
+				}
+			});
+		},
+
+		/**
+		 * Event handler for the "press" event of the Change Status button
+		 * 
+		 * @param oEvent: The press event
+		 * @public
+		 */
+		onOpenStatusPopover: function(oEvent) {
+			// create popover
+			if (!this._oPopover) {
+				this._oPopover = sap.ui.xmlfragment(this.getView().getId(), "de.fis.bewerbungverwaltung.view.fragment.StatusSelectionPopover",
+					this);
+				this.getView().addDependent(this._oPopover);
+			}
+			// delay because addDependent will do a async rerendering and the popover will immediately close without it
+			var oButton = oEvent.getSource();
+			jQuery.sap.delayedCall(0, this, function() {
+				this._oPopover.openBy(oButton);
+			});
+		},
+
+		/**
+		 * Event handler for the "press" event of the Status List in StatusSelectionPopover-Fragment
+		 * 
+		 * @param oEvent: The press event
+		 * @public
+		 */
+		onStatusSelected: function(oEvent) {
+			var oModel = this.getModel("applmanModel");
+			var oListItem = oEvent.getSource();
+			var sBindingPathStatus = oListItem.getBindingContext("applmanModel").getPath(); // example: "/Statuss('1001')"
+			var sBindingPathApplication = this.getView().getElementBinding("applmanModel").getPath(); // example: "/Applications('1003')"
+
+			var statusId = oModel.getProperty(sBindingPathStatus + "/StatusId");
+			var applicationId = oModel.getProperty(sBindingPathApplication + "/ApplicationId");
+
+			oModel.remove("/Statuss('" + statusId + "')/$links/Applications('" + applicationId + "')", {
+				success: function() {
+					var oLink = {
+						"uri": this._serviceURI + "/Applications('" + applicationId + "')"
+					};
+					oModel.create(sBindingPathStatus + "/$links/Applications", oLink, {
+						success: function() {
+							oModel.refresh();
+						}.bind(this)
+					});
+				}.bind(this)
+			});
+			
+			if (this._oPopover) {
+				this._oPopover.close();
+			}
+		},
+
 		/* =========================================================== */
 		/* event handlers for the fragment buttons                     */
 		/* =========================================================== */
-
 		onDetailsEdit: function(oEvent) {
 			/*
 				var oModel = this.getModel("testModel");
@@ -190,7 +278,7 @@ sap.ui.define([
 			var oComment = oViewDataModel.getProperty("/Comment");
 			oComment.Subject = oComment.Subject.length < 1 ? " " : oComment.Subject;
 			oComment.Text = oComment.Text.length < 1 ? " " : oComment.Text;
-			
+
 			oModel.create("/Comments", oComment, {
 				success: function(oData) {
 					var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
@@ -285,7 +373,7 @@ sap.ui.define([
 		/**
 		 * Stores the selected Positions (Id and Name) in the dataModel of the View
 		 * (for later use)
-		 * (onDialogSave --> _updatePositions)
+		 * (onDialogSave --> _handleEntityUpdatesForSelectedItems)
 		 * 
 		 * @param aSelectedItems: An array of the selected Items in the MultiComboBox
 		 * @public
@@ -355,8 +443,8 @@ sap.ui.define([
 
 		/**
 		 * Removes the Links between Entities with the specified Ids
-		 * (_updatePositions --> _removeLinks)
-		 * (_updateSources   --> _removeLinks)
+		 * (onDialogSave --> _handleEntityUpdatesForSelectedItems --> _removeLinks)
+		 * (onDeleteApplication --> _removeLinks)
 		 * 
 		 * @param {object} oModel: An object of the ODataModel (v2)
 		 * @param {object} oParameters: 
@@ -384,8 +472,7 @@ sap.ui.define([
 
 		/**
 		 * Creates the Links between Entities with the specified Ids
-		 * (_updatePositions --> _createLinks)
-		 * (_updateSources   --> _createLinks)
+		 * (onDialogSave --> _handleEntityUpdatesForSelectedItems --> _createLinks)
 		 * 
 		 * @param {object} oModel: An object of the ODataModel (v2)
 		 * @param {object} oParameters: 
@@ -397,7 +484,6 @@ sap.ui.define([
 		 * @private
 		 */
 		_createLinks: function(oModel, oParameters) {
-			var serviceURI = "https://applmanserverp1942281469trial.hanatrial.ondemand.com:443/applman/odata.srv";
 			var oLink;
 			// Create the Links of the new Items 
 			for (var i = 0; i < oParameters.fromIds.length; i++) {
@@ -405,13 +491,13 @@ sap.ui.define([
 					//					var fromId = oModel.createKey(oParameters.toIds[j]);
 					// Source -> Destination
 					oLink = {
-						"uri": serviceURI + "/" + oParameters.toName + "('" + oParameters.toIds[j] + "')"
+						"uri": this._serviceURI + "/" + oParameters.toName + "('" + oParameters.toIds[j] + "')"
 					};
 					oModel.create("/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')/$links/" + oParameters.toName, oLink);
 					// Destination -> Source
 					if (oParameters.reverse) {
 						oLink = {
-							"uri": serviceURI + "/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')"
+							"uri": this._serviceURI + "/" + oParameters.fromName + "('" + oParameters.fromIds[i] + "')"
 						};
 						oModel.create("/" + oParameters.toName + "('" + oParameters.toIds[j] + "')/$links/" + oParameters.fromName, oLink);
 					}

@@ -78,7 +78,7 @@
 					"defaultOperationMode": "Client",
 					"defaultBindingMode": "TwoWay",
 					"defaultCountMode": "Inline",
-					"useBatch": true
+					"useBatch": false
 				},
 				"preload": true
 			}

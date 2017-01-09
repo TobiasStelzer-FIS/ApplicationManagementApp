@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover showHeader="false" contentWidth="200px" contentHeight="300px" placement="Top">
+		<Page id="page" title="Status">
+			<List id="statusList" items="{applmanModel>/Statuss}">
+				<StandardListItem title="{applmanModel>Name}" type="Active" press="onStatusSelected"/>
+			</List>
+		</Page>
+	</Popover>
+</core:FragmentDefinition>
