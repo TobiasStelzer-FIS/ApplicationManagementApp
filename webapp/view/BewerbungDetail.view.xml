@@ -16,7 +16,7 @@
 			<uxap:headerContent>
 				<VBox width="200px">
 					<HBox>
-						<core:Icon src="sap-icon://phone" size="1.3rem">
+						<core:Icon src="sap-icon://phone" size="1.4rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
@@ -24,7 +24,7 @@
 						<Label text="{applmanModel>ApplicantDetails/Phone}"/>
 					</HBox>
 					<HBox>
-						<core:Icon src="sap-icon://iphone" size="1.3rem">
+						<core:Icon src="sap-icon://iphone" size="1.4rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
@@ -32,22 +32,13 @@
 						<Label text="{applmanModel>ApplicantDetails/Mobile}"/>
 					</HBox>
 					<HBox>
-						<core:Icon src="sap-icon://email" size="1.3rem">
+						<core:Icon src="sap-icon://email" size="1.4rem">
 							<core:layoutData>
 								<FlexItemData minWidth="30px"/>
 							</core:layoutData>
 						</core:Icon>
 						<Label text="{applmanModel>ApplicantDetails/Email}"/>
 					</HBox>
-				</VBox>
-				<VBox width="40%" class="sapUiSmallMarginBegin" visible="{= !${device>/system/phone}}">
-					<Label text="Stellen" design="Bold"/>
-					<VBox items="{path: 'applmanModel>Positions'}">
-						<items>
-							<Text text="• {applmanModel>Name}" class="sapUiSmallMarginBegin"/>
-						</items>
-					</VBox>
-					<Text text="Initiativbewerbung" visible="{= ${applmanModel>Positions}.length === 0}" class="sapUiSmallMarginBegin"/>
 				</VBox>
 				<VBox width="auto">
 					<FlexBox width="auto">

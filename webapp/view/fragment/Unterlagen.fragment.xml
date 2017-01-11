@@ -14,7 +14,7 @@
 						<VBox items="{path: 'applmanModel>Documents'}">
 							<Link text="• {applmanModel>Displaytext}" href="{applmanModel>Documentpath}"/>
 						</VBox>
-						<Text text="{i18n>UnterlagenNoDataText}" visible="{= ${testModel>DokumentDetails}.length === 0}"/>
+						<Text text="{i18n>UnterlagenNoDataText}" visible="{= ${applmanModel>Documents}.length === 0}"/>
 					</VBox>
 				</f:FormElement>
 			</f:FormContainer>

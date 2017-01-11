@@ -72,7 +72,7 @@ sap.ui.define([
 					dataReceived: function() {}
 				},
 				parameters: {
-					expand: "Positions,Sources,Comments,StatusDetails,ApplicantDetails"
+					expand: "Positions,Sources,Comments,Documents,StatusDetails,ApplicantDetails"
 				}
 			});
 		},
@@ -180,6 +180,14 @@ sap.ui.define([
 						"uri": this._serviceURI + "/Applications('" + applicationId + "')"
 					};
 					oModel.create(sBindingPathStatus + "/$links/Applications", oLink, {
+						success: function() {
+							oModel.refresh();
+						}.bind(this)
+					});
+					oLink = {
+						"uri": this._serviceURI + "/Statuss('" + statusId + "')"
+					};
+					oModel.update("/Applications('" + applicationId + "')/$links/StatusDetails", oLink, {
 						success: function() {
 							oModel.refresh();
 						}.bind(this)

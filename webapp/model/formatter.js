@@ -10,7 +10,7 @@ sap.ui.define(function() {
 			if (!applicationId) {
 				uri = "";
 			} else {
-				uri = "/applman/picture/" + applicationId + "/" + picture;
+				uri = "/applman/filedownload/" + applicationId + "/" + picture;
 			}
 			return uri;
 		},
