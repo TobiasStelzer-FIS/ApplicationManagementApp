@@ -27,8 +27,7 @@ sap.ui.define([
 			var oViewDataModel = new JSONModel({
 				"Comment": {
 					"Subject": "",
-					"Text": "",
-					"Name": "somebody"
+					"Text": ""
 				}
 			});
 			this.setModel(oViewDataModel, "viewDataModel");
@@ -85,10 +84,11 @@ sap.ui.define([
 		 */
 		_onBindingChange: function(oEvent) {
 			var oElementBinding = this.getView().getElementBinding("applmanModel");
+			var oContext = this.getView().getModel("applmanModel").getProperty(oElementBinding.getPath());
 			this.getView().getModel("applmanModel").updateBindings();
 
 			// No data for the binding
-			if (!oElementBinding) {
+			if (!oContext) {
 				this.getRouter().getTargets().display("DetailObjectNotFound");
 			}
 		},
@@ -115,6 +115,7 @@ sap.ui.define([
 			var sBindingPath = this.getView().getElementBinding("applmanModel").getPath();
 
 			var applicationId = oModel.getProperty(sBindingPath + "/ApplicationId");
+			var statusId = oModel.getProperty(sBindingPath + "/Status");
 			var positionIds = this._getIdsOfEntities("Positions", "Position");
 			var sourceIds = this._getIdsOfEntities("Sources", "Source");
 			
@@ -132,9 +133,10 @@ sap.ui.define([
 				toIds: [applicationId],
 				reverse: false
 			});
+			oModel.remove("/Statuss('" + statusId + "')/$links/Applications('" + applicationId + "')");
 			oModel.remove(sBindingPath, {
 				success: function() {
-					oModel.refresh();
+					oModel.refresh(true);
 				}
 			});
 		},
@@ -181,7 +183,7 @@ sap.ui.define([
 					};
 					oModel.create(sBindingPathStatus + "/$links/Applications", oLink, {
 						success: function() {
-							oModel.refresh();
+							oModel.refresh(true);
 						}.bind(this)
 					});
 					oLink = {
@@ -189,7 +191,7 @@ sap.ui.define([
 					};
 					oModel.update("/Applications('" + applicationId + "')/$links/StatusDetails", oLink, {
 						success: function() {
-							oModel.refresh();
+							oModel.refresh(true);
 						}.bind(this)
 					});
 				}.bind(this)
@@ -306,8 +308,7 @@ sap.ui.define([
 
 			oComment = {
 				"Subject": "",
-				"Text": "",
-				"Name": "somebody"
+				"Text": ""
 			};
 			oViewDataModel.setProperty("/Comment", oComment);
 		},

@@ -130,17 +130,17 @@
 					"viewName": "BewerbungDetail",
 					"controlAggregation": "detailPages"
 				},
-				"detailObjectNotFound": {
+				"DetailObjectNotFound": {
 					"viewName": "DetailObjectNotFound",
 					"viewId": "detailObjectNotFound",
 					"controlAggregation": "detailPages"
 				},
-				"detailNoObjectsAvailable": {
+				"DetailNoObjectsAvailable": {
 					"viewName": "DetailNoObjectsAvailable",
 					"viewId": "detailNoObjectsAvailable",
 					"controlAggregation": "detailPages"
 				},
-				"notFound": {
+				"NotFound": {
 					"viewName": "NotFound",
 					"viewId": "notFound",
 					"controlAggregation": "detailPages"

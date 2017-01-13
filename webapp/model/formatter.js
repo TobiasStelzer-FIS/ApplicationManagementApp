@@ -4,13 +4,22 @@ sap.ui.define(function() {
 	return {
 
 		formatImageURI: function(applicationId) {
-//			return "https://applmanserverp1942281469trial.hanatrial.ondemand.com/applman/picture?applicationId=theApplicationId&filename=Pikachu.png";
 			var uri;
 			var picture = this.getModel("applmanModel").getProperty("/Applications('"+applicationId+"')/ApplicantDetails/Picture");
 			if (!applicationId) {
 				uri = "";
 			} else {
 				uri = "/applman/filedownload/" + applicationId + "/" + picture;
+			}
+			return uri;
+		},
+		
+		formatDocumentURI: function(applicationId, documentname) {
+			var uri;
+			if (!applicationId || !documentname) {
+				uri = "";
+			} else {
+				uri = "/applman/filedownload/" + applicationId + "/" + documentname;
 			}
 			return uri;
 		},

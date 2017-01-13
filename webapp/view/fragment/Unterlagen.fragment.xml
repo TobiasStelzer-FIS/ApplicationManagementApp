@@ -12,7 +12,7 @@
 				<f:FormElement>
 					<VBox>
 						<VBox items="{path: 'applmanModel>Documents'}">
-							<Link text="• {applmanModel>Displaytext}" href="{applmanModel>Documentpath}"/>
+							<Link text="• {applmanModel>Displaytext}" target="_blank" href="{parts: [{path: 'applmanModel>Application'}, {path: 'applmanModel>Documentname'}], formatter: '.formatter.formatDocumentURI'}"/>
 						</VBox>
 						<Text text="{i18n>UnterlagenNoDataText}" visible="{= ${applmanModel>Documents}.length === 0}"/>
 					</VBox>
